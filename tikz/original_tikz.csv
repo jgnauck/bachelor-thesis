@@ -1,0 +1,2020 @@
+Sample,Caption,LaTeX_Document
+Sample,Caption,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+\node at (0,0) {Caption};
+\end{tikzpicture}
+    \end{document}"
+1,"Could some one fix this tikz code?
+
+\documentclass[11pt, twosides]{book}
+\usepackage[a4paper, top=.5cm]{geometry}
+\usepackage[myheadings]{fullpage}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{graphicx, wrapfig, subcaption, setspace}
+\usepackage{mathpazo}
+\usepackage[T1]{fontenc}
+\usepackage[font=small, labelfont=bf]{caption}
+\usepackage[protrusion=true, expansion=true]{microtype}
+\usepackage{sectsty}
+\usepackage{url, lipsum}
+\usepackage{etoolbox}
+\usepackage[explicit]{titlesec}
+\usepackage{epigraph}
+\usepackage{tikz}
+\usepackage{tikzpagenodes}
+\titleformat{\chapter}[display]
+{\normalfont\huge}
+{}
+{20pt}
+{%
+\begin{tikzpicture}[remember picture,overlay]
+\fill[top color=green, bottom color=blue] 
+(16,-23) rectangle (18.5,7);
+\node[
+anchor= east,
+xshift=1cm,
+text width=\textwidth] 
+at ([yshift=5pt]titlerect.east) {\fontsize{30}{36}\sffamily\selectfont#1};
+\node[
+anchor= east,
+inner xsep=3cm,
+outer sep=0pt,
+font=\color{blue}]%,
+at ([yshift=.5cm]current page.east|-titlerect.east)
+{\fontsize{80}{86}\bfseries\thechapter};
+\node[
+anchor= east,
+xshift=11.5cm,
+yshift=-11cm,
+text width=\textwidth] 
+at ([yshift=5pt]titlerect.east) {\fontsize{30}{36}\scshape\selectfont\rotatebox{90}{\color{white}#1}};
+\end{tikzpicture}%
+}
+\titleformat{name=\chapter,numberless}[display]
+{\normalfont\huge}
+{}
+{20pt}
+{%
+\begin{tikzpicture}[remember picture,overlay]
+\fill[top color=green, bottom color=blue] 
+(16,-25) rectangle (18.5,7);
+\node[
+anchor=west,
+rectangle,
+minimum height=4cm,
+text width=\paperwidth,
+xshift=-\the\dimexpr\oddsidemargin+1in\relax,
+outer sep=0pt] (titlerect) {};
+\node[
+anchor=south west,
+xshift=6cm,
+yshift=2cm,
+text width=\textwidth] 
+at (titlerect.south west) {\sffamily\Huge#1};
+\node[
+anchor= east,
+xshift=11.5cm,
+yshift=-11cm,
+text width=\textwidth] 
+at ([yshift=5pt]titlerect.east) {\fontsize{30}{36}\scshape\selectfont\rotatebox{90}{\color{white}#1}};
+\end{tikzpicture}%
+}[]
+\titlespacing*{\chapter}
+{0pt}{-20pt}{60pt}
+\titlespacing*{\chapter}
+{0pt}{-20pt}{60pt}
+\titleformat{\section}[display] 
+{\bfseries\normalsize}
+{}
+{5pt}
+{\color{blue}\thesection~~ #1}
+\titleformat{name=\section, numberless}[display]
+{\bfseries\normalsize}
+{}
+{5pt}
+{#1}
+
+\titleformat{\subsection}[display]
+{\itshape\normalsize}
+{}
+{5pt}
+{\color{blue}\thesection~~ #1}
+
+\fancypagestyle{plain}
+{
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0 mm}
+}
+
+\title{Title}
+\author{Author}
+\date{}
+\textwidth=13cm
+\begin{document}
+
+\maketitle
+
+\chapter{Random}
+
+\section{Lipsum}
+
+\lipsum[2]
+
+\subsection{Subsection}
+
+\lipsum[1]
+\end{document}","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    ```latex
+\begin{tikzpicture}[remember picture,overlay]
+\fill[top color=green, bottom color=blue] 
+(16,-23) rectangle (18.5,7);
+\node[
+anchor= east,
+xshift=1cm,
+text width=\textwidth] 
+at ([yshift=5pt]titlerect.east) {\fontsize{30}{36}\sffamily\selectfont#1};
+\node[
+anchor= east,
+inner xsep=3cm,
+outer sep=0pt,
+font=\color{blue}]%,
+at ([yshift=.5cm]current page.east|-titlerect.east)
+{\fontsize{80}{86}\bfseries\thechapter};
+\node[
+anchor= east,
+xshift=11.5cm,
+yshift=-11cm,
+text width=\textwidth] 
+at ([yshift=5pt]titlerect.east) {\fontsize{30}{36}\scshape\selectfont\rotatebox{90}{\color{white}#1}};
+\end{tikzpicture}
+    \end{document}"
+2,"(Left) The polytope $P_A$ for Example \ref{ex:blob}\\(Right) The completable region and curves defined by {\color{black!60!red}$f(u,v) = 0$} and {\color{black!30!blue}$g(u,v) = 0$}","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Left: Polytope P_A
+    \begin{scope}
+        \fill[blue!20] (0,0) -- (2,0) -- (2,2) -- (0,2) -- cycle;
+        \draw[thick] (0,0) -- (2,0) -- (2,2) -- (0,2) -- cycle;
+        \node at (1,1) {\textbf{Polytope $P_A$}};
+    \end{scope}
+    
+    % Right: Completable region and curves
+    \begin{scope}[xshift=4cm]
+        \fill[red!20] (0,0) -- (3,0) -- (3,3) -- (0,3) -- cycle;
+        \draw[thick, black!60!red] plot[domain=0:3] (\x, {0.5*\x*\x - 1}) node[right] {\color{black!60!red}$f(u,v) = 0$};
+        \draw[thick, black!30!blue] plot[domain=0:3] (\x, {1.5*\x - 2}) node[right] {\color{black!30!blue}$g(u,v) = 0$};
+        \node at (1.5,1.5) {\textbf{Completable Region}};
+    \end{scope}
+\end{tikzpicture}
+    \end{document}"
+3,The domain $\Omega$ with boundary conditions.,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Domain
+    \fill[blue!20] (0,0) rectangle (4,3);
+    
+    % Boundary
+    \draw[thick] (0,0) rectangle (4,3);
+    
+    % Labels
+    \node at (2,1.5) {\textbf{\large $\Omega$}};
+    \node[anchor=east] at (0,1.5) {Boundary};
+\end{tikzpicture}
+    \end{document}"
+4,"2 axes scaling problem
+
+I have two problems :
+the arrow on x axis.
+The left y axis does't match all the hight as the right does.
+I want on the left axe ymin=0 ymax=25 and the ticks lines in front of the tick lines of the right's one.
+I tried with ymin, ymax, and max space between ticks, but nothing good.
+
+\begin{tikzpicture}
+
+% let both axes use the same layers
+\pgfplotsset{set layers}
+
+\begin{axis}[%
+scale only axis=true,
+ybar, bar width=10pt, 
+ymin=0,ymax=100,
+enlargelimits=0.05,
+%axis x line=box,
+axis y line=right,
+symbolic x coords=%
+{Janvier,Février,Mars,Avril,Mai,Juin,Juillet,
+Août,Septembre,Octobre,Novembre,Décembre},
+xtick=data,
+x tick label style={rotate=60,anchor=east},
+legend style={at={(0.1,0.85)}, anchor=south west,legend columns=-1},
+%nodes near coords,
+%nodes near coords align={vertical},
+]
+
+
+\addplot[style={draw=yellow!80!black,fill=yellow!40!white}] coordinates {%
+(Janvier,85)
+(Février,75)
+(Mars,60)
+(Avril,59)
+(Mai,62)
+(Juin,42)
+(Juillet,48)
+(Août,41)
+(Septembre,69)
+(Octobre,80)
+(Novembre,81)
+(Décembre,91)
+} ;
+
+\legend{Précipitations} ;
+\end{axis}
+
+
+%\end{tikzpicture}
+
+%\begin{tikzpicture}
+\begin{axis}[
+scale only axis = true,
+ymin=0,
+max space between ticks=28,
+axis y line=left,
+enlargelimits=0.05,
+axis x line=none,
+symbolic x coords=%
+{Janvier,Février,Mars,Avril,Mai,Juin,Juillet,
+Août,Septembre,Octobre,Novembre,Décembre},
+legend style={at={(0.1,.93)}, anchor=south west,legend columns=-1},
+]
+
+\addplot[red,mark=*] coordinates {%
+(Janvier,9)
+(Février,10)
+(Mars,13)
+(Avril,15)
+(Mai,18)
+(Juin,22)
+(Juillet,24.5)
+(Août,25)
+(Septembre,22.5)
+(Octobre,18)
+(Novembre,13)
+(Décembre,10.5) 
+} ;
+
+\addplot[blue,mark=*] coordinates {%
+(Janvier,3)
+(Février,3.5)
+(Mars,4.5)
+(Avril,6.5)
+(Mai,9.5)
+(Juin,12)
+(Juillet,14)
+(Août,14)
+(Septembre,12)
+(Octobre,9)
+(Novembre,6)
+(Décembre,4) 
+} ;
+
+\legend{Max,Min} ;
+
+\end{axis}
+\end{tikzpicture}","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+
+% let both axes use the same layers
+\pgfplotsset{set layers}
+
+\begin{axis}[%
+scale only axis=true,
+ybar, bar width=10pt, 
+ymin=0,ymax=100,
+enlargelimits=0.05,
+axis y line=right,
+symbolic x coords=%
+{Janvier,Février,Mars,Avril,Mai,Juin,Juillet,
+Août,Septembre,Octobre,Novembre,Décembre},
+xtick=data,
+x tick label style={rotate=60,anchor=east},
+legend style={at={(0.1,0.85)}, anchor=south west,legend columns=-1},
+]
+
+\addplot[style={draw=yellow!80!black,fill=yellow!40!white}] coordinates {%
+(Janvier,85)
+(Février,75)
+(Mars,60)
+(Avril,59)
+(Mai,62)
+(Juin,42)
+(Juillet,48)
+(Août,41)
+(Septembre,69)
+(Octobre,80)
+(Novembre,81)
+(Décembre,91)
+} ;
+
+\legend{Précipitations} ;
+\end{axis}
+
+\begin{axis}[
+scale only axis = true,
+ymin=0,
+ymax=25,
+max space between ticks=5,
+axis y line=left,
+enlargelimits=0.05,
+axis x line=none,
+symbolic x coords=%
+{Janvier,Février,Mars,Avril,Mai,Juin,Juillet,
+Août,Septembre,Octobre,Novembre,Décembre},
+ytick={0,5,10,15,20,25},
+legend style={at={(0.1,.93)}, anchor=south west,legend columns=-1},
+]
+
+\addplot[red,mark=*] coordinates {%
+(Janvier,9)
+(Février,10)
+(Mars,13)
+(Avril,15)
+(Mai,18)
+(Juin,22)
+(Juillet,24.5)
+(Août,25)
+(Septembre,22.5)
+(Octobre,18)
+(Novembre,13)
+(Décembre,10.5) 
+} ;
+
+\addplot[blue,mark=*] coordinates {%
+(Janvier,3)
+(Février,3.5)
+(Mars,4.5)
+(Avril,6.5)
+(Mai,9.5)
+(Juin,12)
+(Juillet,14)
+(Août,14)
+(Septembre,12)
+(Octobre,9)
+(Novembre,6)
+(Décembre,4) 
+} ;
+
+\legend{Max,Min} ;
+
+\end{axis}
+\end{tikzpicture}
+    \end{document}"
+5,"The lower bound set $\mathcal{L}(\eta)$, depicted by the solid line, is partially dominated by the upper bound set $\mathcal{U}$, represented by the crosses. In this situation, it is possible to split the problem into three disjoint sub-problems in the objective space. Each sub-problem is highlighted by the hatched areas, and its corresponding super local upper bound is depicted by its closest large circle.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Draw the lower bound set
+    \draw[thick] plot[domain=0:4] (\x, {0.5*\x + 1}) node[right] {$\mathcal{L}(\eta)$};
+    
+    % Draw the upper bound set
+    \foreach \x in {0.5, 1.5, 2.5, 3.5} {
+        \fill[red] (\x, 3) circle (3pt);
+    }
+    \node at (4, 3) {$\mathcal{U}$};
+    
+    % Draw the hatched areas for sub-problems
+    \begin{scope}
+        \clip (0, 0) -- (0, 3) -- (2, 3) -- (2, 0) -- cycle;
+        \fill[pattern=checkerboard, pattern color=gray] (0, 0) rectangle (2, 3);
+    \end{scope}
+    \begin{scope}
+        \clip (2, 0) -- (2, 3) -- (4, 3) -- (4, 0) -- cycle;
+        \fill[pattern=checkerboard, pattern color=gray] (2, 0) rectangle (4, 3);
+    \end{scope}
+    
+    % Draw the large circles for super local upper bounds
+    \draw[thick] (1, 3.5) circle (0.5) node {Sub-problem 1};
+    \draw[thick] (3, 3.5) circle (0.5) node {Sub-problem 2};
+\end{tikzpicture}
+    \end{document}"
+6,At an angle point.,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \draw[thick] (0,0) -- (2,2);
+    \draw[thick] (0,0) -- (2,-2);
+    \draw[thick] (0,0) -- (-2,2);
+    \draw[thick] (0,0) -- (-2,-2);
+    \draw[fill=black] (0,0) circle (2pt);
+\end{tikzpicture}
+    \end{document}"
+7,Two dessins with monodromy group ${\rm M}_{12}$. The field of moduli for both of them is $\mathbb{Q}(\!\sqrt{-11})$.,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % First dessin
+    \begin{scope}[xshift=0cm]
+        \draw[thick] (0,0) circle(2);
+        \draw[thick] (0,0) -- (2,0);
+        \draw[thick] (0,0) -- (-1.5,1.5);
+        \draw[thick] (0,0) -- (-1.5,-1.5);
+        \draw[thick] (0,0) -- (1.5,1.5);
+        \draw[thick] (0,0) -- (1.5,-1.5);
+        
+        \foreach \i in {0,1,2,3,4,5}
+            \fill[black] ({2*cos(60*\i)},{2*sin(60*\i)}) circle(2pt);
+        
+        \node at (0,-2.5) {Dessin 1};
+    \end{scope}
+    
+    % Second dessin
+    \begin{scope}[xshift=5cm]
+        \draw[thick] (0,0) circle(2);
+        \draw[thick] (0,0) -- (2,0);
+        \draw[thick] (0,0) -- (0,2);
+        \draw[thick] (0,0) -- (-2,0);
+        \draw[thick] (0,0) -- (0,-2);
+        
+        \foreach \i in {0,1,2,3}
+            \fill[black] ({2*cos(90*\i)},{2*sin(90*\i)}) circle(2pt);
+        
+        \node at (0,-2.5) {Dessin 2};
+    \end{scope}
+\end{tikzpicture}
+    \end{document}"
+8,Translation performance on different instruction scales.,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \begin{axis}[
+        title={Translation Performance on Different Instruction Scales},
+        xlabel={Instruction Scale},
+        ylabel={Performance (BLEU Score)},
+        xmin=0, xmax=10,
+        ymin=0, ymax=100,
+        xtick={0,1,...,10},
+        ytick={0,10,...,100},
+        grid=both,
+        legend pos=north west,
+        legend style={font=\tiny},
+        cycle list name=color list
+    ]
+    \addplot coordinates {(1,20) (2,30) (3,50) (4,65) (5,75) (6,80) (7,85) (8,90) (9,95) (10,98)};
+    \addplot coordinates {(1,15) (2,25) (3,40) (4,55) (5,70) (6,78) (7,82) (8,88) (9,92) (10,96)};
+    \legend{Model A, Model B}
+    \end{axis}
+\end{tikzpicture}
+    \end{document}"
+9,"The original graph $\Gamma$ (left); the ``doubled graph'' $\Gamma_2$ (centre); an Eulerian cycle $C$ (right), which forms a closed cycle in $\Gamma_2$, traversing every edge exactly once.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Original graph Gamma
+    \begin{scope}
+        \node[circle, draw] (A) at (0, 0) {A};
+        \node[circle, draw] (B) at (2, 2) {B};
+        \node[circle, draw] (C) at (2, -2) {C};
+        \node[circle, draw] (D) at (4, 0) {D};
+        
+        \draw (A) -- (B);
+        \draw (A) -- (C);
+        \draw (B) -- (D);
+        \draw (C) -- (D);
+    \end{scope}
+
+    % Doubled graph Gamma_2
+    \begin{scope}[xshift=6cm]
+        \node[circle, draw] (A) at (0, 0) {A};
+        \node[circle, draw] (B) at (2, 2) {B};
+        \node[circle, draw] (C) at (2, -2) {C};
+        \node[circle, draw] (D) at (4, 0) {D};
+
+        \draw (A) -- (B);
+        \draw (A) -- (C);
+        \draw (B) -- (D);
+        \draw (C) -- (D);
+        
+        % Doubling the edges
+        \draw[dashed] (A) -- (B);
+        \draw[dashed] (A) -- (C);
+        \draw[dashed] (B) -- (D);
+        \draw[dashed] (C) -- (D);
+    \end{scope}
+
+    % Eulerian cycle C
+    \begin{scope}[xshift=12cm]
+        \node[circle, draw] (A) at (0, 0) {A};
+        \node[circle, draw] (B) at (2, 2) {B};
+        \node[circle, draw] (C) at (2, -2) {C};
+        \node[circle, draw] (D) at (4, 0) {D};
+
+        \draw[->, thick, red] (A) -- (B);
+        \draw[->, thick, red] (B) -- (D);
+        \draw[->, thick, red] (D) -- (C);
+        \draw[->, thick, red] (C) -- (A);
+        \draw[->, thick, red] (A) -- (C);
+        \draw[->, thick, red] (C) -- (B);
+    \end{scope}
+\end{tikzpicture}
+    \end{document}"
+10,A set $\sigma \in PW^+$ inside a rectangle $R$. The blue region $R \setminus (\sigma \cup \partial R)$ can always be triangulated.,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Draw the rectangle R
+    \draw[thick] (0,0) rectangle (4,2);
+    
+    % Draw the boundary of R
+    \draw[dashed] (0,0) -- (4,0);
+    \draw[dashed] (0,2) -- (4,2);
+    \draw[dashed] (0,0) -- (0,2);
+    \draw[dashed] (4,0) -- (4,2);
+    
+    % Define the set sigma
+    \fill[red, opacity=0.5] (1,0.5) -- (1.5,1.5) -- (2,0.5) -- cycle;
+    
+    % Draw the boundary of sigma
+    \draw[thick, red] (1,0.5) -- (1.5,1.5) -- (2,0.5) -- cycle;
+    
+    % Highlight the blue region R \ setminus (sigma \cup \partial R)
+    \fill[blue, opacity=0.5] (0,0) rectangle (4,2);
+    \fill[white] (1,0.5) -- (1.5,1.5) -- (2,0.5) -- cycle;
+    
+    % Add labels
+    \node at (2,2.2) {R};
+    \node at (1.5,1) {$\sigma$};
+    \node at (2,1) {Blue region};
+\end{tikzpicture}
+    \end{document}"
+11,Path on integral \eqref{29} and \eqref{30}.,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \draw[->] (-3,0) -- (3,0) node[right] {$Re$};
+    \draw[->] (0,-3) -- (0,3) node[above] {$Im$};
+
+    % Path for integral eq (29)
+    \draw[thick, blue, ->] (-2,2) .. controls (-1,1) and (1,1) .. (2,2) node[midway, above] {$\gamma_1$};
+    \draw[dashed, red] (-2,2) -- (2,2);
+    
+    % Path for integral eq (30)
+    \draw[thick, green, ->] (-2,-2) .. controls (-1,-1) and (1,-1) .. (2,-2) node[midway, below] {$\gamma_2$};
+    \draw[dashed, red] (-2,-2) -- (2,-2);
+    
+    % Labels
+    \node at (-2, 2.5) {$\gamma_1$};
+    \node at (-2, -2.5) {$\gamma_2$};
+\end{tikzpicture}
+    \end{document}"
+12,"tikz tree use pic as tree node
+
+This question does not aim to explore something meaningful, but just for some interest.
+Is there a way to use a pic as a ""tree node"" directly? It means that I can reference the named node or coordinate in pic after the tree has been draw.
+Consider following pic just for example:
+\documentclass[tikz, border=1cm]{standalone}
+\makeatletter
+\tikzset{
+test n/.store in=\test@n,
+test n=3,
+test/.pic={
+\foreach \x [evaluate=\x as \ang using (\x-1)*360/\test@n] in {1, ..., \test@n} {
+\draw (0, 0) -- (\ang:5mm) coordinate (-\x);
+}
+}
+}
+\makeatother
+
+\begin{document}
+\begin{tikzpicture}
+\pic (a) [test n=6] {test};
+\draw[red] (a-1) -- (a-2);
+\end{tikzpicture}
+\end{document}
+
+
+I'd like to use this pic in several nodes of the tree and reference the coordinates such as (a-1) after, is there a possible way to make it?","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+\tikzset{
+  test n/.store in=\test@n,
+  test n=3,
+  test/.pic={
+    \foreach \x [evaluate=\x as \ang using (\x-1)*360/\test@n] in {1, ..., \test@n} {
+      \draw (0, 0) -- (\ang:5mm) coordinate (-\x);
+    }
+  },
+  mynode/.style={draw, circle, inner sep=2pt, outer sep=0pt}
+}
+
+% Define the tree structure
+\Tree
+  [.\mynode {A}
+    [.\pic (a1) [test n=6] {test} ]
+    [.\mynode {B}
+      [.\pic (b1) [test n=6] {test} ]
+      [.\mynode {C} ]
+    ]
+  ]
+
+% Draw connections between specific coordinates
+\draw[red] (a1-1) -- (a1-2);
+\draw[blue] (b1-1) -- (b1-2);
+\end{tikzpicture}
+    \end{document}"
+13,"Mixed graph (A) representing a model with $d = 5$ variables and with a diagonal $C$-matrix. The edge labels of the directed (blue) edges are the values of the non-zero entries in the $M$-matrix, while all the blunt (red) edges correspond to the diagonal entries of $C$ all being $1$. The mixed graph (B) is the same as (A) but with all directed self-loops removed. We call (B) the base graph of (A).","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[scale=1.5]
+    % Define nodes
+    \node[circle, draw] (1) at (0, 1) {1};
+    \node[circle, draw] (2) at (1, 2) {2};
+    \node[circle, draw] (3) at (2, 1) {3};
+    \node[circle, draw] (4) at (1, 0) {4};
+    \node[circle, draw] (5) at (3, 1) {5};
+
+    % Directed edges with labels
+    \draw[->, blue] (1) edge node[above] {0.5} (2);
+    \draw[->, blue] (2) edge node[above] {0.3} (3);
+    \draw[->, blue] (3) edge node[below] {0.2} (4);
+    \draw[->, blue] (4) edge node[below] {0.4} (1);
+    \draw[->, blue] (5) edge node[above] {0.6} (3);
+    
+    % Blunt edges
+    \draw[-, red] (1) edge (1);
+    \draw[-, red] (2) edge (2);
+    \draw[-, red] (3) edge (3);
+    \draw[-, red] (4) edge (4);
+    \draw[-, red] (5) edge (5);
+
+    % Base graph (B) without self-loops
+    \begin{scope}[xshift=5cm]
+        \node[circle, draw] (1b) at (0, 1) {1};
+        \node[circle, draw] (2b) at (1, 2) {2};
+        \node[circle, draw] (3b) at (2, 1) {3};
+        \node[circle, draw] (4b) at (1, 0) {4};
+        \node[circle, draw] (5b) at (3, 1) {5};
+
+        % Directed edges without self-loops
+        \draw[->, blue] (1b) edge node[above] {0.5} (2b);
+        \draw[->, blue] (2b) edge node[above] {0.3} (3b);
+        \draw[->, blue] (3b) edge node[below] {0.2} (4b);
+        \draw[->, blue] (5b) edge node[above] {0.6} (3b);
+        
+        % Blunt edges
+        \draw[-, red] (2b) edge (2b);
+        \draw[-, red] (3b) edge (3b);
+        \draw[-, red] (4b) edge (4b);
+        \draw[-, red] (5b) edge (5b);
+    \end{scope}
+\end{tikzpicture}
+    \end{document}"
+14,Timing of decisions and outcomes.,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \draw[->] (0,0) -- (0,5) node[above] {Outcomes};
+    \draw[->] (0,0) -- (5,0) node[right] {Time};
+    
+    \draw[thick, blue] (0,1) -- (1,2) -- (2,1.5) -- (3,3) -- (4,2.5) -- (5,4) node[right] {Decision Path};
+    
+    \foreach \x in {0,1,2,3,4,5} {
+        \draw (\x,0.1) -- (\x,-0.1) node[below] {\x};
+    }
+    
+    \foreach \y in {1,2,3,4} {
+        \draw (0.1,\y) -- (-0.1,\y) node[left] {\y};
+    }
+    
+    \node[above right] at (2,1.5) {Decision Point};
+    \node[below right] at (4,2.5) {Outcome};
+\end{tikzpicture}
+    \end{document}"
+15,Workflow to obtain a Feasible Planning Region,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \node (start) [draw, rectangle, minimum width=3cm, minimum height=1cm] {Start};
+    \node (data) [draw, rectangle, below of=start, minimum width=3cm, minimum height=1cm] {Collect Data};
+    \node (analyze) [draw, rectangle, below of=data, minimum width=3cm, minimum height=1cm] {Analyze Data};
+    \node (define) [draw, rectangle, below of=analyze, minimum width=3cm, minimum height=1cm] {Define Constraints};
+    \node (evaluate) [draw, rectangle, below of=define, minimum width=3cm, minimum height=1cm] {Evaluate Feasibility};
+    \node (adjust) [draw, rectangle, below of=evaluate, minimum width=3cm, minimum height=1cm] {Adjust Parameters};
+    \node (finalize) [draw, rectangle, below of=adjust, minimum width=3cm, minimum height=1cm] {Finalize Planning Region};
+    \node (end) [draw, rectangle, below of=finalize, minimum width=3cm, minimum height=1cm] {End};
+
+    \draw[->] (start) -- (data);
+    \draw[->] (data) -- (analyze);
+    \draw[->] (analyze) -- (define);
+    \draw[->] (define) -- (evaluate);
+    \draw[->] (evaluate) -- (adjust);
+    \draw[->] (adjust) -- (finalize);
+    \draw[->] (finalize) -- (end);
+\end{tikzpicture}
+    \end{document}"
+16,Effect of network coding on large network sizes (A:analytical and H:Heuristic),"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \begin{axis}[
+        xlabel={Network Size},
+        ylabel={Throughput},
+        legend pos=outer north east,
+        grid=major,
+        title={Effect of Network Coding on Throughput},
+        width=12cm,
+        height=8cm,
+        cycle list name=color list,
+    ]
+    \addplot coordinates {(10, 5) (20, 15) (30, 25) (40, 35) (50, 45)};
+    \addlegendentry{Analytical (A)}
+    
+    \addplot coordinates {(10, 4) (20, 12) (30, 22) (40, 30) (50, 40)};
+    \addlegendentry{Heuristic (H)}
+    
+    \end{axis}
+\end{tikzpicture}
+    \end{document}"
+17,"Draw octagon with color node at middle edges
+
+I would like to draw three pictures in TikZ but I don't know how to do it.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Draw the octagon
+    \draw[thick] (0, 1) -- (0.76, 0.76) -- (1, 0) -- (0.76, -0.76) -- (0, -1) -- (-0.76, -0.76) -- (-1, 0) -- (-0.76, 0.76) -- cycle;
+
+    % Color nodes at middle edges
+    \fill[red] (0, 0.5) rectangle (0.1, 0.6);
+    \fill[red] (0.5, 0) rectangle (0.6, 0.1);
+    \fill[red] (0, -0.5) rectangle (0.1, -0.6);
+    \fill[red] (-0.5, 0) rectangle (-0.6, -0.1);
+    \fill[blue] (0.5, 0) rectangle (0.6, -0.1);
+    \fill[blue] (0, 0.5) rectangle (0.1, 0.6);
+    \fill[blue] (-0.5, 0) rectangle (-0.6, 0.1);
+    \fill[blue] (0, -0.5) rectangle (0.1, -0.6);
+\end{tikzpicture}
+    \end{document}"
+18,"How to draw a “halftone” spiral made of circles in LaTeX?
+
+I would like to use LaTeX to draw a spiral like the one below, but it's way out of my league. Any help would be much appreciated.
+
+NEW EDIT: (now with a better 3d look!) after playing a bit with Jasper Habicht's solution, this was the best I could get up to now. I'm pretty happy. Thank you!
+
+My customized version of Jasper Habicht's solution! (Give him a “up” vote!)
+% Credits to Jasper Habicht (See below)
+\documentclass[tikz]{standalone}
+\usetikzlibrary{calc}
+
+\begin{document}
+
+\definecolor{mygreencolor}{RGB}{133,196,96} 
+
+\begin{tikzpicture}
+
+\pgfmathsetmacro\maxradius{.3}
+\pgfmathsetmacro\inner{10}
+\pgfmathsetmacro\outer{40}
+\pgfmathsetmacro\range{\outer-\inner}
+
+\foreach \stepy in {\inner, ..., \outer}
+\pgfmathsetmacro\stepstart{60/\stepy}
+\pgfmathsetmacro\steplast{360-\stepstart}
+\pgfmathsetmacro\stepcount{floor(360/\stepstart)} 
+\foreach \stepx in {0, \stepstart, ..., \steplast}
+\pgfmathsetmacro\stepsingle{floor(\stepx/\stepstart)}
+\pgfmathsetmacro\stepradius{(\maxradius/2)*sin(deg(\stepsingle*pi/(\stepcount/2) - pi - (\stepy/5))) + (\maxradius/2)+0.13}
+\pgfmathsetmacro\mybase{90*(\stepy-\inner)/\range)}
+\pgfmathsetmacro\mycoef{((1-cos(\mybase)+sin(\mybase))/2}
+\pgfmathsetmacro\mystepy{\inner+\range*\mycoef}
+\fill[mygreencolor] ({-(\stepx+.25*\stepcount)}:-\mystepy mm) circle (\stepradius mm);
+
+\end{tikzpicture}
+
+\end{document}","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    ```latex
+\begin{tikzpicture}
+\definecolor{mygreencolor}{RGB}{133,196,96} 
+\pgfmathsetmacro\maxradius{.3}
+\pgfmathsetmacro\inner{10}
+\pgfmathsetmacro\outer{40}
+\pgfmathsetmacro\range{\outer-\inner}
+
+\foreach \stepy in {\inner, ..., \outer} {
+    \pgfmathsetmacro\stepstart{60/\stepy}
+    \pgfmathsetmacro\steplast{360-\stepstart}
+    \pgfmathsetmacro\stepcount{floor(360/\stepstart)} 
+    \foreach \stepx in {0, \stepstart, ..., \steplast} {
+        \pgfmathsetmacro\stepsingle{floor(\stepx/\stepstart)}
+        \pgfmathsetmacro\stepradius{(\maxradius/2)*sin(deg(\stepsingle*pi/(\stepcount/2) - pi - (\stepy/5))) + (\maxradius/2)+0.13}
+        \pgfmathsetmacro\mybase{90*(\stepy-\inner)/\range}
+        \pgfmathsetmacro\mycoef{((1-cos(\mybase)+sin(\mybase))/2}
+        \pgfmathsetmacro\mystepy{\inner+\range*\mycoef}
+        \fill[mygreencolor] ({-(\stepx+.25*\stepcount)}:-\mystepy mm) circle (\stepradius mm);
+    }
+}
+\end{tikzpicture}
+    \end{document}"
+19,A directed acyclic graph with one confounder and one instrumental variable.,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[->, node distance=2cm, every node/.style={draw, circle}]
+    \node (U) {Confounder};
+    \node (X) [right=of U] {Instrumental Variable};
+    \node (Y) [below=of U] {Outcome};
+
+    \draw (U) -- (Y);
+    \draw (X) -- (Y);
+\end{tikzpicture}
+    \end{document}"
+20,Schematics,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Example schematic with a resistor and a capacitor
+    \draw
+    (0,0) to[R, l=R] (0,2)
+    to[C, l=C] (2,2)
+    -- (2,0) -- (0,0)
+    (2,2) -- (2,0)
+    (0,2) -- (2,2);
+\end{tikzpicture}
+    \end{document}"
+21,"Pictured is the domain and codomain of a pinched polynomial-like map. Here, $\Int{P_2}$ is the interior of the black polygon with three corners (marked in red). The interior of the blue pinched polygon is $\Int{P_1}$. The pinched point and the additional corner points of $P_1$ are marked in green.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Draw the red polygon (P2)
+    \fill[red!50] (0,0) -- (2,2) -- (4,0) -- cycle;
+    \draw[thick, red] (0,0) -- (2,2) -- (4,0) -- cycle;
+
+    % Draw the blue pinched polygon (P1)
+    \fill[blue!50] (1,0) -- (3,1) -- (2,2) -- (1,1) -- cycle;
+    \draw[thick, blue] (1,0) -- (3,1) -- (2,2) -- (1,1) -- cycle;
+
+    % Mark the corners of P2 in red
+    \fill[red] (0,0) circle (3pt);
+    \fill[red] (2,2) circle (3pt);
+    \fill[red] (4,0) circle (3pt);
+
+    % Mark the corners of P1 and the pinched point in green
+    \fill[green] (1,0) circle (3pt);
+    \fill[green] (3,1) circle (3pt);
+    \fill[green] (1,1) circle (3pt);
+    \fill[green] (2,2) circle (3pt);
+\end{tikzpicture}
+    \end{document}"
+22,"Why can't I give a coordinate an alias using ""late options""?
+
+Here is a small document:
+\documentclass{standalone}
+
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{tikzpicture}
+%\coordinate (A) at (0, 0); % Line A
+%\node [coordinate] (A) at (0, 0) {}; % Line B
+%\node (A) at (0, 0) {}; % Line C
+%\coordinate [alias=AA] (A) at (0, 0); % Line D
+%\node [coordinate, alias=AA] (A) at (0, 0) {}; % Line E
+%\path (A) [late options = {alias=AA}]; % Line ABC
+\coordinate (B) at (1, 0);
+\draw (AA) -- (B);
+\end{tikzpicture}
+
+\end{document}
+
+Uncomment lines A and ABC and you get ""Package pgf Error: No shape named AA is known.""Re-comment line A and uncomment line B and you get the same result.Re-comment line B and uncomment line C and the document compiles successfully.Re-comment lines C and ABC and uncomment line D and the document compiles successfully.Re-comment line D and uncomment line E and the document compiles successfully.
+It seems that if a node is of shape coordinate, you can give it an alias, but not using the late options mechanism. If you try to do it with late options, TikZ doesn't report an error, but it doesn't do anything.
+I am using PGF/TikZ version 2.10.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+\coordinate (A) at (0, 0); % Line A
+%\node [coordinate] (A) at (0, 0) {}; % Line B
+%\node (A) at (0, 0) {}; % Line C
+%\coordinate [alias=AA] (A) at (0, 0); % Line D
+%\node [coordinate, alias=AA] (A) at (0, 0) {}; % Line E
+\path (A) [late options = {alias=AA}]; % Line ABC
+\coordinate (B) at (1, 0);
+\draw (AA) -- (B);
+\end{tikzpicture}
+    \end{document}"
+23,fallen leaf,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \begin{scope}[scale=0.5]
+        \fill[brown] (0,0) .. controls (2,3) and (4,3) .. (5,0)
+                      .. controls (4,-3) and (2,-3) .. (0,0)
+                      .. controls (-2,-3) and (-4,-3) .. (-5,0)
+                      .. controls (-4,3) and (-2,3) .. (0,0);
+        \fill[green!50!yellow] (0,0) .. controls (1,2) and (2,2) .. (3,0)
+                                  .. controls (2,-2) and (1,-2) .. (0,0);
+        \fill[green!70!yellow] (0,0) .. controls (-1,2) and (-2,2) .. (-3,0)
+                                  .. controls (-2,-2) and (-1,-2) .. (0,0);
+    \end{scope}
+\end{tikzpicture}
+    \end{document}"
+24,"Overlapping labels in PSTricks
+
+Consider the following example.
+\documentclass{beamer}
+
+\usepackage[locale = DE]{siunitx}
+\usepackage{xfp}
+\usepackage{etoolbox}
+\usepackage{pstricks-add}
+\usepackage{tikz}
+
+\psset{dimen = m}
+
+% data
+\def\bredde{4.5}
+\def\start{0}
+\def\eleverNul{4}
+\def\eleverEn{2}
+\def\eleverTo{5}
+\def\eleverTre{7}
+\def\eleverFire{5}
+\def\eleverFem{3}
+% beregninger
+\newcommand*\eleverSumNul{\eleverNul}
+\newcommand*\eleverSumEn{\fpeval{\eleverSumNul+\eleverEn}}
+\newcommand*\eleverSumTo{\fpeval{\eleverSumEn+\eleverTo}}
+\newcommand*\eleverSumTre{\fpeval{\eleverSumTo+\eleverTre}}
+\newcommand*\eleverSumFire{\fpeval{\eleverSumTre+\eleverFire}}
+\newcommand*\eleverSumFem{\fpeval{\eleverSumFire+\eleverFem}}
+\newcommand*\eleverTotal{\fpeval{\eleverSumFem}}
+\def\andelB[#1]#2#3#4{%
+\pswedge[fillstyle = solid, fillcolor = #1]%
+{\radius}{\fpeval{round(#2/\eleverTotal*360,9)}}{\fpeval{round(#3/\eleverTotal*360,9)}}
+\ifstrequal{#1}{black}%
+{\psarc[linecolor = white]%
+(0,0){0.5}{\fpeval{round(#2/\eleverTotal*360,9)}}{\fpeval{round(#3/\eleverTotal*360,9)}}
+\uput{8pt}[\fpeval{round((#2+#3)/\eleverTotal*180,9)}]%
+(0,0){\textcolor{white}{\footnotesize\SI{\fpeval{round((#3-#2)/\eleverTotal*360)}}{\degree}}}}
+{\psarc%
+(0,0){0.5}{\fpeval{round(#2/\eleverTotal*360,9)}}{\fpeval{round(#3/\eleverTotal*360,9)}}
+\uput{8pt}[\fpeval{round((#2+#3)/\eleverTotal*180,9)}]%
+(0,0){\footnotesize\SI{\fpeval{round((#3-#2)/\eleverTotal*360)}}{\degree}}}%
+}
+
+
+\begin{document}
+
+\begin{frame}{Opgave~$7$}
+\begin{center}
+\psset{
+unit = 0.4,
+linejoin = 1
+}
+\def\radius{5}
+\begin{pspicture}(\fpeval{-(\radius+0.1)},\fpeval{-(\radius+0.1)})%
+(\fpeval{+(\radius+0.1)},\fpeval{+(\radius+0.1)})
+\visible<4->{%
+\pscircle(0,0){\radius}
+\multido{\r = 0+\fpeval{round(360/\eleverTotal,9)}}{\eleverTotal}{%
+\psRelLine[angle = \r](0,0)(\fpeval{\radius+0.1},0){1}{EndNode}
+\psRelLine[angle = \r, linecolor = white, linewidth = 2\pslinewidth]%
+(0,0)(\fpeval{\radius-0.1},0){1}{EndNode}}}
+\visible<5->{\andelB[yellow!70]{\start}{\eleverSumNul}}
+\visible<6->{\andelB[red!70]{\eleverSumNul}{\eleverSumEn}}
+\visible<7->{\andelB[green!80]{\eleverSumEn}{\eleverSumTo}}
+\visible<8->{\andelB[orange!80]{\eleverSumTo}{\eleverSumTre}}
+\visible<9->{\andelB[blue!70!white]{\eleverSumTre}{\eleverSumFire}}
+\visible<10->{\andelB[black]{\eleverSumFire}{\eleverSumFem}}
+\end{pspicture}
+\end{center}
+\end{frame}
+
+\end{document}
+
+
+Question
+As can be seen, the 28° label is not printed ""on top"" of the green wedge. (It is of course the same of the other labels.)
+How do I make sure that the labels are always printed ""on top""?","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+\def\bredde{4.5}
+\def\start{0}
+\def\eleverNul{4}
+\def\eleverEn{2}
+\def\eleverTo{5}
+\def\eleverTre{7}
+\def\eleverFire{5}
+\def\eleverFem{3}
+\def\radius{5}
+\def\eleverTotal{\eleverNul+\eleverEn+\eleverTo+\eleverTre+\eleverFire+\eleverFem}
+
+\newcommand*\eleverSumNul{\eleverNul}
+\newcommand*\eleverSumEn{\eleverSumNul+\eleverEn}
+\newcommand*\eleverSumTo{\eleverSumEn+\eleverTo}
+\newcommand*\eleverSumTre{\eleverSumTo+\eleverTre}
+\newcommand*\eleverSumFire{\eleverSumTre+\eleverFire}
+\newcommand*\eleverSumFem{\eleverSumFire+\eleverFem}
+
+\newcommand{\andelB}[3]{
+    \pgfmathsetmacro{\startangle}{#1}
+    \pgfmathsetmacro{\endangle}{#2}
+    \pgfmathsetmacro{\midangle}{(#1+#2)/2}
+    \pgfmathsetmacro{\value}{#3}
+    
+    \fill[blue!70!white] (\startangle:0) arc (\startangle:\endangle:1);
+    \node at (\midangle:1.5) {\footnotesize \SI{\value}{\degree}};
+}
+
+\begin{scope}
+\fill[yellow!70] (\start:0) arc (\start:\start+\eleverSumNul/\eleverTotal*360:1);
+\andelB{\start+\eleverSumNul/\eleverTotal*360}{\start+\eleverSumEn/\eleverTotal*360}{\eleverSumNul}
+\andelB{\start+\eleverSumEn/\eleverTotal*360}{\start+\eleverSumTo/\eleverTotal*360}{\eleverSumEn}
+\andelB{\start+\eleverSumTo/\eleverTotal*360}{\start+\eleverSumTre/\eleverTotal*360}{\eleverSumTo}
+\andelB{\start+\eleverSumTre/\eleverTotal*360}{\start+\eleverSumFire/\eleverTotal*360}{\eleverSumTre}
+\andelB{\start+\eleverSumFire/\eleverTotal*360}{\start+\eleverSumFem/\eleverTotal*360}{\eleverSumFire}
+\end{scope}
+\draw (0,0) circle (\radius);
+\end{tikzpicture}
+    \end{document}"
+25,"How can I specify the coordinates in a boxplot as black dots?
+
+How can I specify the coordinates (here outliers) as black dots? The color in the square brackets is already defined as black, if I insert ""mark=*"" in the square brackets the boxplots disappear.
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usepgfplotslibrary{groupplots}
+\usepgfplotslibrary{statistics}
+\pgfplotsset{compat=1.3}
+
+\begin{document}
+\begin{tikzpicture} 
+\begin{axis}
+[
+boxplot/draw direction=y,
+xtick={1,2},
+ymin={0},
+ymax={890000},
+]
+\addplot+[color=black, 
+boxplot prepared={
+median=231040,
+upper quartile=307800,
+lower quartile=189576,
+upper whisker=568892,
+lower whisker=92821
+},
+] coordinates {(1,790724)(1,603189)(1,574542)};
+
+\addplot+[color=black, 
+boxplot prepared={
+median=290626,
+lower whisker=97525,
+lower quartile=218151,
+upper quartile=379487,
+upper whisker=674757
+},
+] coordinates {(3,835414)(3,752967)(3,737438)(3,737438)};
+\end{axis}
+\end{tikzpicture}
+\end{document}","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    ```latex
+\begin{tikzpicture} 
+\begin{axis}
+[
+boxplot/draw direction=y,
+xtick={1,2},
+ymin={0},
+ymax={890000},
+]
+\addplot+[color=black, 
+boxplot prepared={
+median=231040,
+upper quartile=307800,
+lower quartile=189576,
+upper whisker=568892,
+lower whisker=92821
+},
+] coordinates {(1,790724)(1,603189)(1,574542)};
+
+\addplot+[color=black, 
+boxplot prepared={
+median=290626,
+lower whisker=97525,
+lower quartile=218151,
+upper quartile=379487,
+upper whisker=674757
+},
+] coordinates {(3,835414)(3,752967)(3,737438)(3,737438)};
+
+% Adding outliers as black dots
+\addplot+[only marks, mark=*] coordinates {(1,790724)(1,603189)(1,574542)(3,835414)(3,752967)(3,737438)};
+\end{axis}
+\end{tikzpicture}
+    \end{document}"
+26,An automaton $\mathcal D$ admitting two distinct minimum-size e.c. decompositions.,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[scale=1.2]
+    % States
+    \node[state] (q0) {$q_0$};
+    \node[state] (q1) [right=of q0] {$q_1$};
+    \node[state] (q2) [right=of q1] {$q_2$};
+    \node[state, accepting] (q3) [below=of q1] {$q_3$};
+    
+    % Transitions for first decomposition
+    \path[->]
+        (q0) edge node {a} (q1)
+        (q1) edge node {b} (q2)
+        (q2) edge node {c} (q3)
+        (q0) edge[loop above] node {b} (q0)
+        (q1) edge[loop above] node {a} (q1)
+        (q2) edge[loop above] node {a} (q2);
+    
+    % Transitions for second decomposition
+    \path[->]
+        (q0) edge[red] node {b} (q0)
+        (q1) edge[red] node {a} (q1)
+        (q2) edge[red] node {b} (q2)
+        (q0) edge[red] node {a} (q1)
+        (q1) edge[red] node {c} (q3)
+        (q2) edge[red] node {a} (q3);
+    
+    % Labels
+    \node at (0, 1.5) {Decomposition 1};
+    \node at (0, -2.5) {Decomposition 2};
+\end{tikzpicture}
+    \end{document}"
+27,"Specify Radius for a cylinder, or draw edge for two 3d circles
+
+I want to plot an optical fiber as in the picture below:
+
+As you can see, the drawing is composed of three concentric cylinders of different radii. This question is about drawing just one of those, say the right, small radius one.
+My code up until now is this:
+\documentclass[border=5pt]{standalone}
+\usepackage{tikz}
+\begin{document}
+\usetikzlibrary{3d}
+\begin{tikzpicture}
+%Opaque frame so it is easier to get the 3d visualization.
+\begin{scope}[opacity=0.3]
+\draw(-0.25,1,1) -- (0.25,1,1);
+\draw(-0.25,1,1) -- (-0.25,1,-1);
+\draw(-0.25,1,1) -- (-0.25,-1,1);
+\draw(0.25,1,1) -- (0.25,1,-1);
+\draw(0.25,1,1) -- (0.25,-1,1);
+\draw(0.25,1,-1) -- (-0.25,1,-1);
+\draw(0.25,1,-1) -- (0.25,-1,-1);
+\draw(-0.25,1,-1) -- (-0.25,-1,-1);
+\draw(-0.25,-1,1) -- (0.25,-1,1);
+\draw(0.25,-1,-1) -- (0.25,-1,1);
+\draw(0.25,-1,-1) -- (-0.25,-1,-1);
+\draw(-0.25,-1,-1) -- (-0.25,-1,1);
+\end{scope}
+% Draw the cylinder planes
+\begin{scope}[canvas is zy plane at x=0.25]
+\draw (0,0) circle (1);
+\end{scope}
+\begin{scope}[canvas is zy plane at x=-0.25]
+\draw (0,0) circle (1);
+\end{scope}
+% Draw the edges, this is the tricky part.
+\draw (-0.25,1,0) -- (0.25,1,0);
+\end{tikzpicture}
+\end{document}
+
+output:
+
+As you can see this last command that makes a straight line from the upper visible part from right to left is not actually where it should be. Any one have an idea on how to parametrically derive the ""correct 3d"" coordinates for this kind of lines?
+Alternatively, I tried working with shapes.geometric and its cylinder primitive:
+\documentclass[border=5pt]{standalone}
+\usepackage{tikz}
+\begin{document}
+\usetikzlibrary{3d}
+\usetikzlibrary {shapes.geometric}
+\begin{tikzpicture}
+\begin{scope}[opacity=0.3]
+\draw(-0.25,1,1) -- (0.25,1,1);
+\draw(-0.25,1,1) -- (-0.25,1,-1);
+\draw(-0.25,1,1) -- (-0.25,-1,1);
+\draw(0.25,1,1) -- (0.25,1,-1);
+\draw(0.25,1,1) -- (0.25,-1,1);
+\draw(0.25,1,-1) -- (-0.25,1,-1);
+\draw(0.25,1,-1) -- (0.25,-1,-1);
+\draw(-0.25,1,-1) -- (-0.25,-1,-1);
+\draw(-0.25,-1,1) -- (0.25,-1,1);
+\draw(0.25,-1,-1) -- (0.25,-1,1);
+\draw(0.25,-1,-1) -- (-0.25,-1,-1);
+\draw(-0.25,-1,-1) -- (-0.25,-1,1);
+\end{scope}
+
+\node[cylinder,draw,minimum height=0.5cm,minimum width=1] (c) {};
+\end{tikzpicture}
+\end{document}
+
+output:
+
+Well not bad, but I have two questions about its specification:
+
+How to set its front and ens planes?
+How to set its radius to be equal to 2 so to fill up this rectangular prism's height and width? How to specify its depth to be equal to 0.5, as the prism's depth?","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    ```latex
+\begin{tikzpicture}
+\begin{scope}[opacity=0.3]
+\draw(-0.25,1,1) -- (0.25,1,1);
+\draw(-0.25,1,1) -- (-0.25,1,-1);
+\draw(-0.25,1,1) -- (-0.25,-1,1);
+\draw(0.25,1,1) -- (0.25,1,-1);
+\draw(0.25,1,1) -- (0.25,-1,1);
+\draw(0.25,1,-1) -- (-0.25,1,-1);
+\draw(0.25,1,-1) -- (0.25,-1,-1);
+\draw(-0.25,1,-1) -- (-0.25,-1,-1);
+\draw(-0.25,-1,1) -- (0.25,-1,1);
+\draw(0.25,-1,-1) -- (0.25,-1,1);
+\draw(0.25,-1,-1) -- (-0.25,-1,-1);
+\draw(-0.25,-1,-1) -- (-0.25,-1,1);
+\end{scope}
+
+\begin{scope}[canvas is zy plane at x=0]
+    \draw (0,0) circle (2);
+\end{scope}
+\begin{scope}[canvas is zy plane at x=0.5]
+    \draw (0,0) circle (2);
+\end{scope}
+\draw (-0.5,1,0) -- (0.5,1,0);
+\end{tikzpicture}
+    \end{document}"
+28,"Illustration of the worst case instance for the greedy algorithm. $l = 1, \cdots, L$.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \foreach \l in {1, 2, 3, 4, 5} {
+        \draw[thick] (0,\l) -- (5,\l);
+        \foreach \x in {1, 2, 3, 4} {
+            \fill[red] (\x,\l) circle (3pt);
+        }
+    }
+    \foreach \l in {1, 2, 3, 4, 5} {
+        \node at (5.5,\l) {\l};
+    }
+    \node at (2.5, 6) {Worst Case Instance for Greedy Algorithm};
+    \node at (6, 0) {Items};
+    \draw[->] (0,0) -- (6,0);
+    \draw[->] (0,0) -- (0,6);
+\end{tikzpicture}
+    \end{document}"
+29,"Externally set ymin, ymax, xmin and xmax with pgfplotset
+
+According to percusses answer in Argument to \input or \include statement? both height and width in the axis environment in PGFplots may be set externally (outside the axis environment) with a nested \pgfplotsset statement:
+\pgfplotsset{execute at begin axis={\pgfplotsset{width=5cm}}} 
+
+However, if I try to apply the same concept to xmin, xmax, ymin and ymax according to the answer suggested by Piotr, pgfplotsset doesn't seem to override the settings given within the axis environment.
+Consider the following MWE:
+\documentclass{article}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\begin{document}
+{ % begin outer pgfplotsset scope
+\pgfplotsset{ymax=5, ymin=1, execute at begin axis={\pgfplotsset{width=5cm}}}
+\begin{tikzpicture}
+\begin{axis}[width=10cm, ymin=0]
+\addplot {x^2};
+\end{axis}
+\end{tikzpicture}
+} % end outer pgfplotsset scope
+\end{document}
+
+which produces the following graph, where ymin clearly is 0, though I just set it ymin=1 in pgfplotsset.
+
+
+What I want to achieve
+Set xmin, xmax, ymin and ymax from outside the axis environment (in a similar way as I do with width applying execute at begin axis in pgsplotsset), even though they also will be specified in \begin{axis}[]. The external call to xmin etc. should override the values set in \begin{axis}[].","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    ```latex
+\begin{tikzpicture}
+\pgfplotsset{ymax=5, ymin=1, xmin=0, xmax=10, execute at begin axis={\pgfplotsset{width=5cm}}}
+\begin{axis}[width=10cm, ymin=0, ymax=4, xmin=-1, xmax=11]
+\addplot {x^2};
+\end{axis}
+\end{tikzpicture}
+    \end{document}"
+30,"Curving the cylinder in a periodic fashion
+
+I have to implement an array made up of cylindrical like elements. However, below code can only provide a straight cylinder (code credit goes to this link), instead I need to bend it like in the figure shown, may not be at that angle but vertical. But I couldn't seem to succeed. I couldn't even seem to increase the number of cylinder from one to more.
+\documentclass[border=2mm]{standalone}
+\usepackage{xcolor}
+\definecolor{mycolor}{RGB}{8,108,131}
+\usepackage{tikz} 
+\usetikzlibrary{positioning}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{calc}
+\tikzset{cylinder end fill/.style={path picture={
+\pgftransformshift{\centerpoint}%
+\pgftransformrotate{\rotate}% 
+\pgfpathmoveto{\beforetop}%
+\pgfpatharc{90}{-270}{\xradius and \yradius}%
+\pgfpathclose
+\pgfsetfillcolor{#1}%
+\pgfusepath{fill}}
+}}
+\begin{document}
+\begin{tikzpicture}
+\begin{scope}[on background layer]
+\path let \p1=(0.2,8.4),
+\n1={atan2(\y1,\x1)},\n2={veclen(\y1,\x1)} in
+node[cylinder, rotate=270,
+minimum height=0.85*\n2,minimum width=1cm,aspect=1.0,
+cylinder end fill=red,
+left color=red!30,right color=black,middle color=red!80, opacity=0.7,
+draw] at (0.8,4.7) {1};
+\end{scope}
+\end{tikzpicture}
+\end{document}","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    ```latex
+\begin{tikzpicture}
+\begin{scope}[on background layer]
+\foreach \i in {0,1,2,3} {
+    \path let \p1=(0.2,8.4),
+    \n1={atan2(\y1,\x1)},\n2={veclen(\y1,\x1)} in
+    node[cylinder, rotate=270 + \i*15,
+    minimum height=0.85*\n2,minimum width=1cm,aspect=1.0,
+    cylinder end fill=red,
+    left color=red!30,right color=black,middle color=red!80, opacity=0.7,
+    draw] at (0.8 + \i*0.3, 4.7 - \i*0.5) {\i + 1};
+}
+\end{scope}
+\end{tikzpicture}
+    \end{document}"
+31,"Example of a zigzag integral, with integration vertices marked with dots.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \draw[->] (-0.5,0) -- (5.5,0) node[right] {$x$};
+    \draw[->] (0,-1) -- (0,3) node[above] {$f(x)$};
+
+    % Zigzag line
+    \draw[thick] (0,0) -- (1,1) -- (2,0) -- (3,2) -- (4,1) -- (5,0);
+
+    % Dots at integration vertices
+    \foreach \x in {0, 1, 2, 3, 4, 5} {
+        \fill[black] (\x, {(\x==0 || \x==2 || \x==4) ? 0 : (\x==1 ? 1 : (\x==3 ? 2 : 1))}) circle (2pt);
+    }
+
+    % Integration area
+    \fill[blue!20] (0,0) -- (1,1) -- (2,0) -- (3,2) -- (4,1) -- (5,0) -- (5,0) -- (0,0) -- cycle;
+
+    % Labels
+    \node at (2.5,-0.5) {$\int_{0}^{5} f(x) \, dx$};
+\end{tikzpicture}
+    \end{document}"
+32,Low-rank approximation errors for \texttt{Derive2}. Left: basic PbP-QLP. Right: PI-coupled PbP-QLP with $q=2$.,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \begin{axis}[
+        title={Low-rank approximation errors for Derive2},
+        xlabel={Rank},
+        ylabel={Error},
+        legend style={at={(1.05,1)}, anchor=south west},
+        grid=both,
+        width=0.45\textwidth,
+        height=0.3\textwidth,
+        domain=1:10,
+        ymin=0, ymax=1,
+        xtick={1,2,...,10},
+        ytick={0,0.1,...,1},
+        legend cell align=left,
+        cycle list={blue, red}
+    ]
+    % Basic PbP-QLP
+    \addplot {0.1/x}; 
+    \addlegendentry{Basic PbP-QLP}
+    
+    % PI-coupled PbP-QLP with q=2
+    \addplot {0.05/x^2}; 
+    \addlegendentry{PI-coupled PbP-QLP (q=2)}
+    \end{axis}
+    
+    \begin{axis}[
+        title={Low-rank approximation errors for Derive2},
+        xlabel={Rank},
+        ylabel={Error},
+        legend style={at={(1.05,1)}, anchor=south west},
+        grid=both,
+        width=0.45\textwidth,
+        height=0.3\textwidth,
+        domain=1:10,
+        ymin=0, ymax=1,
+        xtick={1,2,...,10},
+        ytick={0,0.1,...,1},
+        legend cell align=left,
+        cycle list={blue, red},
+        at={(0.55,0)},
+        anchor=south west
+    ]
+    % Basic PbP-QLP
+    \addplot {0.1/x}; 
+    \addlegendentry{Basic PbP-QLP}
+    
+    % PI-coupled PbP-QLP with q=2
+    \addplot {0.05/x^2}; 
+    \addlegendentry{PI-coupled PbP-QLP (q=2)}
+    \end{axis}
+\end{tikzpicture}
+    \end{document}"
+33,Illustration of Eskin--Mirzakhani scheme.,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Draw the outer hexagon
+    \draw[thick] (0,0) -- (2,1.732) -- (2,-1.732) -- (0,-3.464) -- (-2,-1.732) -- (-2,1.732) -- cycle;
+
+    % Draw the inner hexagon
+    \draw[thick, color=blue] (0,0) -- (1,1.732) -- (1,-1.732) -- (0,-2.0) -- (-1,-1.732) -- (-1,1.732) -- cycle;
+
+    % Draw the diagonal lines
+    \draw[dashed] (0,0) -- (1,1.732);
+    \draw[dashed] (0,0) -- (1,-1.732);
+    \draw[dashed] (0,0) -- (-1,-1.732);
+    \draw[dashed] (0,0) -- (-1,1.732);
+
+    % Draw the vertices
+    \foreach \x/\y in {0/0, 2/1.732, 2/-1.732, 0/-3.464, -2/-1.732, -2/1.732, 1/1.732, 1/-1.732, -1/-1.732, -1/1.732} 
+        \fill (\x,\y) circle (3pt);
+
+    % Label the vertices
+    \node at (0,0) [above right] {O};
+    \node at (2,1.732) [above right] {A};
+    \node at (2,-1.732) [below right] {B};
+    \node at (0,-3.464) [below] {C};
+    \node at (-2,-1.732) [below left] {D};
+    \node at (-2,1.732) [above left] {E};
+    \node at (1,1.732) [above right] {F};
+    \node at (1,-1.732) [below right] {G};
+    \node at (-1,-1.732) [below left] {H};
+    \node at (-1,1.732) [above left] {I};
+\end{tikzpicture}
+    \end{document}"
+34,"Circle using tikz
+
+How can I draw a Circle using tikz?
+I'm practicing tikz, but I can't draw this one, it's difficult for me.
+Any help?
+
+Thanks in advance.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \draw (0,0) circle (2cm);
+\end{tikzpicture}
+    \end{document}"
+35,cityscape at dusk,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Draw the sky
+    \fill[blue!30] (0,0) rectangle (10,6);
+    \fill[orange!70] (0,3.5) rectangle (10,6);
+    
+    % Draw the sun
+    \fill[yellow] (8,5) circle (0.5);
+    
+    % Draw buildings
+    \fill[gray] (0,0) rectangle (1,4);
+    \fill[gray] (1.5,0) rectangle (2.5,5);
+    \fill[gray] (3,0) rectangle (4,3);
+    \fill[gray] (4.5,0) rectangle (5.5,6);
+    \fill[gray] (6,0) rectangle (7,2);
+    \fill[gray] (7.5,0) rectangle (8.5,4);
+    \fill[gray] (9,0) rectangle (10,3);
+    
+    % Draw windows
+    \foreach \x in {0.1, 0.3, 0.6, 0.8} {
+        \foreach \y in {0.5, 1.5, 2.5, 3.5} {
+            \fill[white] (\x, \y) rectangle (\x+0.2, \y+0.5);
+        }
+    }
+    
+    \foreach \x in {1.6, 1.8} {
+        \foreach \y in {0.5, 1.5, 2.5, 3.5, 4.5} {
+            \fill[white] (\x, \y) rectangle (\x+0.2, \y+0.5);
+        }
+    }
+    
+    \foreach \x in {3.1, 3.3} {
+        \foreach \y in {0.5, 1.5} {
+            \fill[white] (\x, \y) rectangle (\x+0.2, \y+0.5);
+        }
+    }
+    
+    \foreach \x in {4.6, 4.8} {
+        \foreach \y in {0.5, 1.5, 2.5, 3.5, 4.5, 5.5} {
+            \fill[white] (\x, \y) rectangle (\x+0.2, \y+0.5);
+        }
+    }
+    
+    \foreach \x in {6.1, 6.3} {
+        \foreach \y in {0.5, 1.5} {
+            \fill[white] (\x, \y) rectangle (\x+0.2, \y+0.5);
+        }
+    }
+    
+    \foreach \x in {7.6, 7.8} {
+        \foreach \y in {0.5, 1.5, 2.5, 3.5} {
+            \fill[white] (\x, \y) rectangle (\x+0.2, \y+0.5);
+        }
+    }
+    
+    \foreach \x in {9.1, 9.3} {
+        \foreach \y in {0.5, 1.5, 2.5} {
+            \fill[white] (\x, \y) rectangle (\x+0.2, \y+0.5);
+        }
+    }
+\end{tikzpicture}
+    \end{document}"
+36,"Analytic structure of the full non-perturbative amplitudes $\Phi_i(s,t,u)$ in the complex plane $s$ at a fixed value of $t<0$. There are two branch cuts along the real axis, namely, for $s>0$ and for $u=-s-t>0$. The EFT amplitudes are good approximations of the full non-perturbative amplitude inside the grey region corresponding to $|s|\lesssim M^2$. The full non-perturbative amplitude may have other branch points on the real axis. For example, in QED there are branch points at $s=4m_e^2$ and $u=4m_e^2$ associated with the threshold for electron-positron production.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Axes
+    \draw[->] (-5,0) -- (5,0) node[right] {$\Re(s)$};
+    \draw[->] (0,-3) -- (0,3) node[above] {$\Im(s)$};
+
+    % Branch cuts
+    \draw[thick, red] (0,0) -- (5,0);
+    \draw[thick, red] (0,0) -- (-5,0);
+    \draw[thick, red] (0,0) -- (0,-3);
+    \draw[thick, red] (0,0) -- (0,3);
+
+    % Grey region
+    \fill[gray, opacity=0.3] (-3,-3) rectangle (3,3);
+
+    % Branch points
+    \fill[black] (2,0) circle (2pt) node[below right] {$s=4m_e^2$};
+    \fill[black] (-2,0) circle (2pt) node[above right] {$u=4m_e^2$};
+    
+    % Labels
+    \node at (2.5, 2) {$s > 0$};
+    \node at (-2.5, 2) {$u > 0$};
+    \node at (0.5, -1) {$t < 0$};
+\end{tikzpicture}
+    \end{document}"
+37,"A $\theta$-orbit $[a,b]$ in a triangulated octagon and its restriction.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Draw the octagon
+    \draw[thick] (0,0) -- (2,0) -- (3,1) -- (3,2) -- (2,3) -- (0,3) -- (-1,2) -- (-1,1) -- cycle;
+
+    % Label vertices
+    \node at (1,0) {1};
+    \node at (2.5,0.5) {2};
+    \node at (3,1.5) {3};
+    \node at (2.5,2.5) {4};
+    \node at (1,3) {5};
+    \node at (-0.5,2.5) {6};
+    \node at (-1,1.5) {7};
+    \node at (-0.5,0.5) {8};
+
+    % Draw the theta-orbit [a,b]
+    \draw[red, thick] (0,0) -- (2,0) -- (3,1) -- (3,2) -- (2,3);
+    \draw[red, thick, dashed] (2,3) -- (1,3);
+    \draw[red, thick, dashed] (1,3) -- (0,3);
+    
+    % Draw the restriction
+    \draw[blue, thick] (0,0) -- (1,0);
+    \draw[blue, thick] (1,0) -- (1,1);
+    \draw[blue, thick] (1,1) -- (2,1);
+    \draw[blue, thick] (2,1) -- (2,2);
+    \draw[blue, thick] (2,2) -- (3,2);
+    
+    % Add labels
+    \node[red] at (1,1) {[$a,b$] $\theta$-orbit};
+    \node[blue] at (1,2) {Restriction};
+\end{tikzpicture}
+    \end{document}"
+38,Graph $H_1$ with a percolating set.,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \foreach \x in {0,1,2,3,4} {
+        \foreach \y in {0,1,2,3,4} {
+            \node[circle, draw, fill=blue!30] at (\x,\y) {};
+        }
+    }
+    \foreach \x in {0,1,2,3} {
+        \foreach \y in {0,1,2,3} {
+            \draw[thick] (\x,\y) -- (\x+1,\y);
+            \draw[thick] (\x,\y) -- (\x,\y+1);
+        }
+    }
+    \fill[red] (0,0) circle (5pt);
+    \fill[red] (1,0) circle (5pt);
+    \fill[red] (2,0) circle (5pt);
+    \fill[red] (2,1) circle (5pt);
+    \fill[red] (2,2) circle (5pt);
+    \fill[red] (3,2) circle (5pt);
+    \fill[red] (4,2) circle (5pt);
+    \fill[red] (4,3) circle (5pt);
+    \fill[red] (4,4) circle (5pt);
+\end{tikzpicture}
+    \end{document}"
+39,"What would be the tikz code for this particular voltage source?
+
+I am using circuitikz and I cannot find the code for this particular voltage source. It is a sinusoidal source with the polarity + and - on its ends, inside the circle.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+\draw (0,0) to[sV, v={$V_s$}] (0,2);
+\end{tikzpicture}
+    \end{document}"
+40,The definition of anti-sector $\bar{n}$.,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \draw[->] (-3,0) -- (3,0) node[right] {$x$};
+    \draw[->] (0,-3) -- (0,3) node[above] {$y$};
+    
+    \draw[thick,->] (0,0) -- (2,2) node[midway, above right] {$\bar{n}$};
+    \draw[dashed] (2,0) -- (2,2);
+    \draw[dashed] (0,2) -- (2,2);
+    
+    \draw[thick] (0,0) -- (2,-2) node[midway, below right] {$-\bar{n}$};
+    \draw[dashed] (2,0) -- (2,-2);
+    \draw[dashed] (0,-2) -- (2,-2);
+    
+    \node at (1,1) {$\theta$};
+    \node at (1,-1) {$-\theta$};
+\end{tikzpicture}
+    \end{document}"
+41,A tree $T$ on $5$ vertices,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+  \node (1) at (0,0) {1};
+  \node (2) at (-1,-1) {2};
+  \node (3) at (1,-1) {3};
+  \node (4) at (-1,-2) {4};
+  \node (5) at (1,-2) {5};
+  
+  \draw (1) -- (2);
+  \draw (1) -- (3);
+  \draw (2) -- (4);
+  \draw (3) -- (5);
+\end{tikzpicture}
+    \end{document}"
+42,"An example of a subgraph $G_i$. The black vertices are included in the set $S$ constructed in the proof of Lemma~\ref{op:lem:smallbridge}. The cycle with the solid edges is a Hamiltonian cycle of $G_i'$, and the dashed lines within the cycle represent edges of $G_i'$ not in the Hamiltonian cycle. The dotted lines depict a possible partition of the vertices considered in steps~1-3 to obtain an upper bound on $|S|$.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Draw vertices
+    \foreach \i in {1,2,3,4,5,6} {
+        \fill[black] (\i*60:1) circle (3pt);
+    }
+    \foreach \i in {1,2,3,4,5,6} {
+        \node at (\i*60:1.2) {\i};
+    }
+    
+    % Draw Hamiltonian cycle
+    \draw[thick] (0:1) -- (60:1) -- (120:1) -- (180:1) -- (240:1) -- (300:1) -- cycle;
+    
+    % Draw dashed edges (not in the Hamiltonian cycle)
+    \draw[dashed] (0:1) -- (120:1);
+    \draw[dashed] (60:1) -- (240:1);
+    \draw[dashed] (180:1) -- (300:1);
+    
+    % Draw dotted lines for partition
+    \draw[dotted] (0:1) -- (180:1);
+    \draw[dotted] (60:1) -- (240:1);
+    \draw[dotted] (120:1) -- (300:1);
+\end{tikzpicture}
+    \end{document}"
+43,The agent outcomes based on their utilities in the Nash equilibrium.,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Axes
+    \draw[->] (0,0) -- (5,0) node[right] {Utility of Agent 1};
+    \draw[->] (0,0) -- (0,5) node[above] {Utility of Agent 2};
+
+    % Nash Equilibrium Point
+    \fill[red] (3,3) circle (2pt) node[above right] {Nash Equilibrium};
+
+    % Utility Lines
+    \draw[blue, thick] (0,4) -- (4,0) node[pos=0.5, above right] {Indifference Curve 1};
+    \draw[blue, thick] (0,2) -- (2,0) node[pos=0.5, above right] {Indifference Curve 2};
+
+    % Labels
+    \node at (2.5, 4.5) {Agent 1's Utility};
+    \node at (4.5, 2.5) {Agent 2's Utility};
+
+    % Adding grid for better visualization
+    \draw[very thin, gray] (0,0) grid (5,5);
+\end{tikzpicture}
+    \end{document}"
+44,"A graph $G=(V,E)$ with $10$ edges having $\mathrm{VC}(G)=3$. The unique vertex cover of size $3$ is highlighted in teal.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[scale=1.0]
+    \node[circle, draw, fill=teal] (v1) at (0, 2) {1};
+    \node[circle, draw, fill=teal] (v2) at (2, 2) {2};
+    \node[circle, draw, fill=teal] (v3) at (1, 0) {3};
+    \node[circle, draw] (v4) at (4, 2) {4};
+    \node[circle, draw] (v5) at (3, 0) {5};
+    \node[circle, draw] (v6) at (5, 0) {6};
+    \node[circle, draw] (v7) at (1, 3) {7};
+    \node[circle, draw] (v8) at (2, 3) {8};
+    \node[circle, draw] (v9) at (0, 4) {9};
+    \node[circle, draw] (v10) at (4, 4) {10};
+
+    \foreach \i/\j in {1/2, 1/3, 2/3, 2/4, 3/5, 2/8, 1/7, 4/6, 4/10, 6/5} {
+        \draw (v\i) -- (v\j);
+    }
+\end{tikzpicture}
+    \end{document}"
+45,The graph $G_k$,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \graph[grow=east, node distance=1.5cm] {
+        A -- B -- C -- D;
+        A -- E;
+        B -- F;
+        C -- G;
+        D -- H;
+    };
+\end{tikzpicture}
+    \end{document}"
+46,Triangulation of the cusp torus at vertex class 0.,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \draw[thick] (0, 0) -- (2, 0) -- (1, 1.732) -- cycle; % Triangle
+    \draw[thick] (0, 0) -- (1, 1.732); % Altitude
+    \draw[thick] (2, 0) -- (1, 1.732); % Altitude
+    \draw[thick] (0, 0) -- (1, 0); % Base
+    \draw[thick] (1, 0) -- (2, 0); % Base
+    \draw[dashed] (1, 0) -- (1, 1.732); % Height
+    \node at (0, -0.2) {$(0,0)$};
+    \node at (2, -0.2) {$(2,0)$};
+    \node at (1, 1.9) {$(1, \sqrt{3})$};
+    \node at (1, -0.2) {$(1,0)$};
+\end{tikzpicture}
+    \end{document}"
+47,The Stark fly-by geometry.,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Define the coordinates
+    \coordinate (A) at (0, 0);
+    \coordinate (B) at (3, 1);
+    \coordinate (C) at (3, -1);
+    \coordinate (D) at (5, 0);
+    
+    % Draw the axes
+    \draw[->] (-1, 0) -- (6, 0) node[right] {x};
+    \draw[->] (0, -2) -- (0, 2) node[above] {y};
+    
+    % Draw the trajectory
+    \draw[thick, blue] plot[smooth, tension=1] coordinates {(A) (B) (D)};
+    
+    % Draw the Stark effect
+    \draw[dashed, red] (A) -- (B);
+    \draw[dashed, red] (A) -- (C);
+    
+    % Mark points
+    \fill (A) circle (2pt) node[below left] {A};
+    \fill (B) circle (2pt) node[above right] {B};
+    \fill (C) circle (2pt) node[below right] {C};
+    \fill (D) circle (2pt) node[below right] {D};
+    
+    % Annotations
+    \node at (1.5, 0.5) {Trajectory};
+    \node at (1.5, -0.5) {Stark Effect};
+\end{tikzpicture}
+    \end{document}"
+48,"Schematic representation of the model investigated. The two quantum dots are coupled to noninteracting electron reservoirs and coupled to each other by Coulomb interaction. Within the investigation, energies of reservoir $A$ are driven harmonically, resulting in a nonzero current between the dots and reservoirs and energy transfer between the reservoirs.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Draw reservoirs
+    \draw[fill=blue!20] (0,0) rectangle (1,2) node[pos=.5] {Reservoir A};
+    \draw[fill=red!20] (4,0) rectangle (5,2) node[pos=.5] {Reservoir B};
+    
+    % Draw quantum dots
+    \draw[fill=green!20] (1.5,0.5) circle (0.5) node {Dot 1};
+    \draw[fill=green!20] (3.5,0.5) circle (0.5) node {Dot 2};
+    
+    % Draw connections
+    \draw[->, thick] (1,1) -- (1.5,1) node[midway, above] {Coulomb Interaction};
+    \draw[->, thick] (1,1) -- (0,1) node[midway, above] {Current};
+    \draw[->, thick] (4,1) -- (3.5,1) node[midway, above] {Current};
+    \draw[->, thick] (1.5,1) -- (4,1) node[midway, above] {Energy Transfer};
+    
+    % Draw harmonic driving
+    \draw[->, thick, blue] (0.5,2) -- (0.5,2.5) node[midway, right] {Harmonic Drive};
+    \draw[->, thick, red] (4.5,2) -- (4.5,2.5) node[midway, right] {Harmonic Drive};
+\end{tikzpicture}
+    \end{document}"
+49,"TiKZ: trouble with angles ! Missing \endcsname inserted. <to be read again>
+
+I'm trying to draw the arc of an angle between two lines in tikz. I'm using the angles library and have pretty much copied the example from the manual, but when I try to label the arc, I get the following error:
+! Missing \endcsname inserted.
+<to be read again>
+\theta
+l.29 ...c [draw, ""$\theta$"", angle eccentricity=3]{angle=P--V--Q};
+
+I am following the syntax from this answer.
+But I have the same trouble using the syntax from the manual pg 570.
+Removing the label allows me to draw the arc no trouble. But I would really like to put a theta in my diagram. I thought it might be an escaping issue so I tried labelling with ""$t$"", and then ""t"". In the last case the error tells me tikz doesn't know of the label t.
+
+my drawing code is below
+\documentclass[border=20pt]{standalone}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,angles}
+
+\begin{document}
+
+
+\begin{tikzpicture}
+
+\def \radius{3.5}
+\coordinate (V) at ($(0,0)!\radius cm!rand*45:(0,\radius)$);
+
+\path (-\radius, 0) coordinate(P) -- 
+coordinate[midway](O)
+(\radius, 0) coordinate(Q);
+
+% Draw semicircle
+\draw (Q) arc(0:180:\radius1);
+\draw[shorten <=-5mm, shorten >=-5mm] (P) -- (Q);
+
+%draw an arc starting at [partway from V to Q], to[ partway from V to P]
+\draw [color=blue] (P)--(V)--(Q);
+\pic [draw, ""$\theta$"", angle eccentricity=3] {angle=P--V--Q};
+
+
+\node at (O) [below] {$O$};
+\node at (P) [below] {$P$};
+\node at (Q) [below] {$Q$};
+\node at (V) [above] {$V$};
+
+\foreach \p in {O,P,Q, V}{
+\fill (\p) circle (1pt);
+}\
+
+\end{tikzpicture}
+
+\end{document}","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    ```latex
+\begin{tikzpicture}
+
+\def \radius{3.5}
+\coordinate (V) at ($(0,0)!\radius cm!rand*45:(0,\radius)$);
+
+\path (-\radius, 0) coordinate(P) -- 
+coordinate[midway](O)
+(\radius, 0) coordinate(Q);
+
+% Draw semicircle
+\draw (Q) arc(0:180:\radius);
+\draw[shorten <=-5mm, shorten >=-5mm] (P) -- (Q);
+
+%draw an arc starting at [partway from V to Q], to[ partway from V to P]
+\draw [color=blue] (P)--(V)--(Q);
+\pic [draw, angle radius=1cm, ""$\theta$""] {angle=P--V--Q};
+
+\node at (O) [below] {$O$};
+\node at (P) [below] {$P$};
+\node at (Q) [below] {$Q$};
+\node at (V) [above] {$V$};
+
+\foreach \p in {O,P,Q, V}{
+\fill (\p) circle (1pt);
+}
+\end{tikzpicture}
+    \end{document}"

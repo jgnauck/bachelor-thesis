@@ -1,0 +1,1430 @@
+Sample,Caption,LaTeX_Document
+Image,Caption,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+\node[draw, rectangle, minimum width=3cm, minimum height=1cm] (box) {Caption};
+\end{tikzpicture}
+    \end{document}"
+img_0000.png,"The image is a detailed diagram of a random number generator. The diagram is divided into three sections, each with a different purpose. The first section is a text-based description of the random number generator, providing a clear understanding of its structure and function. The second section is a visual representation of the generator, with arrows and labels indicating the various components and their relationships. The third section is a text-based description of the visual representation, further clarifying the details of the diagram.
+
+The diagram is color-coded, with blue representing the text-based descriptions, green representing the visual representation, and white representing the text-based description of the visual representation. The text is embedded within the diagram, making it easy to follow and understand.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[node distance=1cm]
+    % Define colors
+    \definecolor{myblue}{RGB}{173,216,230}
+    \definecolor{mygreen}{RGB}{144,238,144}
+    
+    % Text-based description section
+    \node[draw, fill=myblue, rounded corners, text width=5cm] (desc1) {Text-based description of the random number generator. This section provides a clear understanding of its structure and function.};
+
+    % Visual representation section
+    \node[draw, fill=mygreen, rounded corners, below=of desc1, text width=5cm] (visual) {Visual representation of the generator. Components are labeled and arrows indicate relationships.};
+    
+    % Text-based description of visual representation section
+    \node[draw, fill=white, rounded corners, below=of visual, text width=5cm] (desc2) {Text-based description of the visual representation, clarifying details and enhancing understanding.};
+
+    % Arrows between sections
+    \draw[->] (desc1.south) -- (visual.north);
+    \draw[->] (visual.south) -- (desc2.north);
+
+    % Visual representation components
+    \node[draw, fill=white, below=of visual, xshift=-3cm, text width=2cm] (comp1) {Component 1};
+    \node[draw, fill=white, below=of visual, xshift=0cm, text width=2cm] (comp2) {Component 2};
+    \node[draw, fill=white, below=of visual, xshift=3cm, text width=2cm] (comp3) {Component 3};
+
+    % Arrows between components
+    \draw[->] (comp1.east) -- (comp2.west);
+    \draw[->] (comp2.east) -- (comp3.west);
+\end{tikzpicture}
+    \end{document}"
+img_0001.png,"The image is a black and white drawing of a triangle with a dot at each corner. The triangle is divided into four sections, each with a number label. The numbers are arranged in a clockwise order, starting from the top left corner and moving counterclockwise around the triangle.
+
+The triangle is composed of three main lines, with the top line connecting the corners of the triangle. The bottom line is slightly curved, connecting the bottom corners of the triangle. The middle line is also slightly curved, connecting the middle corners of the triangle. The dots are positioned at the intersection of each line, creating a well-defined geometric shape.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Draw the triangle
+    \draw[thick] (0,2) -- (-1,0) -- (1,0) -- cycle;
+    
+    % Draw curved lines
+    \draw[thick, decorate, decoration={snake, amplitude=.4mm, segment length=2mm}] (0,2) -- (-1,0);
+    \draw[thick, decorate, decoration={snake, amplitude=.4mm, segment length=2mm}] (0,2) -- (1,0);
+    \draw[thick, decorate, decoration={snake, amplitude=.4mm, segment length=2mm}] (-1,0) -- (1,0);
+    
+    % Draw dots at the corners
+    \fill (0,2) circle (2pt);
+    \fill (-1,0) circle (2pt);
+    \fill (1,0) circle (2pt);
+    
+    % Draw dots at the intersection of lines
+    \fill (-0.5,1) circle (2pt);
+    \fill (0.5,1) circle (2pt);
+    \fill (0,0) circle (2pt);
+    
+    % Label the sections
+    \node at (-0.5,1.5) {1};
+    \node at (0.5,1.5) {2};
+    \node at (-0.5,-0.3) {3};
+    \node at (0.5,-0.3) {4};
+\end{tikzpicture}
+    \end{document}"
+img_0002.png,"The image features a white background with a variety of mathematical symbols and equations. There are several arrows pointing in different directions, indicating the flow of information or the relationships between the equations. 
+
+In the scene, there are two main equations, one located towards the left side and the other towards the right side. The left equation is accompanied by a few smaller equations, while the right equation is accompanied by a larger equation. The entire image is filled with mathematical symbols, making it a complex and detailed visual representation of mathematical concepts.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[every node/.style={draw, align=center}]
+    % Main equations
+    \node at (0, 0) {Equation 1: $E = mc^2$};
+    \node at (5, 0) {Equation 2: $F = ma$};
+    
+    % Smaller equations on the left
+    \node at (0, -1.5) {Sub-equation 1: $a = \frac{F}{m}$};
+    \node at (0, -2.5) {Sub-equation 2: $c = \sqrt{a^2 + b^2}$};
+    
+    % Larger equation on the right
+    \node at (5, -1.5) {Larger Equation: $E = \frac{1}{2} mv^2$};
+    
+    % Arrows indicating relationships
+    \draw[->] (0.5, -0.5) -- (4.5, -0.5) node[midway, above] {Relationship};
+    \draw[->] (0, -1) -- (0, -2) node[midway, left] {Flow of information};
+    \draw[->] (5, -1) -- (5, -1.5) node[midway, right] {Related concept};
+    
+    % Additional symbols
+    \node at (2.5, 2) {$\sum$};
+    \node at (2, 1) {$\int$};
+    \node at (3, 1) {$\prod$};
+    \node at (1, 1) {$\sqrt{}$};
+    \node at (4, 2) {$\infty$};
+\end{tikzpicture}
+    \end{document}"
+img_0003.png,"The image displays a graph with a blue line and a red line, both of which are labeled ""precipitations."" The blue line is on the left side of the graph, while the red line is on the right side. The graph is showing the precipitation levels for different months of the year.
+
+There are several numbers and labels on the graph, indicating the specific precipitation levels for each month. The numbers are placed at various positions along the blue and red lines, with some numbers appearing closer to the left side and others near the right side. The labels are placed above the numbers, providing additional information about the precipitation levels for each month.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \begin{axis}[
+        xlabel={Months},
+        ylabel={Precipitation (mm)},
+        legend pos=outer north east,
+        grid=major,
+        xtick={1,2,3,4,5,6,7,8,9,10,11,12},
+        xticklabels={Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec},
+        ytick={0,20,40,60,80,100},
+        ymin=0, ymax=100,
+        domain=0:12,
+    ]
+    \addplot[color=blue, thick] coordinates {(1,30)(2,40)(3,50)(4,60)(5,70)(6,80)(7,90)(8,100)(9,80)(10,60)(11,40)(12,30)};
+    \addlegendentry{Precipitation (Blue)}
+
+    \addplot[color=red, thick] coordinates {(1,20)(2,30)(3,40)(4,50)(5,60)(6,70)(7,80)(8,90)(9,70)(10,50)(11,30)(12,20)};
+    \addlegendentry{Precipitation (Red)}
+
+    % Adding labels
+    \foreach \x/\y in {1/30, 2/40, 3/50, 4/60, 5/70, 6/80, 7/90, 8/100, 9/80, 10/60, 11/40, 12/30} {
+        \node at (\x,\y+5) {\y};
+    }
+    \foreach \x/\y in {1/20, 2/30, 3/40, 4/50, 5/60, 6/70, 7/80, 8/90, 9/70, 10/50, 11/30, 12/20} {
+        \node at (\x,\y+5) {\y};
+    }
+    \end{axis}
+\end{tikzpicture}
+    \end{document}"
+img_0004.png,"The image features a graph with a slope, likely representing a function or a trend. The graph is labeled with the equation ""u = n + ln(u)"", indicating the relationship between the variables. There are several dots on the graph, possibly representing data points or points of interest.
+
+In addition to the graph, there are two arrows pointing in opposite directions, one on the left side and the other on the right side. These arrows might be used to indicate the direction of the trend or the relationship between the variables.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Draw the axes
+    \draw[->] (-1,0) -- (3,0) node[right] {n};
+    \draw[->] (0,-1) -- (0,3) node[above] {u};
+
+    % Draw the function u = n + ln(u)
+    \draw[domain=-0.5:2.5,smooth,variable=\x,blue] plot ({\x},{\x + ln(\x + exp(1))});
+    
+    % Add data points
+    \fill (0.5, 1.2) circle (2pt);
+    \fill (1, 1.5) circle (2pt);
+    \fill (1.5, 1.8) circle (2pt);
+    \fill (2, 2.2) circle (2pt);
+    
+    % Label the function
+    \node at (2, 2.5) {$u = n + \ln(u)$};
+
+    % Draw arrows
+    \draw[->] (-1,0.5) -- (-0.5,0.5) node[midway, above] {Trend};
+    \draw[->] (2.5,0.5) -- (3,0.5) node[midway, above] {Trend};
+\end{tikzpicture}
+    \end{document}"
+img_0005.png,"The image features a black and white diagram of a triangle with a label ""S"" on the top right corner. The triangle is divided into three sections, each with a different label. The first section is labeled ""S1,"" the second section is labeled ""S2,"" and the third section is labeled ""S3.""
+
+There are also two arrows in the image, one pointing upwards and the other pointing downwards. The upward arrow is located near the top left corner of the triangle, while the downward arrow is situated near the bottom left corner. The triangle itself is a black shape, with the labels and arrows providing additional context and information.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \fill[black] (0,0) -- (3,0) -- (1.5,2.5) -- cycle;
+    \node at (1.5, 2.2) {S};
+    \node at (0.75, 0.5) {S1};
+    \node at (2.25, 0.5) {S2};
+    \node at (1.5, 1) {S3};
+    \draw[->] (0.5, 1.5) -- (0.5, 2);
+    \draw[->] (0.5, 0) -- (0.5, -0.5);
+\end{tikzpicture}
+    \end{document}"
+img_0006.png,"The image features two black and white figures, each with a different pose. The first figure is on the left side of the image, while the second figure is on the right side. Both figures are standing and appear to be facing each other.
+
+In the scene, there are three dots visible. One dot is located near the center of the image, another is on the right side, and the third one is on the left side. Additionally, there is a small arrow pointing towards the right side of the image.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Draw the first figure on the left
+    \draw[fill=black] (0,0) circle (0.2);
+    \draw[fill=white] (-0.1,-0.2) rectangle (0.1,0);
+    
+    % Draw the second figure on the right
+    \draw[fill=black] (3,0) circle (0.2);
+    \draw[fill=white] (2.9,-0.2) rectangle (3.1,0);
+    
+    % Draw the dots
+    \fill (1.5,0) circle (0.05);
+    \fill (2.5,0) circle (0.05);
+    \fill (0.5,0) circle (0.05);
+    
+    % Draw the arrow
+    \draw[->] (1.5,0) -- (2.5,0);
+\end{tikzpicture}
+    \end{document}"
+img_0007.png,"The image displays a graph with a blue line and a red line, both of which are labeled with the letters ""Zhen."" The blue line is positioned on the left side of the graph, while the red line is on the right side. There are also two other lines, one in the middle and the other on the right side of the graph.
+
+The graph is accompanied by a few numbers, with one number located at the top left corner, another at the top right corner, and the third number at the bottom left corner. The numbers seem to be related to the graph's content.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Draw axes
+    \draw[->] (0,0) -- (0,5) node[above] {Y-axis};
+    \draw[->] (0,0) -- (5,0) node[right] {X-axis};
+
+    % Draw lines
+    \draw[blue, thick] (0,1) -- (3,4) node[midway, above] {Zhen};
+    \draw[red, thick] (2,0) -- (4,3) node[midway, right] {Zhen};
+    \draw[green, thick] (1,2) -- (3,1);
+    \draw[purple, thick] (3,2) -- (4,4);
+
+    % Draw numbers
+    \node at (0.5,4.5) {1};
+    \node at (4.5,4.5) {2};
+    \node at (0.5,0.5) {3};
+\end{tikzpicture}
+    \end{document}"
+img_0008.png,"The image features a series of four diagrams, each depicting a different shape. The shapes are arranged in a row, with the first one on the left, the second one in the middle, the third one on the right, and the fourth one at the far right.
+
+Each shape is accompanied by a label, indicating the specific shape or concept it represents. The labels are placed above the corresponding shapes, making it easy to identify each shape. The diagrams are black and white, which adds to the simplicity and focus on the shapes and their labels.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \foreach \i/\label in {0/{Circle}, 1/{Square}, 2/{Triangle}, 3/{Rectangle}} {
+        \begin{scope}[xshift=\i*3cm]
+            \node at (0,1) {\label};
+            \ifnum\i=0
+                \draw[thick] (0,0) circle(1);
+            \fi
+            \ifnum\i=1
+                \draw[thick] (-1,-1) rectangle (1,1);
+            \fi
+            \ifnum\i=2
+                \draw[thick] (0,0) -- (-1.732, -1) -- (1.732, -1) -- cycle;
+            \fi
+            \ifnum\i=3
+                \draw[thick] (-1,0.5) rectangle (1,-0.5);
+            \fi
+        \end{scope}
+    }
+\end{tikzpicture}
+    \end{document}"
+img_0009.png,"The image features a black and white geometric design, possibly a stylized representation of a square. The square is divided into four smaller squares, each with a different orientation. The black and white color scheme adds a sense of depth and contrast to the design.
+
+In addition to the main square, there are two smaller squares located on the left side of the image, and another two smaller squares on the right side. These smaller squares are positioned at the top and bottom of the main square, creating a visually appealing composition.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Main square divided into four smaller squares
+    \fill[black] (0,0) rectangle (2,2);
+    \fill[white] (0,0) rectangle (1,1);
+    \fill[white] (1,1) rectangle (2,2);
+    \fill[black] (1,0) rectangle (2,1);
+    \fill[black] (0,1) rectangle (1,2);
+    
+    % Smaller squares on the left side
+    \fill[black] (-1,1) rectangle (0,2);
+    \fill[white] (-1,0) rectangle (0,1);
+    
+    % Smaller squares on the right side
+    \fill[white] (2,1) rectangle (3,2);
+    \fill[black] (2,0) rectangle (3,1);
+\end{tikzpicture}
+    \end{document}"
+img_0010.png,"The image features a white sphere with a heart-shaped cutout in the center. The heart is located towards the top of the sphere, and the cutout is surrounded by a series of arrows pointing inward. The arrows are positioned at various angles and distances around the heart, creating a sense of depth and dimension.
+
+In addition to the arrows, there are several labels and numbers scattered throughout the image. These labels and numbers are likely related to the mathematical concepts or measurements associated with the sphere and its heart-shaped cutout. The combination of the heart, arrows, and labels creates a visually engaging and informative image.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Draw the sphere
+    \shade[ball color=white] (0,0) circle (2);
+    
+    % Draw the heart-shaped cutout
+    \begin{scope}
+        \clip (0,0) circle(2);
+        \fill[white] (0,1) .. controls (-1,2) and (-2,1) .. (0,0) .. controls (2,1) and (1,2) .. (0,1);
+    \end{scope}
+    
+    % Draw arrows pointing inward
+    \foreach \angle in {0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330} {
+        \draw[->, thick] (2*\cos(\angle), 2*\sin(\angle)) -- (0.5*\cos(\angle), 0.5*\sin(\angle));
+    }
+    
+    % Draw labels around the heart
+    \node at (0, 1.5) {A};
+    \node at (1.5, 0) {B};
+    \node at (0, -1.5) {C};
+    \node at (-1.5, 0) {D};
+    
+    % Draw numbers
+    \node at (1, 1) {1};
+    \node at (-1, 1) {2};
+    \node at (1, -1) {3};
+    \node at (-1, -1) {4};
+\end{tikzpicture}
+    \end{document}"
+img_0011.png,"The image features a tree-like structure with six triangles, each with a different color. The tree is composed of three main branches, each with two triangles attached to them. The triangles are arranged in a way that resembles a tree, with the colors being red, blue, and green.
+
+The tree is labeled with the word ""root"" at the top, indicating the central point of the structure. The triangles are positioned in a way that creates a sense of depth and balance within the image. The overall composition of the tree-like structure is visually appealing and well-organized.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Draw the root
+    \node at (0, 3) {root};
+
+    % Draw the branches and triangles
+    \draw[thick] (0, 2.5) -- (-1, 1.5);
+    \draw[thick] (0, 2.5) -- (1, 1.5);
+    \draw[thick] (0, 2.5) -- (-1, 0);
+    \draw[thick] (0, 2.5) -- (1, 0);
+    
+    % Left branch triangles
+    \fill[red] (-1, 1.5) -- (-1.5, 2) -- (-1.5, 1) -- cycle;
+    \fill[blue] (-1, 0) -- (-1.5, 0.5) -- (-1.5, -0.5) -- cycle;
+
+    % Right branch triangles
+    \fill[green] (1, 1.5) -- (1.5, 2) -- (1.5, 1) -- cycle;
+    \fill[red] (1, 0) -- (1.5, 0.5) -- (1.5, -0.5) -- cycle;
+    
+    % Draw the left and right branches
+    \draw[thick] (-1, 1.5) -- (-1, 0);
+    \draw[thick] (1, 1.5) -- (1, 0);
+\end{tikzpicture}
+    \end{document}"
+img_0012.png,"The image features two diagrams, each with a different color scheme. The diagrams are placed side by side, with one being red and the other being blue. The diagrams are filled with various shapes, including circles and arrows, which are used to represent different elements within the diagrams.
+
+In the red diagram, there are multiple circles scattered throughout the image, with some of them connected by arrows. The blue diagram also contains several circles, but they are not connected by arrows. Instead, the blue diagram features a more complex arrangement of shapes, including a few triangles and a square.
+
+The diagrams are labeled with numbers, which are likely used to identify specific elements within the diagrams. The numbers are placed near the corresponding shapes, making it easier to understand the relationships between the shapes and their labels.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+
+% Red diagram
+\begin{scope}[shift={(0,0)}]
+    \fill[red!30] (0,0) circle (0.5);
+    \fill[red!30] (1,1) circle (0.5);
+    \fill[red!30] (2,0) circle (0.5);
+    \fill[red!30] (0.5,-1) circle (0.5);
+    \draw[->, red] (0,0) -- (1,1);
+    \draw[->, red] (1,1) -- (2,0);
+    \draw[->, red] (0,0) -- (0.5,-1);
+    \node at (0,0) {1};
+    \node at (1,1) {2};
+    \node at (2,0) {3};
+    \node at (0.5,-1) {4};
+\end{scope}
+
+% Blue diagram
+\begin{scope}[shift={(4,0)}]
+    \fill[blue!30] (0,0) circle (0.5);
+    \fill[blue!30] (1,0.5) circle (0.5);
+    \fill[blue!30] (1,-0.5) circle (0.5);
+    \fill[blue!30] (2,0) circle (0.5);
+    \fill[blue!30] (0.5,1) triangle;
+    \fill[blue!30] (0.5,-1) rectangle (1,-2);
+    \node at (0,0) {5};
+    \node at (1,0.5) {6};
+    \node at (1,-0.5) {7};
+    \node at (2,0) {8};
+    \node at (0.5,1) {9};
+    \node at (0.75,-1.5) {10};
+\end{scope}
+\end{tikzpicture}
+    \end{document}"
+img_0013.png,"The image is a black and white diagram, possibly a flowchart or a timeline, depicting a series of events or choices. The diagram is divided into several sections, each with a label and a date. The labels are in a foreign language, but the dates are in English.
+
+There are multiple arrows pointing in different directions, indicating the flow of events or the progression of choices. The diagram is organized in a way that allows the viewer to understand the sequence of events or the decision-making process. The visual elements include lines, shapes, and text, which together create a clear and informative representation of the subject matter.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[node distance=1.5cm, every node/.style={draw, rectangle, minimum width=2cm, minimum height=1cm, align=center}]
+    % Nodes
+    \node (start) {Inizio \\ 2023-01-01};
+    \node (event1) [below of=start] {Evento 1 \\ 2023-01-05};
+    \node (decision1) [below of=event1] {Decisione 1 \\ 2023-01-10};
+    \node (event2) [below of=decision1, xshift=-2cm] {Evento 2 \\ 2023-01-15};
+    \node (event3) [below of=decision1, xshift=2cm] {Evento 3 \\ 2023-01-20};
+    \node (end) [below of=event2, yshift=-1cm] {Fine \\ 2023-01-25};
+
+    % Arrows
+    \draw[->] (start) -- (event1);
+    \draw[->] (event1) -- (decision1);
+    \draw[->] (decision1) -- (event2);
+    \draw[->] (decision1) -- (event3);
+    \draw[->] (event2) -- (end);
+    \draw[->] (event3) -- (end);
+\end{tikzpicture}
+    \end{document}"
+img_0014.png,"The image is a diagram illustrating a process of generating a planning region. The diagram consists of multiple layers, with the main focus on the lower part of the image. There are several arrows pointing in different directions, indicating the flow of the process.
+
+The diagram features a grid-like structure, with a few boxes and circles scattered throughout the image. The boxes and circles are likely used to represent different elements of the process. The overall layout of the image is organized, with the main components clearly visible and well-defined.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Draw grid
+    \draw[step=1cm, gray, thin] (0,0) grid (6,4);
+    
+    % Draw boxes
+    \draw[fill=blue!20] (1,1) rectangle (2,2) node[midway] {Box A};
+    \draw[fill=red!20] (3,1) rectangle (4,2) node[midway] {Box B};
+    
+    % Draw circles
+    \draw[fill=green!20] (1.5,3) circle (0.5) node {Circle A};
+    \draw[fill=yellow!20] (4.5,3) circle (0.5) node {Circle B};
+    
+    % Draw arrows
+    \draw[->, thick] (2,1.5) -- (3,1.5);
+    \draw[->, thick] (1.5,2) -- (1.5,3);
+    \draw[->, thick] (3.5,2) -- (4.5,3);
+    \draw[->, thick] (2.5,3) -- (2.5,2.5);
+    
+    % Draw additional elements
+    \node at (5,2) {Process Flow};
+    \node at (5,1) {Planning Region};
+\end{tikzpicture}
+    \end{document}"
+img_0015.png,"The image displays a graph with a red line that is gradually increasing in height. The red line is accompanied by a blue line, which is also gradually increasing in height. The graph is labeled with various numbers, such as 30, 40, and 50, indicating the progression of the lines.
+
+There are also several stars scattered throughout the graph, with some located near the red line and others near the blue line. The stars are positioned at different heights, adding visual interest to the graph.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \draw[->] (0,0) -- (0,60) node[above] {Height};
+    \draw[->] (0,0) -- (60,0) node[right] {Progression};
+
+    \draw[red, thick] plot coordinates {(0,10) (10,20) (20,30) (30,40) (40,50) (50,55) (60,60)};
+    \draw[blue, thick] plot coordinates {(0,5) (10,15) (20,25) (30,35) (40,45) (50,50) (60,55)};
+    
+    \foreach \x/\y in {10/20, 20/30, 30/40, 40/50, 50/55} {
+        \node[star, star points=5, star point ratio=2.25, fill=yellow, minimum size=5pt] at (\x,\y) {};
+    }
+    
+    \foreach \x/\y in {10/15, 20/25, 30/35, 40/45, 50/50} {
+        \node[star, star points=5, star point ratio=2.25, fill=cyan, minimum size=5pt] at (\x,\y) {};
+    }
+
+    \foreach \y in {30, 40, 50} {
+        \draw[gray] (0,\y) -- (60,\y);
+        \node[left] at (0,\y) {\y};
+    }
+\end{tikzpicture}
+    \end{document}"
+img_0016.png,"The image features a white background with three geometric figures. The first figure is a large circle, occupying a significant portion of the background. The second figure is a square, positioned to the right of the circle. The third figure is a smaller circle, located near the center of the image.
+
+There are two arrows in the scene, one pointing towards the left side of the image and the other pointing towards the right side. The arrows are likely used to indicate the direction of the geometric figures or to emphasize their relative positions.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[background color=white]
+    % Large Circle
+    \draw[fill=blue!20] (0,0) circle (3);
+    
+    % Square
+    \draw[fill=red!20] (4,1.5) rectangle (6,3.5);
+    
+    % Smaller Circle
+    \draw[fill=green!20] (1,1) circle (1);
+    
+    % Left Arrow
+    \draw[->, thick] (2, 3) -- (0, 3);
+    
+    % Right Arrow
+    \draw[->, thick] (5, 3) -- (7, 3);
+\end{tikzpicture}
+    \end{document}"
+img_0017.png,"The image features a green circle with a white background, which is a close-up of a green and white pattern. The green circle is surrounded by a white circle, creating a visually appealing contrast. The white circle is further divided into smaller white circles, which are scattered throughout the image. The green and white pattern is a combination of circles and dots, creating a unique and intricate design.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Draw the outer white circle
+    \fill[white] (0,0) circle (3);
+    % Draw the inner green circle
+    \fill[green] (0,0) circle (2);
+    
+    % Draw smaller white circles scattered around
+    \foreach \angle in {0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330} {
+        \fill[white] ({2.5*cos(\angle)}, {2.5*sin(\angle)}) circle (0.3);
+    }
+    
+    % Draw additional smaller white circles
+    \foreach \angle in {15, 45, 75, 105, 135, 165, 195, 225, 255, 285, 315, 345} {
+        \fill[white] ({1.5*cos(\angle)}, {1.5*sin(\angle)}) circle (0.2);
+    }
+\end{tikzpicture}
+    \end{document}"
+img_0018.png,"The image is a black and white diagram featuring a series of interconnected triangles. The triangles are arranged in a way that they form a larger triangle, with smaller triangles inside the larger one. The diagram is labeled with various letters and numbers, indicating the relationships between the different elements.
+
+There are several arrows pointing in different directions, indicating the flow of information or energy within the diagram. The arrows are placed at various points within the triangles, connecting them and providing context to the overall structure.
+
+The visual elements in the image include the triangles, arrows, and labels. The triangles are the primary focus, with their interconnected nature creating a complex and intricate pattern. The arrows and labels help to clarify the relationships between the different elements, making the diagram more comprehensible.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Draw the large triangle
+    \draw[thick] (0,0) -- (4,0) -- (2,3.464) -- cycle;
+
+    % Draw the inner triangles
+    \draw[thick] (0,0) -- (2,1.154) -- (4,0) -- cycle; % Bottom triangle
+    \draw[thick] (2,0) -- (2,1.154) -- (4,0) -- cycle; % Right triangle
+    \draw[thick] (0,0) -- (2,1.154) -- (2,3.464) -- cycle; % Left triangle
+    \draw[thick] (2,1.154) -- (4,0) -- (2,3.464) -- cycle; % Top triangle
+
+    % Labels
+    \node at (2,3.5) {A};
+    \node at (0.5,0.5) {B};
+    \node at (3.5,0.5) {C};
+    \node at (1.5,1.5) {D};
+    \node at (2.5,1.5) {E};
+
+    % Arrows
+    \draw[->] (2,1.154) -- (1,0.5);
+    \draw[->] (2,1.154) -- (3,0.5);
+    \draw[->] (2,3.464) -- (2,1.154);
+    \draw[->] (0.5,0) -- (1.5,1);
+    \draw[->] (3.5,0) -- (2.5,1);
+\end{tikzpicture}
+    \end{document}"
+img_0019.png,"The image features a white background with a blue and red line that appears to be a graph or a diagram. The line is divided into three sections, each with a different color. The blue section is on the left side, the red section is in the middle, and the third section is on the right side.
+
+There are several black dots scattered throughout the image, with some located near the top, middle, and bottom sections of the line. The dots are positioned at various distances from each other, creating a sense of depth and complexity in the visual representation.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[scale=1]
+    % Draw the colored sections
+    \draw[blue, thick] (0,0) -- (2,0) -- (2,1) -- (0,1) -- cycle; % Blue section
+    \draw[red, thick] (2,0) -- (4,0) -- (4,1) -- (2,1) -- cycle; % Red section
+    \draw[white, thick] (4,0) -- (6,0) -- (6,1) -- (4,1) -- cycle; % White section
+    
+    % Draw the black dots
+    \fill (0.5,0.5) circle (2pt);
+    \fill (1.5,0.2) circle (2pt);
+    \fill (2.5,0.8) circle (2pt);
+    \fill (3.5,0.4) circle (2pt);
+    \fill (0.5,0.8) circle (2pt);
+    \fill (1.5,0.9) circle (2pt);
+    \fill (3.0,0.1) circle (2pt);
+    \fill (4.5,0.5) circle (2pt);
+\end{tikzpicture}
+    \end{document}"
+img_0020.png,"The image is a diagram that illustrates the concept of a ""p"" value. The diagram features a square with a large ""P"" written in the center. The square is divided into four smaller squares, each containing a letter. The letters are arranged in a way that forms the word ""image."" The diagram is designed to help explain the concept of the ""p"" value in a visual and accessible manner.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Draw the large square
+    \draw[thick] (0, 0) rectangle (4, 4);
+    
+    % Draw the smaller squares
+    \draw[thick] (0, 2) rectangle (2, 4);
+    \draw[thick] (2, 2) rectangle (4, 4);
+    \draw[thick] (0, 0) rectangle (2, 2);
+    \draw[thick] (2, 0) rectangle (4, 2);
+    
+    % Add the large P in the center
+    \node[font=\Huge] at (2, 2) {P};
+    
+    % Add letters in the smaller squares
+    \node[font=\Large] at (1, 3) {I};
+    \node[font=\Large] at (3, 3) {M};
+    \node[font=\Large] at (1, 1) {A};
+    \node[font=\Large] at (3, 1) {G};
+    \node[font=\Large] at (2, 0.5) {E};
+\end{tikzpicture}
+    \end{document}"
+img_0021.png,"The image is a black and white drawing of a square with a black outline. The square is divided into four smaller squares, each with a black outline. The four smaller squares are arranged in a way that they form a larger square. The black and white drawing gives it a classic and timeless appearance.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+\draw[black, thick] (0, 0) rectangle (2, 2);
+\draw[black, thick] (0, 0) rectangle (1, 1);
+\draw[black, thick] (1, 0) rectangle (2, 1);
+\draw[black, thick] (0, 1) rectangle (1, 2);
+\draw[black, thick] (1, 1) rectangle (2, 2);
+\end{tikzpicture}
+    \end{document}"
+img_0022.png,"The image features a staircase with a brown roof, likely a sunshade, covering the top of the stairs. The staircase is made up of several steps, with the first step being the most prominent. The roof is positioned above the stairs, providing shade and protection from the elements. The overall layout of the image is well-organized, with the staircase being the main focus, and the roof covering the top of the stairs.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Draw the staircase
+    \foreach \i in {0, 1, 2, 3, 4} {
+        \fill[gray!30] (0, \i) rectangle (2, \i + 0.5);
+    }
+    
+    % Draw the roof
+    \fill[brown] (-0.5, 4.5) rectangle (2.5, 5);
+    \draw (-0.5, 4.5) -- (0, 5) -- (2, 5) -- (2.5, 4.5);
+    
+    % Draw the outline of the stairs
+    \draw[thick] (0, 0) rectangle (2, 0.5);
+    \draw[thick] (0, 1) rectangle (2, 1.5);
+    \draw[thick] (0, 2) rectangle (2, 2.5);
+    \draw[thick] (0, 3) rectangle (2, 3.5);
+    \draw[thick] (0, 4) rectangle (2, 4.5);
+    
+    % Draw the roof outline
+    \draw[thick] (-0.5, 4.5) -- (0, 5) -- (2, 5) -- (2.5, 4.5);
+\end{tikzpicture}
+    \end{document}"
+img_0023.png,"The image features a colorful circle with various segments, each representing a different aspect of a figure. The circle is divided into seven segments, each with a distinct color. The colors are arranged in a clockwise order, starting from the top left and moving counterclockwise around the circle.
+
+In addition to the colorful segments, there are two arrows present in the image. One arrow is located in the top left corner, while the other is situated in the top right corner. These arrows might be used to indicate the direction or orientation of the figure.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Draw the circle divided into segments
+    \foreach \i/\color in {0/red, 1/orange, 2/yellow, 3/green, 4/blue, 5/indigo, 6/violet} {
+        \fill[fill=\color] (0,0) -- (\i*360/7:2) arc (\i*360/7:\i*360/7 + 360/7:2) -- cycle;
+    }
+    
+    % Draw arrows
+    \draw[->, thick] (-2.5, 1) -- (-1.5, 1);
+    \draw[->, thick] (2.5, 1) -- (1.5, 1);
+\end{tikzpicture}
+    \end{document}"
+img_0024.png,"The image features a graph with two main lines, one on the left side and the other on the right side. There are several dots scattered across the graph, with some located near the top, middle, and bottom sections. 
+
+In addition to the main lines, there are two smaller lines, one on the left side and the other on the right side. The smaller lines are positioned above the main lines, and they appear to be connected to the main lines. The graph also has a few arrows pointing in different directions, adding to the complexity of the visual elements.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Main lines
+    \draw[thick] (0,0) -- (0,3);
+    \draw[thick] (4,0) -- (4,3);
+    
+    % Smaller lines
+    \draw[thick, dashed] (0,3) -- (1,4);
+    \draw[thick, dashed] (4,3) -- (3,4);
+    
+    % Dots
+    \fill (0.5,2.5) circle (2pt);
+    \fill (1.5,1) circle (2pt);
+    \fill (0.5,0.5) circle (2pt);
+    \fill (4.5,2.5) circle (2pt);
+    \fill (3.5,1) circle (2pt);
+    \fill (4.5,0.5) circle (2pt);
+    
+    % Arrows
+    \draw[->] (1,2) -- (2,3);
+    \draw[->] (3,2) -- (2,1);
+    \draw[->] (1,1) -- (0,0);
+    \draw[->] (3,1) -- (4,0);
+\end{tikzpicture}
+    \end{document}"
+img_0025.png,"The image is a black and white diagram featuring a complex network of interconnected circles. The circles are arranged in various positions, forming a web-like structure. There are several arrows pointing in different directions, indicating the flow of information or energy within the network.
+
+The diagram is labeled with letters and numbers, possibly representing specific nodes or connections within the network. The labels are scattered throughout the image, with some placed near the top, middle, and bottom sections of the diagram. The overall layout of the image is intricate and visually engaging, showcasing the intricate connections between the various elements.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[node distance=1.5cm]
+    % Define nodes
+    \node[circle, draw] (A) {A};
+    \node[circle, draw, below left=of A] (B) {B};
+    \node[circle, draw, below right=of A] (C) {C};
+    \node[circle, draw, below=of B] (D) {D};
+    \node[circle, draw, below=of C] (E) {E};
+    \node[circle, draw, right=of C] (F) {F};
+    \node[circle, draw, above right=of F] (G) {G};
+    \node[circle, draw, above left=of F] (H) {H};
+    
+    % Draw arrows
+    \draw[->] (A) -- (B);
+    \draw[->] (A) -- (C);
+    \draw[->] (B) -- (D);
+    \draw[->] (C) -- (E);
+    \draw[->] (C) -- (F);
+    \draw[->] (F) -- (G);
+    \draw[->] (F) -- (H);
+    \draw[->] (D) -- (B);
+    \draw[->] (E) -- (C);
+    
+    % Additional arrows for complexity
+    \draw[->] (B) -- (F);
+    \draw[->] (D) -- (E);
+    \draw[->] (G) -- (C);
+    \draw[->] (H) -- (A);
+    
+    % Add labels
+    \node at (1.5, 1.5) {1};
+    \node at (-3, -1) {2};
+    \node at (3, -1) {3};
+    \node at (1, -3) {4};
+    \node at (1, 2) {5};
+    \node at (2.5, 2.5) {6};
+\end{tikzpicture}
+    \end{document}"
+img_0026.png,"The image features a close-up of a clear glass bottle with a red and blue tint. The bottle is positioned in the center of the image, and its shape is visible. The red and blue tint adds a unique touch to the bottle's appearance.
+
+There are no other objects or people in the image, making it a simple and focused representation of the glass bottle.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \fill[blue!50!red!50] (0,0) ellipse (1.5 and 3);
+    \fill[white] (0,-3) rectangle (-1.5,3);
+    \fill[white] (0,-3) rectangle (1.5,3);
+    \draw[thick] (0,-3) -- (0,3);
+    \draw[thick] (0,3) arc[start angle=0,end angle=180,radius=1.5];
+    \draw[thick] (0,-3) arc[start angle=180,end angle=360,radius=1.5];
+    \fill[red] (0,2.5) circle (0.2);
+    \draw[thick] (0,2.5) -- (0,3);
+    \fill[blue] (0,-3) arc[start angle=180,end angle=360,radius=1.5 and 0.5];
+\end{tikzpicture}
+    \end{document}"
+img_0027.png,"The image is a whiteboard with a diagram drawn on it. The diagram consists of a series of arrows and labels, possibly representing a flowchart or a conceptual representation. The arrows are pointing in various directions, and the labels are placed at the ends of the arrows.
+
+There are several shapes and colors used in the diagram, which adds to its visual appeal. The whiteboard is filled with these elements, making it a complex and intricate visual representation.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[node distance=1.5cm, every node/.style={draw, fill=white, rounded corners}]
+    % Nodes
+    \node (A) {Start};
+    \node (B) [below of=A] {Step 1};
+    \node (C) [below of=B] {Step 2};
+    \node (D) [below of=C] {Decision};
+    \node (E) [below of=D, xshift=-2cm] {Option 1};
+    \node (F) [below of=D, xshift=2cm] {Option 2};
+    \node (G) [below of=E] {End 1};
+    \node (H) [below of=F] {End 2};
+
+    % Arrows
+    \draw[->] (A) -- (B);
+    \draw[->] (B) -- (C);
+    \draw[->] (C) -- (D);
+    \draw[->] (D) -- node[above] {yes} (E);
+    \draw[->] (D) -- node[above] {no} (F);
+    \draw[->] (E) -- (G);
+    \draw[->] (F) -- (H);
+
+    % Labels
+    \node[above of=A, node distance=1cm] {Flowchart Example};
+\end{tikzpicture}
+    \end{document}"
+img_0028.png,"The image features a blue graph with a curve that appears to be a parabolic function. The graph is labeled with the number 5, indicating the starting point of the curve. There are several blue dots scattered throughout the graph, possibly representing data points or other important information.
+
+The graph is displayed on a white background, making the blue curve and dots stand out. The overall layout of the image is simple and clean, with the focus on the parabolic function and its associated data points.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \draw[->] (-1,0) -- (6,0) node[right] {x};
+    \draw[->] (0,-1) -- (0,6) node[above] {y};
+    
+    \draw[blue, thick, domain=-1:5] plot (\x, {0.5*(\x-2)^2 + 1}) node[right] {y = 0.5(x-2)^2 + 1};
+    
+    \fill[blue] (2,5) circle (2pt) node[above right] {5};
+    \fill[blue] (1,2) circle (2pt);
+    \fill[blue] (3,2) circle (2pt);
+    \fill[blue] (4,3) circle (2pt);
+    \fill[blue] (0,1) circle (2pt);
+\end{tikzpicture}
+    \end{document}"
+img_0029.png,"The image features a black and white road with a series of white lines on it. The road appears to be a flat surface, possibly a carpet or a piece of artwork. The white lines are arranged in a zigzag pattern, creating a visually interesting and unique design. The lines are positioned in a way that they appear to be moving in a diagonal direction, adding depth and dimension to the scene.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \fill[black] (0,0) rectangle (10,5);
+    \foreach \i in {0, 1, 2, 3, 4} {
+        \draw[white, thick] (0, 1 + \i*0.5) -- (10, 4 - \i*0.5);
+    }
+    \foreach \i in {0, 1, 2, 3, 4} {
+        \draw[white, thick] (0, 4 - \i*0.5) -- (10, 1 + \i*0.5);
+    }
+\end{tikzpicture}
+    \end{document}"
+img_0030.png,"The image features a three-dimensional geometric structure, possibly a tetrahedron, with a black background. The structure is composed of four triangles, each with a different orientation. The triangles are connected by lines, forming a complex network of interconnected shapes.
+
+There are several dots scattered throughout the image, possibly representing points of interest or focal points within the structure. The dots are positioned at various locations, including the corners and edges of the triangles. The overall composition of the image is visually intriguing and captures the viewer's attention.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[scale=3, background color=black]
+    % Define the vertices of the tetrahedron
+    \coordinate (A) at (1, 1, 1);
+    \coordinate (B) at (1, -1, -1);
+    \coordinate (C) at (-1, 1, -1);
+    \coordinate (D) at (-1, -1, 1);
+
+    % Draw the tetrahedron faces
+    \fill[cyan, opacity=0.5] (A) -- (B) -- (C) -- cycle; % ABC
+    \fill[magenta, opacity=0.5] (A) -- (B) -- (D) -- cycle; % ABD
+    \fill[yellow, opacity=0.5] (A) -- (C) -- (D) -- cycle; % ACD
+    \fill[green, opacity=0.5] (B) -- (C) -- (D) -- cycle; % BCD
+
+    % Draw the edges of the tetrahedron
+    \draw[white] (A) -- (B);
+    \draw[white] (A) -- (C);
+    \draw[white] (A) -- (D);
+    \draw[white] (B) -- (C);
+    \draw[white] (B) -- (D);
+    \draw[white] (C) -- (D);
+
+    % Draw the dots at the vertices
+    \foreach \point in {A, B, C, D} {
+        \fill[red] (\point) circle (0.05);
+    }
+
+    % Draw additional dots along the edges
+    \foreach \point in {A, B, C, D} {
+        \foreach \other in {A, B, C, D} {
+            \ifnum\point<\other
+                \fill[white] ({(\point) + (\other) / 2}) circle (0.02);
+            \fi
+        }
+    }
+\end{tikzpicture}
+    \end{document}"
+img_0031.png,"The image features two graphs side by side, each displaying different data. The graphs are labeled with numbers, indicating the scale of the data. The graphs are filled with various shapes, including circles and squares, which are scattered throughout the graphs.
+
+There are also several arrows pointing in different directions, possibly indicating trends or relationships between the data points. The graphs are accompanied by labels, which provide additional context and information about the data being displayed. Overall, the image presents a complex and detailed visual representation of the data.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Graph 1
+    \begin{axis}[
+        title={Graph 1},
+        xlabel={X-axis},
+        ylabel={Y-axis},
+        xmin=0, xmax=10,
+        ymin=0, ymax=10,
+        grid=major,
+        width=6cm,
+        height=6cm,
+        axis lines=middle,
+        ticks=none
+    ]
+        \addplot[only marks, mark=circle*, mark size=2pt] coordinates {(1,1) (2,3) (3,2) (4,5) (5,4)};
+        \addplot[only marks, mark=square*, mark size=2pt] coordinates {(6,6) (7,8) (8,7) (9,9) (10,8)};
+        \draw[->, thick] (3,2) -- (5,4);
+        \draw[->, thick] (7,8) -- (6,6);
+    \end{axis}
+
+    % Graph 2
+    \begin{axis}[at={(8,0)}, anchor=west,
+        title={Graph 2},
+        xlabel={X-axis},
+        ylabel={Y-axis},
+        xmin=0, xmax=10,
+        ymin=0, ymax=10,
+        grid=major,
+        width=6cm,
+        height=6cm,
+        axis lines=middle,
+        ticks=none
+    ]
+        \addplot[only marks, mark=circle*, mark size=2pt] coordinates {(1,8) (2,6) (3,7) (4,4) (5,5)};
+        \addplot[only marks, mark=square*, mark size=2pt] coordinates {(6,3) (7,2) (8,1) (9,0) (10,2)};
+        \draw[->, thick] (4,4) -- (2,6);
+        \draw[->, thick] (7,2) -- (6,3);
+    \end{axis}
+\end{tikzpicture}
+    \end{document}"
+img_0032.png,"The image is a black and white diagram featuring a series of interconnected lines and arrows. The lines are arranged in a way that resembles a tree structure, with some lines branching off into smaller lines. The arrows are pointing in various directions, indicating the flow of information or energy within the diagram.
+
+There are several labels on the diagram, indicating the names of the lines or the points they connect. The labels are placed at the ends of the lines or at the junctions of the lines. The overall layout of the diagram is organized and visually appealing, making it easy to understand the relationships between the different elements.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \node (A) at (0,0) {A};
+    \node (B) at (-2,-2) {B};
+    \node (C) at (2,-2) {C};
+    \node (D) at (-3,-4) {D};
+    \node (E) at (-1,-4) {E};
+    \node (F) at (1,-4) {F};
+    \node (G) at (3,-4) {G};
+
+    \draw[->] (A) -- (B);
+    \draw[->] (A) -- (C);
+    \draw[->] (B) -- (D);
+    \draw[->] (B) -- (E);
+    \draw[->] (C) -- (F);
+    \draw[->] (C) -- (G);
+    
+    \node at (-2.5,-3) {Branch 1};
+    \node at (1.5,-3) {Branch 2};
+\end{tikzpicture}
+    \end{document}"
+img_0033.png,"The image features a white circle with a triangle drawn on it. The triangle is located in the center of the circle, and it is surrounded by a line. The circle is divided into four sections, with each section having a number assigned to it. The numbers are arranged in a clockwise order, starting from the top left section and moving counterclockwise around the circle. The triangle is also labeled with the number 2, indicating its position in the circle.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \draw[fill=white] (0,0) circle(2);
+    \foreach \i in {1,2,3,4} {
+        \draw[thick] (0,0) -- ({90-90*\i}:2);
+        \node at ({90-90*\i}:1.5) {\i};
+    }
+    \draw[thick] (0,0) -- (0,2);
+    \draw[thick] (0,0) -- ({60}:2);
+    \draw[thick] (0,0) -- ({-60}:2);
+    \draw[thick] (0,0) -- ({120}:2);
+    \draw[fill=white] (0,0) -- (0,1.5) -- ({-60}:1.5) -- cycle;
+    \node at (0,0) {2};
+\end{tikzpicture}
+    \end{document}"
+img_0034.png,"The image features a detailed illustration of a city skyline, with a focus on the tall buildings. The buildings are arranged in a row, with some of them appearing to be taller than others. The skyline is depicted in a colorful manner, with the buildings having different colors, giving the scene a vibrant and lively appearance.
+
+The buildings are positioned in a way that they appear to be standing on top of each other, creating a sense of depth and height. The overall layout of the image is well-organized, with the buildings occupying a significant portion of the frame. The illustration effectively captures the essence of a bustling cityscape.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Background
+    \fill[skyblue] (0,0) rectangle (10,5);
+    % Ground
+    \fill[green!50] (0,0) rectangle (10,0.5);
+    
+    % Buildings
+    \fill[red] (0,0.5) rectangle (1,3);
+    \fill[blue] (1.5,0.5) rectangle (2.5,4);
+    \fill[orange] (3,0.5) rectangle (4,2.5);
+    \fill[yellow] (4.5,0.5) rectangle (5.5,5);
+    \fill[purple] (6,0.5) rectangle (7,3.5);
+    \fill[cyan] (7.5,0.5) rectangle (8.5,4.5);
+    \fill[magenta] (9,0.5) rectangle (10,2);
+    
+    % Windows
+    \foreach \x in {0.1, 0.3, 0.5, 0.7, 0.9} {
+        \foreach \y in {1, 1.5, 2, 2.5, 3} {
+            \fill[white] (\x, \y) rectangle (\x+0.2, \y+0.4);
+        }
+    }
+    
+    \foreach \x in {1.6, 1.8, 2.0, 2.2, 2.4} {
+        \foreach \y in {1, 1.5, 2, 2.5, 3.5} {
+            \fill[white] (\x, \y) rectangle (\x+0.2, \y+0.4);
+        }
+    }
+
+    \foreach \x in {3.1, 3.3, 3.5, 3.7, 3.9} {
+        \foreach \y in {1, 1.5, 2} {
+            \fill[white] (\x, \y) rectangle (\x+0.2, \y+0.4);
+        }
+    }
+
+    \foreach \x in {4.6, 4.8, 5.0, 5.2, 5.4} {
+        \foreach \y in {1, 1.5, 2, 2.5, 3, 4} {
+            \fill[white] (\x, \y) rectangle (\x+0.2, \y+0.4);
+        }
+    }
+
+    \foreach \x in {6.1, 6.3, 6.5, 6.7, 6.9} {
+        \foreach \y in {1, 1.5, 2, 2.5, 3} {
+            \fill[white] (\x, \y) rectangle (\x+0.2, \y+0.4);
+        }
+    }
+
+    \foreach \x in {7.6, 7.8, 8.0, 8.2, 8.4} {
+        \foreach \y in {1, 1.5, 2, 2.5, 3.5} {
+            \fill[white] (\x, \y) rectangle (\x+0.2, \y+0.4);
+        }
+    }
+
+    \foreach \x in {9.1, 9.3, 9.5, 9.7} {
+        \foreach \y in {1, 1.5} {
+            \fill[white] (\x, \y) rectangle (\x+0.2, \y+0.4);
+        }
+    }
+\end{tikzpicture}
+    \end{document}"
+img_0035.png,"The image features a white background with a red line running horizontally across the scene. The red line is accompanied by a small circle, which is located near the center of the line. There are two arrows in the scene, one pointing towards the circle and the other pointing towards the left side of the image.
+
+In addition to the main elements, there are two labels present in the image. One label is located on the left side of the scene, while the other label is situated on the right side. The labels seem to be providing information about the circle and the red line.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[background color=white]
+    % Draw the red line
+    \draw[red, thick] (0,0) -- (5,0);
+    
+    % Draw the circle
+    \fill[black] (2.5,0) circle (0.1);
+    
+    % Draw the arrows
+    \draw[->] (2,0) -- (2.5,0) node[midway, above] {};
+    \draw[->] (4,0) -- (3.5,0) node[midway, above] {};
+    
+    % Add labels
+    \node at (0,-0.5) {Left Label};
+    \node at (5,-0.5) {Right Label};
+\end{tikzpicture}
+    \end{document}"
+img_0036.png,"The image features a white background with two geometric shapes, likely triangles, placed on it. The shapes are positioned close to each other, with one located towards the left side of the image and the other towards the right side.
+
+There are several labels and numbers on the shapes, indicating that they are mathematical diagrams. The labels are placed on the shapes, with one label on the left triangle and another on the right triangle. The numbers are also present on the shapes, with one number on the left triangle and another on the right triangle.
+
+The overall layout of the image is simple and clean, with the focus on the two geometric shapes and their accompanying labels and numbers.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[scale=1]
+    % Left triangle
+    \draw[fill=blue!20] (0,0) -- (2,0) -- (1,1.732) -- cycle;
+    \node at (1,0.5) {A};
+    \node at (0.5,0.2) {1};
+
+    % Right triangle
+    \draw[fill=red!20] (4,0) -- (6,0) -- (5,1.732) -- cycle;
+    \node at (5,0.5) {B};
+    \node at (5.5,0.2) {2};
+\end{tikzpicture}
+    \end{document}"
+img_0037.png,"The image features a complex diagram with multiple interconnected circles. The circles are arranged in a grid-like pattern, with some circles overlapping each other. The diagram appears to be a visual representation of a mathematical concept, possibly related to geometry or topology.
+
+There are several numbers and labels scattered throughout the diagram, indicating the relationships between the circles. The numbers are placed near the circles, and some labels are placed above or below the circles. The overall layout of the diagram is intricate and requires careful observation to fully understand its purpose and meaning.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \foreach \i in {1, 2, 3} {
+        \foreach \j in {1, 2, 3} {
+            \node[circle, draw, minimum size=1.5cm] (c\i\j) at (\i * 2, \j * 2) {};
+            \node at (\i * 2, \j * 2) {\i\j};
+        }
+    }
+    
+    \draw (c11) -- (c12);
+    \draw (c12) -- (c13);
+    \draw (c21) -- (c22);
+    \draw (c22) -- (c23);
+    \draw (c31) -- (c32);
+    
+    \draw[opacity=0.5] (c11) circle (1cm);
+    \draw[opacity=0.5] (c22) circle (1cm);
+    \draw[opacity=0.5] (c33) circle (1cm);
+    
+    \node[above] at (c11.north) {A};
+    \node[below] at (c12.south) {B};
+    \node[left] at (c21.west) {C};
+    \node[right] at (c23.east) {D};
+    \node[below] at (c31.south) {E};
+    \node[above] at (c33.north) {F};
+\end{tikzpicture}
+    \end{document}"
+img_0038.png,"The image is a black and white drawing of an electrical circuit. The circuit consists of multiple wires and components, including two large circles, which are likely capacitors. There are also two smaller circles, which could be capacitors or other components.
+
+The drawing features a variety of arrows, indicating the flow of electricity through the circuit. The arrows are placed in different directions, indicating the connections between the components.
+
+In addition to the wires and components, there are two labels in the drawing. One label is placed near the top left corner, and the other label is located near the top right corner. These labels likely provide information about the circuit or its components.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Draw large capacitors
+    \draw (0, 2) circle (0.5) node {C1};
+    \draw (2, 2) circle (0.5) node {C2};
+    
+    % Draw small capacitors
+    \draw (0, 0) circle (0.3) node {C3};
+    \draw (2, 0) circle (0.3) node {C4};
+    
+    % Draw wires
+    \draw[thick] (0.5, 2) -- (1.5, 2);
+    \draw[thick] (0.5, 0) -- (1.5, 0);
+    \draw[thick] (1.5, 2) -- (1.5, 0);
+    
+    % Draw arrows indicating flow
+    \draw[->, thick] (1.5, 2) -- (2, 2.5);
+    \draw[->, thick] (1.5, 0) -- (2, -0.5);
+    
+    % Labels
+    \node at (-1, 2.5) {Label 1};
+    \node at (3, 2.5) {Label 2};
+\end{tikzpicture}
+    \end{document}"
+img_0039.png,"The image features a detailed illustration of a spiral, likely a mathematical concept or a part of a scientific diagram. The spiral is depicted in two different colors, with one color being blue and the other being white. The spiral is divided into three sections, each with a distinct color.
+
+The illustration is accompanied by a few labels, including ""Q"" and ""lun,"" which might be related to the spiral's context or purpose. The spiral is positioned in the center of the image, with the blue section on the left, the white section on the right, and the third section in the middle. The spiral's shape is curved, and it appears to be a complex and intricate design.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \draw[blue, thick] plot [variable=\t, domain=0:4*pi, samples=100] ({\t r*cos(\t r)}, {\t r*sin(\t r)});
+    \draw[white, thick] plot [variable=\t, domain=4*pi:8*pi, samples=100] ({\t r*cos(\t r)}, {\t r*sin(\t r)});
+    \draw[red, thick] plot [variable=\t, domain=8*pi:12*pi, samples=100] ({\t r*cos(\t r)}, {\t r*sin(\t r)});
+    
+    \node at (2, 0) {Q};
+    \node at (1, -2) {lun};
+\end{tikzpicture}
+    \end{document}"
+img_0040.png,"The image features a black and white drawing of a line with numbers on it. The line is divided into sections, each labeled with a number from one to four. The numbers are arranged in a sequence, with one on the left, two in the middle, and three on the right. The line itself is positioned horizontally across the image, with the numbers placed above it. The overall layout of the image is simple and straightforward, focusing on the numerical sequence and the line that connects the numbers.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \draw[thick] (0,0) -- (4,0);
+    \foreach \x/\num in {0/1, 1/2, 2/3, 3/4} {
+        \node at (\x, 0.5) {\num};
+    }
+\end{tikzpicture}
+    \end{document}"
+img_0041.png,"The image is a black and white drawing of a hand with many lines and dots. The hand is positioned in the center of the drawing, and the lines and dots are scattered throughout the image, creating a complex and intricate pattern. The drawing appears to be a mathematical or scientific diagram, possibly representing a concept or theory related to the hand. The lines and dots are of various sizes and shapes, adding to the visual complexity of the image.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Draw the hand
+    \draw[thick] (0,0) -- (0,2); % wrist
+    \draw[thick] (0,2) -- (-1,3); % thumb
+    \draw[thick] (0,2) -- (1,3); % index finger
+    \draw[thick] (0,2) -- (1.5,2.5); % middle finger
+    \draw[thick] (0,2) -- (1.2,1.5); % ring finger
+    \draw[thick] (0,2) -- (0.5,1.2); % pinky
+
+    % Draw palm lines
+    \draw[dashed] (-0.5,2) .. controls (-1,1.5) and (-0.5,1) .. (0,1); 
+    \draw[dashed] (0,2) .. controls (0.5,1.5) and (1,1) .. (1.5,1); 
+    \draw[dashed] (-0.5,2) .. controls (-0.5,0.5) and (0.5,0.5) .. (0,0);
+
+    % Draw dots
+    \foreach \x in {-2,-1.5,...,2} {
+        \foreach \y in {-2,-1.5,...,2} {
+            \fill[black] (\x,\y) circle (0.05);
+        }
+    }
+    
+    % Draw additional lines
+    \foreach \angle in {0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330} {
+        \draw[thick] (0,0) -- ({2*cos(\angle)},{2*sin(\angle)});
+    }
+\end{tikzpicture}
+    \end{document}"
+img_0042.png,"The image features a white background with a line of text and arrows. The text is written in a combination of yellow, pink, and blue colors, creating a visually appealing contrast. The arrows are placed at various positions along the line, pointing in different directions.
+
+There are three main sections of text, with one in the middle and two on either side. The text on the left side is written in blue, while the text on the right side is written in yellow. The text in the middle is written in pink. The arrows are placed at different intervals, with some closer to the text and others further away.
+
+The overall layout of the image is organized and easy to follow, with the text and arrows providing clear guidance and information.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[every node/.style={align=center}]
+    \draw[->] (0,0) -- (1,0) node[midway, below] {\textcolor{blue}{Left Text}};
+    \draw[->] (2,0) -- (3,0) node[midway, below] {\textcolor{pink}{Middle Text}};
+    \draw[->] (4,0) -- (5,0) node[midway, below] {\textcolor{yellow}{Right Text}};
+    
+    \node at (0.5, 0.5) {\textcolor{blue}{\textbf{Left}}};
+    \node at (2.5, 0.5) {\textcolor{pink}{\textbf{Middle}}};
+    \node at (4.5, 0.5) {\textcolor{yellow}{\textbf{Right}}};
+    
+    \draw[->] (1.5,0) -- (2.5,0) node[midway, above] {};
+    \draw[->] (3.5,0) -- (4.5,0) node[midway, above] {};
+\end{tikzpicture}
+    \end{document}"
+img_0043.png,"The image features a complex network of interconnected dots, forming a web-like structure. The dots are arranged in various shapes and sizes, creating a visually intriguing pattern. The dots are spread across the entire image, with some located closer to the center and others near the edges.
+
+There are several arrows pointing in different directions, indicating the flow of energy or information within the network. The arrows are positioned at various angles and heights, adding depth and complexity to the overall design.
+
+The image also includes a few labels, which are placed near the dots to provide context or information about the network. The labels are written in a contrasting color, making them stand out against the background.
+
+Overall, the image presents a fascinating visual representation of a complex network, with a combination of dots, arrows, and labels that create a captivating and intricate design.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Draw dots
+    \foreach \x/\y in {0/0, 1/1, 2/0, 1/-1, -1/1, -2/0, -1/-1, 0.5/0.5, -0.5/-0.5} {
+        \fill[blue] (\x,\y) circle (3pt);
+    }
+
+    % Draw arrows
+    \draw[->, thick, red] (0,0) -- (2,0);
+    \draw[->, thick, red] (1,1) -- (1.5,1.5);
+    \draw[->, thick, red] (-1,-1) -- (0,-2);
+    \draw[->, thick, red] (-2,0) -- (-1,1);
+    \draw[->, thick, red] (0.5,0.5) -- (1,1);
+    
+    % Add labels
+    \node[above] at (0,0) {A};
+    \node[above right] at (1,1) {B};
+    \node[below left] at (-1,-1) {C};
+    \node[below] at (-2,0) {D};
+    \node[above right] at (0.5,0.5) {E};
+\end{tikzpicture}
+    \end{document}"
+img_0044.png,"The image is a black and white diagram featuring a complex network of interconnected circles. The circles are arranged in a circular pattern, with some overlapping each other. The diagram is labeled with various letters and numbers, indicating the relationships between the different elements.
+
+There are several arrows pointing in different directions, suggesting connections between the circles. The diagram appears to be a visual representation of a mathematical concept or a complex system. The overall layout and visual elements create a sense of depth and intricacy in the image.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \foreach \i in {1,2,...,12} {
+        \node[circle, draw, minimum size=1cm] (A\i) at ({360/12*\i}:3) {\i};
+    }
+    
+    \foreach \i in {1,2,...,12} {
+        \foreach \j in {1,2,...,12} {
+            \ifnum\i<\j
+                \draw[->] (A\i) -- (A\j);
+            \fi
+        }
+    }
+    
+    \node at (0,0) {Complex Network};
+\end{tikzpicture}
+    \end{document}"
+img_0045.png,"The image features a blue and red triangle with a series of numbers and letters on it. The triangle is divided into three sections, each containing a different set of numbers and letters. The numbers are arranged in a linear fashion, with some numbers appearing in the middle section and others in the top and bottom sections.
+
+There are several arrows pointing in different directions, indicating the relationships between the numbers and letters. The arrows are placed at various points within the triangle, with some pointing towards the numbers and others pointing towards the letters. The overall layout of the image is organized and visually appealing, making it easy to understand the relationships between the numbers and letters.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Draw the triangle
+    \fill[blue] (0,0) -- (3,5) -- (6,0) -- cycle;
+    \fill[red] (0,0) -- (1.5,2.5) -- (3,0) -- cycle;
+    \fill[red] (3,0) -- (4.5,2.5) -- (6,0) -- cycle;
+
+    % Add numbers and letters in the sections
+    \node at (1.5, 4) {A};
+    \node at (4.5, 4) {B};
+    \node at (1.5, 2) {1};
+    \node at (1.5, 1) {2};
+    \node at (4.5, 2) {3};
+    \node at (4.5, 1) {4};
+    \node at (3, -0.5) {C};
+
+    % Draw arrows
+    \draw[->] (1.5, 2.5) -- (1.5, 3.5);
+    \draw[->] (4.5, 2.5) -- (4.5, 3.5);
+    \draw[->] (1.5, 1) -- (1.5, 0);
+    \draw[->] (4.5, 1) -- (4.5, 0);
+    \draw[->] (1.5, 4) -- (3, 0);
+    \draw[->] (4.5, 4) -- (3, 0);
+\end{tikzpicture}
+    \end{document}"
+img_0046.png,"The image features a white background with a black circle in the center. The circle is surrounded by a red line, which appears to be a graph or a representation of a wave. There are several arrows pointing in different directions, indicating various directions or relationships between the elements in the image.
+
+In addition to the main circle, there are two smaller circles located towards the top left corner of the image. A number ""0"" can be seen in the top right corner, possibly indicating a scale or measurement. The overall layout of the image suggests a visual representation of a concept or idea, with the black circle and red line serving as the main focus.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[scale=1]
+    % Background
+    \fill[white] (0,0) rectangle (10,10);
+    
+    % Main black circle
+    \fill[black] (5,5) circle (1);
+    
+    % Red wave line
+    \draw[red, thick, domain=0:10, samples=100] plot (\x, 5 + 0.5*sin(2*pi*\x/3));
+    
+    % Arrows
+    \draw[->, thick] (5,5) -- (6,6);
+    \draw[->, thick] (5,5) -- (4,6);
+    \draw[->, thick] (5,5) -- (5,4);
+    \draw[->, thick] (5,5) -- (6,4);
+    
+    % Smaller circles
+    \fill[black] (1,8) circle (0.3);
+    \fill[black] (2,8) circle (0.3);
+    
+    % Number ""0""
+    \node at (9,9) {\textbf{0}};
+\end{tikzpicture}
+    \end{document}"
+img_0047.png,"The image features a white background with a series of diagrams and mathematical symbols. There are three main diagrams, each with a different color: red, blue, and green. The red diagram is located on the left side of the image, while the blue and green diagrams are positioned on the right side.
+
+In addition to the diagrams, there are several mathematical symbols scattered throughout the image. These symbols include a variety of letters, numbers, and arrows. Some of the letters are placed near the diagrams, while others are positioned independently. The numbers are also dispersed throughout the image, with some appearing near the diagrams and others placed separately. The arrows are found in various locations, pointing in different directions and connecting different elements of the image.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[scale=1.0]
+    % Background
+    \fill[white] (0,0) rectangle (10,6);
+
+    % Red diagram
+    \draw[red, thick] (1,3) circle (1.5);
+    \node[red] at (1,3) {Red Diagram};
+    
+    % Blue diagram
+    \draw[blue, thick] (7,4) rectangle (9,5);
+    \node[blue] at (8,4.5) {Blue Diagram};
+
+    % Green diagram
+    \draw[green, thick] (7,2) -- (9,1) -- (7,1) -- cycle;
+    \node[green] at (8,1.5) {Green Diagram};
+
+    % Mathematical symbols
+    \node at (0.5,5) {$a$};
+    \node at (0.5,4.5) {$b$};
+    \node at (0.5,4) {$c$};
+    \node at (0.5,3.5) {$d$};
+    \node at (0.5,3) {$e$};
+    \node at (0.5,2.5) {$f$};
+    
+    \node at (9.5,5) {$1$};
+    \node at (9.5,4.5) {$2$};
+    \node at (9.5,4) {$3$};
+    
+    \draw[->] (2.5,3) -- (6,3);
+    \node at (4.5,3.2) {$\rightarrow$};
+    
+    \draw[->] (8,5) -- (8,2);
+    \node at (8.2,3.5) {$\downarrow$};
+
+    \draw[->] (5,1) -- (9,1);
+    \node at (7,0.8) {$\rightarrow$};
+\end{tikzpicture}
+    \end{document}"
+img_0048.png,"The image features a white background with a blue triangle and a red dot in the center. The triangle is positioned towards the left side of the image, while the red dot is located in the middle of the triangle. The triangle is slightly tilted, giving it a more dynamic appearance.
+
+There are two arrows in the image, one pointing towards the top right corner and the other pointing towards the top left corner. These arrows likely indicate the direction of the triangle or the red dot. The overall layout of the image is simple and clean, with the main focus being on the blue triangle and the red dot.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[background color=white]
+    % Draw the blue triangle
+    \fill[blue] (0,0) -- (2,4) -- (4,0) -- cycle;
+    
+    % Draw the red dot in the center of the triangle
+    \fill[red] (2,1.5) circle (5pt);
+    
+    % Draw the arrows
+    \draw[->] (2,4) -- (5,5);
+    \draw[->] (2,4) -- (-1,5);
+\end{tikzpicture}
+    \end{document}"
+img_0049.png,"The image is a diagram illustrating a process of encoding information. The main components of the diagram include a driver script, a SAT solver, and a Fourier transform. The driver script is located on the left side of the image, while the SAT solver is situated in the middle. The Fourier transform is positioned on the right side of the image.
+
+There are several arrows pointing in different directions, indicating the flow of information and the connections between the components. The arrows are placed at various points within the diagram, highlighting the relationships between the different elements.
+
+The diagram also features a few labels, which provide additional context and information about the process being depicted. Overall, the image is a clear and concise representation of the encoding process.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[node distance=2cm]
+    % Nodes
+    \node (driver) [draw, rectangle] {Driver Script};
+    \node (sat) [draw, rectangle, right of=driver] {SAT Solver};
+    \node (fourier) [draw, rectangle, right of=sat] {Fourier Transform};
+
+    % Arrows
+    \draw[->] (driver) -- (sat) node[midway, above] {Input};
+    \draw[->] (sat) -- (fourier) node[midway, above] {Output};
+    \draw[->] (fourier.east) -- ++(1,0) node[midway, above] {Transformed Data} |- (sat.east);
+    \draw[->] (sat.south) -- ++(0,-1) node[midway, right] {Results} |- (driver.south);
+    
+    % Labels
+    \node at ($(driver.east) + (0.5,0)$) {Step 1: Prepare};
+    \node at ($(sat.east) + (0.5,0)$) {Step 2: Solve};
+    \node at ($(fourier.east) + (0.5,0)$) {Step 3: Transform};
+\end{tikzpicture}
+    \end{document}"

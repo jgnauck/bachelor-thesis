@@ -1,0 +1,1717 @@
+Sample,Caption,LaTeX_Document
+filename,caption,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \node[draw, rectangle, minimum width=3cm, minimum height=1cm] (box) {Caption};
+\end{tikzpicture}
+    \end{document}"
+img_0000.png,"The image features a page of text set against a gradient background. The left side has a white background with black text that includes section headings and paragraphs of body text. The section heading ""1.2 Ipsum"" is bold and larger than the other text. Below it, there are two paragraphs, both written in a serif font. The text is aligned to the left and consists of sentences that appear to be placeholder text, possibly resembling Latin.
+
+On the right side, there's a vertical gradient transitioning from green at the top to blue at the bottom. The word ""Random"" is displayed vertically along the right edge in a large font, with the letters arranged so they are readable from top to bottom. The overall composition presents a clean, modern layout with a striking contrast between the text and the colorful gradient background.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[remember picture, overlay]
+
+% Gradient background
+\fill[green] (0,0) rectangle (5,10);
+\fill[blue] (0,5) rectangle (5,10);
+
+% White background for text
+\fill[white] (0,0) rectangle (5,5);
+
+% Section heading
+\node[anchor=north west, font=\bfseries\Large] at (0.5,5) {1.2 Ipsum};
+
+% Body text
+\node[anchor=north west, font=\sffamily] at (0.5,4.5) {
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+};
+\node[anchor=north west, font=\sffamily] at (0.5,3.5) {
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+};
+
+% Vertical text ""Random""
+\node[anchor=north east, font=\Huge, rotate=90] at (5,5) {Random};
+\end{tikzpicture}
+    \end{document}"
+img_0001.png,"The image depicts a simple graph consisting of six nodes and several edges. At the top, there is a node labeled ""3"" positioned near the right side. Directly below ""3,"" there is another node labeled ""5."" To the left of both nodes, there's a node labeled ""1,"" which is connected by a diagonal line to node ""2"" located below it, and also connected to node ""3."" Node ""2"" is situated at the lowest point of the diagram. 
+
+From ""2,"" a vertical line connects downward to another node labeled ""4."" This creates a vertical structure where nodes ""2"" and ""4"" are directly aligned. The edges visually create a triangular shape with ""3"" at the top vertex, while ""1"" and ""2"" form the base. The overall structure has a simple, clear arrangement of connected nodes.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \node (1) at (0,2) {1};
+    \node (2) at (0,0) {2};
+    \node (3) at (2,2) {3};
+    \node (4) at (0,-2) {4};
+    \node (5) at (0,1) {5};
+    
+    \draw (1) -- (2);
+    \draw (1) -- (3);
+    \draw (3) -- (2);
+    \draw (2) -- (4);
+\end{tikzpicture}
+    \end{document}"
+img_0002.png,"The image depicts a rectangular domain with labeled boundaries. The left side is labeled ""Γ inflow"" in red, while the right side is labeled ""Γo"" in blue. The top and bottom boundaries are labeled ""ΓN,θ"" in black. Inside the rectangle, there is a boundary denoted as ""∂B"" represented by a circle with two points marked, labeled ""x1"" and ""x2."" The overall structure conveys a mathematical or physical representation, possibly related to boundary conditions in a fluid dynamics or mathematical analysis context.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Draw rectangle
+    \draw[thick] (0, 0) rectangle (4, 2);
+
+    % Label boundaries
+    \node[red] at (-0.2, 1) {Γ inflow};
+    \node[blue] at (4.2, 1) {Γo};
+    \node[black] at (2, 2.2) {ΓN,θ};
+    \node[black] at (2, -0.2) {ΓN,θ};
+
+    % Draw circle for ∂B
+    \draw[thick] (2, 1) circle (0.5);
+
+    % Mark points x1 and x2
+    \fill (1.7, 1) circle (2pt);
+    \node[below] at (1.7, 1) {$x_1$};
+    \fill (2.3, 1) circle (2pt);
+    \node[below] at (2.3, 1) {$x_2$};
+\end{tikzpicture}
+    \end{document}"
+img_0003.png,"The image presents a combination line and bar chart illustrating temperature and precipitation data across the months of the year from January to December. The horizontal axis is labeled with the names of the months in French: ""Janvier,"" ""Février,"" ""Mars,"" ""Avril,"" ""Mai,"" ""Juin,"" ""Juillet,"" ""Août,"" ""Septembre,"" ""Octobre,"" ""Novembre,"" and ""Décembre."" The vertical axis on the left indicates temperature, ranging from 0 to 30 degrees, while the vertical axis on the right shows the precipitation levels from 0 to 100 millimeters.
+
+The chart features two lines. The red line represents the maximum temperatures, marked with circular red data points, while the blue line represents the minimum temperatures, marked with circular blue data points. These lines are connected by smooth curves. Additionally, there are yellow bars that represent the precipitation levels for each month, displaying varying heights corresponding to the amount of rainfall.
+
+The elements of the chart are enclosed within a black border. A legend is present in the top left corner, indicating that the red line corresponds to ""Max,"" the blue line to ""Min,"" and the yellow bars indicate ""Précipitations."" The background color of the precipitation bars is yellow, while the gridlines are faint, facilitating the visualization of the data.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \begin{axis}[
+        width=15cm,
+        height=10cm,
+        xlabel={Mois},
+        ylabel={Température (°C)},
+        ymajorgrids=true,
+        grid style={gray!30},
+        ymin=0, ymax=30,
+        ytick={0,5,...,30},
+        ylabel near ticks,
+        y axis line style={->},
+        xtick={1,2,...,12},
+        xticklabels={Janvier, Février, Mars, Avril, Mai, Juin, Juillet, Août, Septembre, Octobre, Novembre, Décembre},
+        legend style={at={(0.5,-0.15)}, anchor=north, legend columns=3},
+        axis y line*=left,
+        axis x line=bottom,
+        % Secondary y-axis for precipitation
+        y axis line style={->},
+        ylabel={Précipitations (mm)},
+        ymajorgrids=false,
+        ytick={0,20,...,100},
+        yticklabel style={text width=1cm},
+        ylabel near ticks,
+        y axis line style={->},
+        axis y line*=right,
+        % Background color for bars
+        bar width=0.4cm,
+        enlarge x limits=0.15,
+        every axis label/.append style={font=\small}
+    ]
+    
+    % Precipitation data (yellow bars)
+    \addplot[ybar, yellow, fill=yellow] coordinates {(1,20) (2,30) (3,40) (4,25) (5,60) (6,70) (7,80) (8,75) (9,50) (10,30) (11,20) (12,15)};
+    
+    % Maximum temperature data (red line)
+    \addplot[color=red, mark=*] coordinates {(1,10) (2,12) (3,15) (4,18) (5,22) (6,25) (7,28) (8,27) (9,23) (10,18) (11,12) (12,10)};
+    \addplot[color=red] coordinates {(1,10) (2,12) (3,15) (4,18) (5,22) (6,25) (7,28) (8,27) (9,23) (10,18) (11,12) (12,10)};
+    
+    % Minimum temperature data (blue line)
+    \addplot[color=blue, mark=*] coordinates {(1,5) (2,7) (3,8) (4,10) (5,13) (6,16) (7,18) (8,17) (9,14) (10,10) (11,7) (12,5)};
+    \addplot[color=blue] coordinates {(1,5) (2,7) (3,8) (4,10) (5,13) (6,16) (7,18) (8,17) (9,14) (10,10) (11,7) (12,5)};
+    
+    % Legend
+    \legend{Précipitations, Max, Min}
+    
+    \end{axis}
+\end{tikzpicture}
+    \end{document}"
+img_0004.png,"The image depicts a graph with a Cartesian coordinate system featuring both a grid and marked axes. The vertical axis (y-axis) ranges from 0 to 15, while the horizontal axis (x-axis) ranges from 0 to 15 as well. 
+
+A series of points, indicated by plus signs, are positioned in an irregular manner and connect to create a piecewise function, forming a staircase-like descending line. There are several shaded areas beneath this line. 
+
+The graph contains distinct notations: a circle, marked as an open circle, is located at the coordinates (5, 10), while two filled circles appear at coordinates (8, 3) and (12, 3). Additionally, a square filled symbol represents points in the data set, primarily placed horizontally across the graph’s middle portion. 
+
+The shaded area is categorized into two regions: one is an entirely filled region below the “U” line, covering multiple grid squares, while another contains a crosshatched area beneath the main descending function and above the lower curve, labeled as ""L(η)."" 
+
+A legend in the upper right corner labels three symbols: the plus signs denote ""U,"" the squares represent ""N(U),"" and the line type signifies ""L(η)."" The overall graph is structured clearly, with well-defined grid lines assisting in the precise plotting of points and the visual distinction of areas.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[scale=0.8]
+    % Draw the grid
+    \draw[very thin, gray] (0,0) grid (15,15);
+    
+    % Draw the axes
+    \draw[->] (0,0) -- (15,0) node[right] {x};
+    \draw[->] (0,0) -- (0,15) node[above] {y};
+    
+    % Mark the axes
+    \foreach \x in {0, 1, ..., 15} \draw (\x,0.2) -- (\x,-0.2) node[below] {\x};
+    \foreach \y in {0, 1, ..., 15} \draw (0.2,\y) -- (-0.2,\y) node[left] {\y};
+    
+    % Draw the staircase-like function
+    \draw[thick] (0,15) -- (5,10) -- (8,3) -- (12,3) -- (15,0);
+    
+    % Open circle at (5,10)
+    \draw[open circle, fill=white] (5,10) circle (5pt);
+    
+    % Filled circles at (8,3) and (12,3)
+    \fill (8,3) circle (5pt);
+    \fill (12,3) circle (5pt);
+    
+    % Squares for N(U)
+    \fill[black] (1,7) rectangle (2,8);
+    \fill[black] (3,7) rectangle (4,8);
+    \fill[black] (5,7) rectangle (6,8);
+    \fill[black] (7,7) rectangle (8,8);
+    
+    % Shaded area under U
+    \fill[blue!30] (0,0) -- (0,15) -- (5,10) -- (0,10) -- cycle;
+    
+    % Crosshatched area under the staircase
+    \begin{scope}
+        \clip (5,10) -- (8,3) -- (12,3) -- (15,0) -- (15,0) -- (5,0) -- cycle;
+        \fill[pattern=checkerboard, pattern color=gray!30] (5,10) -- (8,3) -- (12,3) -- (15,0) -- (15,0) -- (5,0) -- cycle;
+    \end{scope}
+    
+    % Legend
+    \draw[thick] (12,12) -- (13,12) node[right] {U (plus signs)};
+    \fill (12,11) circle (5pt);
+    \draw[thick] (12,10) -- (13,10) node[right] {N(U) (squares)};
+    \fill[black] (12,9) rectangle (12.5,9.5);
+    \draw[thick] (12,8) -- (13,8) node[right] {L(η) (line)};
+    \draw[thick] (12,7) -- (12.5,7) -- (12.5,6);
+\end{tikzpicture}
+    \end{document}"
+img_0005.png,"The image depicts a simple diagram consisting of three labeled segments that form a right triangle. At the bottom, there is a horizontal line representing segment S1. Extending vertically from the left end of S1, there is a vertical line segment representing S2. At the top of S2, there is a diagonal line segment extending from the end of S2 to the right, which represents S3. The angle formed between S2 and S1 is a right angle, while S3 connects the ends of S2 and S1. Each segment is clearly labeled with its respective designation: S1 at the bottom, S2 on the left vertical, and S3 on the upper diagonal. The placement of the labels is such that S2 is near the bottom left, S1 is centered below, and S3 is at the upper right end of the diagonal line.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \draw[thick] (0,0) -- (4,0) node[midway, below] {S1};
+    \draw[thick] (0,0) -- (0,3) node[midway, left] {S2};
+    \draw[thick] (0,3) -- (4,0) node[midway, right] {S3};
+    \draw[thick] (0,0) rectangle (0.1,0.1); % Right angle marker
+\end{tikzpicture}
+    \end{document}"
+img_0006.png,"The image features two stick figures drawn in a minimalistic style. The figure on the left has a circular head that connects to a straight vertical line for the body. The arms are represented by a single horizontal line extending from the body, with one arm bent and ending in a circle. The legs are depicted with two diagonal lines stemming from the bottom of the body, each connecting to a circle at the feet. The figure on the right has a circular head as well, with a straight vertical line for the body. Its arms are horizontal lines extending from the body, with one arm featuring a horizontal line that ends in a circle, representing a hand. The legs are two diagonal lines that meet at a point and extend downward, also connecting to circles at the feet. Both figures are drawn with simple black lines and circles on a white background.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Left stick figure
+    % Head
+    \draw[black] (0,2) circle (0.2);
+    % Body
+    \draw[black] (0,1.8) -- (0,0);
+    % Arms
+    \draw[black] (-0.5,1.5) -- (0.5,1.5);
+    \draw[black] (0,1.5) -- (0.5,1.5);
+    \draw[black] (0.5,1.5) -- (0.5,1.7);
+    % Legs
+    \draw[black] (0,0) -- (-0.5,-1);
+    \draw[black] (0,0) -- (0.5,-1);
+    \draw[black] (-0.5,-1) circle (0.1);
+    \draw[black] (0.5,-1) circle (0.1);
+    
+    % Right stick figure
+    % Head
+    \draw[black] (2,2) circle (0.2);
+    % Body
+    \draw[black] (2,1.8) -- (2,0);
+    % Arms
+    \draw[black] (1.5,1.5) -- (2.5,1.5);
+    \draw[black] (2,1.5) -- (2.5,1.5);
+    \draw[black] (2.5,1.5) -- (2.5,1.7);
+    % Legs
+    \draw[black] (2,0) -- (1.5,-1);
+    \draw[black] (2,0) -- (2.5,-1);
+    \draw[black] (1.5,-1) circle (0.1);
+    \draw[black] (2.5,-1) circle (0.1);
+\end{tikzpicture}
+    \end{document}"
+img_0007.png,"The image is a line graph that depicts BLEU scores for various language pairs against different instruction scales. The x-axis is labeled ""Instruction Scales"" and has five tick marks indicating the values from 1/10 to 1, spaced evenly. The y-axis is labeled ""BLEU"" and ranges from 20 to 50 in increments of 10. 
+
+There are four data series represented by different colored markers and lines. The series for ""Zh-En"" (Chinese to English) is shown with blue circles and a solid line. ""De-En"" (German to English) is depicted with red squares and a dashed line. ""Fr-En"" (French to English) is represented with brown circles and a solid line. The series for ""De-En"" has a distinct line that is drawn slightly above the others while ""Zh-En"" starts low and progresses steadily upward. 
+
+A legend is located inside the graph area: the ""Zh-En"" series is indicated by blue circles, ""De-En"" by red squares, and ""Fr-En"" by brown circles. The graph has a clean background with no gridlines, and the overall presentation is minimalistic yet informative.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \begin{axis}[
+        xlabel={Instruction Scales},
+        ylabel={BLEU},
+        xtick={1,2,3,4,5},
+        xticklabels={0.1,0.3,0.5,0.7,1},
+        ytick={20,30,40,50},
+        ymin=20, ymax=50,
+        legend style={at={(0.5,-0.15)}, anchor=north, legend columns=3},
+        grid=none,
+        width=10cm,
+        height=6cm
+    ]
+    \addplot[color=blue, mark=o] coordinates {(1,25) (2,30) (3,35) (4,40) (5,45)};
+    \addplot[color=red, mark=square, dashed] coordinates {(1,30) (2,35) (3,40) (4,45) (5,50)};
+    \addplot[color=brown, mark=o] coordinates {(1,20) (2,25) (3,30) (4,35) (5,40)};
+    
+    \legend{Zh-En, De-En, Fr-En}
+    \end{axis}
+\end{tikzpicture}
+    \end{document}"
+img_0008.png,"The image contains three diagrams arranged horizontally. 
+
+On the left, the first diagram features a Y-shaped structure that has three lines extending upward from a central junction, representing the vertices of a graph. 
+
+The middle diagram, labeled with the symbol \( \Gamma_2 \), depicts a similar Y-shape but with four lines curving outward from two junction points at the bottom and one central junction at the top. This forms a symmetric structure with a more intricate appearance compared to the first.
+
+On the right, labeled \( C \), the third diagram also has a Y-shape but contains six lines. Three lines extend outward from the central junction positioned at the bottom while three other lines curve inward from the outer edges to reconnect at the top again, creating a symmetrical and complex figure.
+
+All diagrams are drawn in simple black lines on a white background, with arrows at the tips of some lines indicating directionality.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % First Diagram
+    \begin{scope}
+        \draw[->] (0,0) -- (0,1.5);
+        \draw[->] (-1,0) -- (0,0);
+        \draw[->] (1,0) -- (0,0);
+        \draw[->] (0,0) -- (-1,1);
+        \draw[->] (0,0) -- (1,1);
+    \end{scope}
+    \hspace{1cm}
+    % Second Diagram
+    \begin{scope}
+        \node at (0,1.5) {\( \Gamma_2 \)};
+        \draw[->] (0,0) -- (0,1.5);
+        \draw[->] (-1,0) -- (0,0);
+        \draw[->] (1,0) -- (0,0);
+        \draw[->] (0,0) -- (-1,1);
+        \draw[->] (0,0) -- (1,1);
+        \draw[->] (-1,0) -- (-1,1);
+        \draw[->] (1,0) -- (1,1);
+    \end{scope}
+    \hspace{1cm}
+    % Third Diagram
+    \begin{scope}
+        \node at (0,1.5) {\( C \)};
+        \draw[->] (0,0) -- (0,1);
+        \draw[->] (-1,0) -- (0,0);
+        \draw[->] (1,0) -- (0,0);
+        \draw[->] (0,0) -- (-1,1);
+        \draw[->] (0,0) -- (1,1);
+        \draw[->] (0,1) -- (0,2);
+        \draw[->] (-1,1) -- (-1,2);
+        \draw[->] (1,1) -- (1,2);
+    \end{scope}
+\end{tikzpicture}
+    \end{document}"
+img_0009.png,"The image features a light purple background with a blue border. In the upper left corner, the letter ""R"" is displayed in a serif font. Towards the top right, the Greek letter ""σ"" is presented in a similar font style. On the left side of the image, there is a larger black shape resembling a rounded rectangle or square with a smaller black square centered within it. This larger shape has a white outline, and the smaller square is solid black. To the right of this black shape, there is a larger, more complex black figure that appears to consist of several geometric shapes, including a diamond and a triangle, with additional facets resembling a stylized character or an abstract design. The whole composition combines these elements in a visually balanced way.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[background color=lightpurple]
+    % Background and border
+    \fill[lightpurple] (0,0) rectangle (10,6);
+    \draw[blue, thick] (0,0) rectangle (10,6);
+    
+    % Upper left letter R
+    \node[font=\sffamily\Huge] at (1,5) {R};
+    
+    % Upper right Greek letter σ
+    \node[font=\sffamily\Huge] at (9,5) {$\sigma$};
+    
+    % Left black shape with a smaller square
+    \draw[white, thick] (1,2) rectangle (3,4);
+    \fill[black] (2,3) rectangle (2.5,3.5);
+    
+    % Right complex black figure
+    \fill[black] (4,1) -- (5,3) -- (6,1) -- (5,0) -- cycle; % Diamond
+    \fill[black] (5,3) -- (7,4) -- (7,2) -- cycle; % Triangle
+    \draw[black] (4,1) -- (5,3) -- (6,1) -- (5,0) -- cycle; % Diamond outline
+    \draw[black] (5,3) -- (7,4) -- (7,2) -- cycle; % Triangle outline
+\end{tikzpicture}
+    \end{document}"
+img_0010.png,"The image depicts a three-dimensional sphere with a transparent appearance. Inside the sphere, there are several labeled vectors and points. At the center of the sphere is a point labeled ϕ₀. From this point, there are two vectors depicted along the vertical axis: one is directed upwards, labeled as Γₐ, and another is directed downwards but not labeled in the visible section. 
+
+There are two curved lines extending diagonally from the left side of the sphere to the right, forming a shape reminiscent of a heart. These curves are labeled Γₑ and Γₗ. Near the top of the sphere, there's a vector labeled ξ'ₚ pointing upwards. Below it is another vector labeled ξ'ₛ pointing towards the center of the sphere. On the bottom part, a vector labeled ξ'ₛ points similarly but in the opposite direction. 
+
+The sphere is oriented such that the y-axis extends horizontally to the right, the z-axis extends vertically upwards, and the x-axis extends horizontally to the left. There is also a horizontal dashed line labeled r, which extends to the right and intersects with a vertical dashed line labeled r‖ that goes downwards from the top edge of the sphere. A curved line near the bottom, labeled Gξ' , curves gently downward towards the left.
+
+The overall design creates a representation of angles and vectors relative to a spherical coordinate system, likely used for illustrating concepts in physics or mathematics.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[scale=2]
+    % Draw the sphere
+    \shade[ball color=blue!30, opacity=0.5] (0,0,0) circle (1);
+    
+    % Axes
+    \draw[->] (-1.5,0,0) -- (1.5,0,0) node[right] {$x$};
+    \draw[->] (0,-1.5,0) -- (0,1.5,0) node[above] {$y$};
+    \draw[->] (0,0,-1.5) -- (0,0,1.5) node[above] {$z$};
+
+    % Central point
+    \fill (0,0,0) circle (2pt) node[below right] {$\phi_0$};
+
+    % Vectors
+    \draw[->, thick] (0,0,0) -- (0,0,1) node[above] {$\Gamma_a$};
+    \draw[->, thick] (0,0,0) -- (0,0,-1) node[below] {};
+    \draw[->, thick] (0,0,0) -- (0.5,0.5,0.5) node[right] {$\xi'_p$};
+    \draw[->, thick] (0,0,0) -- (0.5,0.5,-0.5) node[below right] {$\xi'_s$};
+    \draw[->, thick] (0,0,0) -- (-0.5,-0.5,-0.5) node[below left] {$\xi'_s$};
+
+    % Curved lines
+    \draw[thick,->] (-1,0,0) .. controls (-0.5,0.5,0) and (0.5,0.5,0) .. (1,0,0) node[right] {$\Gamma_e$};
+    \draw[thick,->] (-1,0,0) .. controls (-0.5,-0.5,0) and (0.5,-0.5,0) .. (1,0,0) node[right] {$\Gamma_l$};
+    
+    % Dashed lines
+    \draw[dashed] (0,0,1) -- (1,0,1) node[right] {$r$};
+    \draw[dashed] (1,0,1) -- (1,0,0) node[below right] {$r_{\parallel}$};
+    
+    % Curved line
+    \draw[thick] (-0.5,-0.5,-1) .. controls (-0.5,-0.5,-0.5) and (-0.5,0,0) .. (-0.5,0,0) node[below left] {$G\xi'$;
+\end{tikzpicture}
+    \end{document}"
+img_0011.png,"The image depicts a tree structure labeled ""root"" at the top. Beneath the ""root,"" there are three branches leading to different shapes.
+
+On the left branch, there's a red outline of an upward-pointing triangle, situated above a regular star shape formed by intersecting lines. The star has multiple points and is symmetrical.
+
+In the middle branch, there is a red outline of a downward-pointing triangle atop another regular star shape similar to the one on the left. Beneath this, there are two lines diverging downwards, but there are no shapes at the ends of these lines.
+
+On the right branch, there is a symmetric star shape similar to the others, situated within a circle that seems to be aligned vertically. Below this, two additional lines diverge downwards but again have no shapes at the ends.
+
+The overall layout of the image is structured, with clear symmetry and geometric shapes, maintaining a clean and organized appearance.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Draw the root
+    \node at (0, 3) {root};
+    
+    % Left branch
+    \node[draw, red, shape=triangle, shape border rotate=90] at (-2, 2) {};
+    \node[draw] at (-2, 1) {★};
+    
+    % Middle branch
+    \node[draw, red, shape=triangle, shape border rotate=270] at (0, 2) {};
+    \node[draw] at (0, 1) {★};
+    \draw[->] (0, 0.5) -- (0, 0);
+    \draw[->] (0.2, 0.5) -- (0.2, 0);
+    
+    % Right branch
+    \draw[draw] (2, 1) circle (0.5);
+    \node[draw] at (2, 1) {★};
+    \draw[->] (2, 0.5) -- (2, 0);
+    \draw[->] (2.2, 0.5) -- (2.2, 0);
+\end{tikzpicture}
+    \end{document}"
+img_0012.png,"The image consists of two directed graphs labeled (A) and (B). Both graphs have five nodes, represented as circles and labeled with numbers 1 through 5. The nodes are connected by directed edges, which are indicated by arrows. 
+
+In graph (A), there are arrows pointing between the nodes with the following connections: 
+
+- From node 1 to node 2, there is a red arrow labeled -1.
+- From node 1 to node 5, there is a blue arrow labeled -1.
+- From node 2 to node 1, there is a blue arrow labeled 1.
+- From node 2 to node 4, there is a blue arrow labeled 0.2.
+- From node 3 to node 4, there is a red arrow labeled 1.
+- From node 3 to node 5, there is a blue arrow labeled 1.
+- From node 4 to node 2, there is a red arrow labeled -1.
+- From node 4 to node 3, there is a blue arrow labeled -0.5.
+- From node 5 to node 1, there is a blue arrow labeled -1.
+- From node 5 to node 3, there is a red arrow labeled 1.
+- Node 4 has a loop with a blue arrow labeled 0.2.
+- Node 1 has a loop with a red arrow labeled -1.
+- Node 2 has a loop","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[node distance=1.5cm, every node/.style={circle, draw}]
+    \node (1) {1};
+    \node (2) [right of=1] {2};
+    \node (3) [below of=1] {3};
+    \node (4) [below of=2] {4};
+    \node (5) [right of=4] {5};
+
+    \draw[->, red] (1) -- (2) node[midway, above] {-1};
+    \draw[->, blue] (1) -- (5) node[midway, below] {-1};
+    \draw[->, blue] (2) -- (1) node[midway, above] {1};
+    \draw[->, blue] (2) -- (4) node[midway, right] {0.2};
+    \draw[->, red] (3) -- (4) node[midway, left] {1};
+    \draw[->, blue] (3) -- (5) node[midway, below] {1};
+    \draw[->, red] (4) -- (2) node[midway, left] {-1};
+    \draw[->, blue] (4) -- (3) node[midway, left] {-0.5};
+    \draw[->, blue] (5) -- (1) node[midway, below] {-1};
+    \draw[->, red] (5) -- (3) node[midway, right] {1};
+    \draw[->, blue, loop above] (4) edge node {0.2} (4);
+    \draw[->, red, loop above] (1) edge node {-1} (1);
+    \draw[->, blue, loop above] (2) edge node {} (2);
+\end{tikzpicture}
+    \end{document}"
+img_0013.png,"The image is a timeline representing a decision-making process involving a patient. It is a horizontal line divided into sections, labeled with distinct events.
+
+At the far left, the section is labeled ""ex ante disclosure."" Following this, there's a point where a decision is indicated, saying ""the patient chooses a."" Next, there’s a point that states ""θ is observed if a = 1."" 
+
+The timeline continues with a section labeled ""interim disclosure,"" leading to another decision point, which says ""the patient chooses c."" 
+
+In between the two decision points, there's a dashed vertical line labeled ""A,"" indicating a relationship or transition between the events occurring at Date 1 and Date 2.
+
+Towards the right, labeled after the choice point for ""the patient chooses c,"" is the section ""the outcome reveals."" 
+
+Overall, the timeline shows sequential events and decisions, with clear labels indicating points of decision and observations.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \draw[->] (0,0) -- (12,0);
+    
+    \foreach \x/\text in {0/""ex ante disclosure"", 2/""the patient chooses a"", 4/""θ is observed if a = 1"", 6/""interim disclosure"", 8/""the patient chooses c"", 10/""the outcome reveals""} {
+        \node[below] at (\x,0) {\text};
+    }
+    
+    \draw[dashed] (4,0.2) -- (4,-0.2);
+    \node[above] at (4,0.2) {A};
+    
+    \foreach \x in {0, 2, 4, 6, 8, 10} {
+        \draw (\x,0.1) -- (\x,-0.1);
+    }
+\end{tikzpicture}
+    \end{document}"
+img_0014.png,"The image is a flowchart consisting of several labeled components and arrows that indicate the flow of the process. At the top, there is an oval labeled ""Input,"" which points to a rectangular box labeled ""Initialization."" From ""Initialization,"" an arrow leads down to another rectangular box labeled ""Grid variation."" 
+
+Inside a larger shaded rectangular area labeled ""Computation,"" there are two additional rectangular boxes: one labeled ""Generation of Feasible Operation Region,"" and the other labeled ""Generation of Feasible Planning Region."" An arrow points from ""Grid variation"" to ""Generation of Feasible Operation Region,"" and then to ""Generation of Feasible Planning Region."" 
+
+At the bottom of the ""Computation"" area, there is a diamond-shaped decision box labeled ""Additional Grid?"" This box has two output paths: one leading to an oval labeled ""Output"" marked as ""False,"" and the other leading back to the ""Grid variation"" step, indicating a loop if the answer is ""True."" The overall layout follows a downward flow, with structured connections between the components.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[node distance=1.5cm]
+    \tikzstyle{input} = [ellipse, draw, minimum width=2.5cm, minimum height=1cm]
+    \tikzstyle{process} = [rectangle, draw, minimum width=3cm, minimum height=1cm]
+    \tikzstyle{decision} = [diamond, draw, aspect=2, minimum width=3cm, minimum height=1cm]
+    \tikzstyle{output} = [ellipse, draw, minimum width=2.5cm, minimum height=1cm]
+    \tikzstyle{block} = [rectangle, draw, fill=gray!20, minimum width=4cm, minimum height=1cm]
+
+    \node (input) [input] {Input};
+    \node (init) [process, below of=input] {Initialization};
+    \node (grid) [process, below of=init] {Grid variation};
+    
+    \node (computation) [block, below of=grid, yshift=-0.5cm] {Computation};
+    \node (feasibleOp) [process, below of=computation, yshift=-0.5cm] {Generation of Feasible Operation Region};
+    \node (feasiblePlan) [process, below of=feasibleOp] {Generation of Feasible Planning Region};
+    
+    \node (decision) [decision, below of=feasiblePlan, yshift=-0.5cm] {Additional Grid?};
+    \node (outputFalse) [output, below of=decision, xshift=-2cm] {Output: False};
+    \node (loop) [process, below of=decision, xshift=2cm] {Grid variation};
+
+    \draw[->] (input) -- (init);
+    \draw[->] (init) -- (grid);
+    \draw[->] (grid) -- (feasibleOp);
+    \draw[->] (feasibleOp) -- (feasiblePlan);
+    \draw[->] (feasiblePlan) -- (decision);
+    \draw[->] (decision) -- node[right] {Yes} (loop);
+    \draw[->] (decision) -- node[left] {No} (outputFalse);
+\end{tikzpicture}
+    \end{document}"
+img_0015.png,"The image is a graph depicting the relationship between network size (number of nodes) on the x-axis and power savings percentage on the y-axis. The x-axis extends from 0 to 150 nodes, while the y-axis ranges from 0% to 50% power savings. There are several distinct lines and markers on the graph representing different network topologies: 
+
+1. A red solid line with red circular markers indicates ""Line (A),"" showing a gradual increase in power savings that approaches around 40% as the number of nodes increases.
+2. A black dashed line with black square markers represents ""Ring (A),"" which also shows an upward trend but levels off around 30%.
+3. A blue dashed line with blue triangle markers indicates ""Star (A),"" which shows slower growth, reaching just below 10% savings.
+4. A dotted red line with red circular markers indicates ""Line (H),"" which similarly shows a rise in savings but levels off at around 30%.
+5. A dotted black line with black square markers represents ""Ring (H),"" displaying a slightly lower power saving that also approaches 30%.
+6. A dotted blue line with blue triangle markers indicates ""Star (H),"" which converges to a similar low power saving as ""Star (A).""
+
+Two vertical dashed lines mark additional references labeled ""NSFNET"" and ""USNET,"" which help indicate specific network sizes. The legend in the bottom right corner identifies the lines by their respective markers and colors","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \begin{axis}[
+        xlabel={Network Size (Number of Nodes)},
+        ylabel={Power Savings (\%)},
+        xlim={0, 150},
+        ylim={0, 50},
+        grid=both,
+        legend style={at={(1,0)}, anchor=south east},
+        legend cell align=left,
+        legend columns=1,
+    ]
+    % Line (A)
+    \addplot[red, thick] coordinates {(0,0) (150,40)};
+    \addplot[red, only marks, mark=circle] coordinates {(0,0) (30,5) (60,15) (90,25) (120,35) (150,40)};
+    
+    % Ring (A)
+    \addplot[black, dashed, thick] coordinates {(0,0) (150,30)};
+    \addplot[black, only marks, mark=square] coordinates {(0,0) (30,10) (60,15) (90,20) (120,25) (150,30)};
+    
+    % Star (A)
+    \addplot[blue, dashed, thick] coordinates {(0,0) (150,9)};
+    \addplot[blue, only marks, mark=triangle] coordinates {(0,0) (30,3) (60,5) (90,7) (120,8) (150,9)};
+    
+    % Line (H)
+    \addplot[dotted red, thick] coordinates {(0,0) (150,30)};
+    \addplot[dotted red, only marks, mark=circle] coordinates {(0,0) (30,5) (60,10) (90,20) (120,25) (150,30)};
+    
+    % Ring (H)
+    \addplot[dotted black, thick] coordinates {(0,0) (150,28)};
+    \addplot[dotted black, only marks, mark=square] coordinates {(0,0) (30,8) (60,12) (90,18) (120,22) (150,28)};
+    
+    % Star (H)
+    \addplot[dotted blue, thick] coordinates {(0,0) (150,8)};
+    \addplot[dotted blue, only marks, mark=triangle] coordinates {(0,0) (30,2) (60,4) (90,6) (120,7) (150,8)};
+    
+    % Vertical Lines
+    \addplot[dashed] coordinates {(60,0) (60,50)};
+    \addplot[dashed] coordinates {(120,0) (120,50)};
+    
+    % Labels for vertical lines
+    \node at (60,-5) {NSFNET};
+    \node at (120,-5) {USNET};
+    
+    % Legend
+    \addlegendentry{Line (A)}
+    \addlegendentry{Ring (A)}
+    \addlegendentry{Star (A)}
+    \addlegendentry{Line (H)}
+    \addlegendentry{Ring (H)}
+    \addlegendentry{Star (H)}
+    \end{axis}
+\end{tikzpicture}
+    \end{document}"
+img_0016.png,"The image contains two geometric shapes displayed side by side. On the left, there is a regular octagon outlined in black, with eight vertices positioned at equal distances. Each vertex has a small red dot, and there is a green dot located at the center of the octagon. The right side displays a square, also outlined in black. This square has four vertices, each marked with a red dot, and a green dot at its center as well. Both shapes are presented on a plain background, with no additional markings or features. The overall layout is symmetric and the shapes are proportionally sized to fit within the same visual space.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Draw the octagon
+    \draw[black] (0,0) polygon (45:1, 135:1, 225:1, 315:1, 0:1, 90:1, 180:1, 270:1);
+    \foreach \angle in {0, 45, 90, 135, 180, 225, 270, 315} {
+        \fill[red] ({cos(\angle)},{sin(\angle)}) circle (2pt);
+    }
+    \fill[green] (0,0) circle (3pt);
+    
+    % Shift for the square
+    \begin{scope}[xshift=4cm]
+        % Draw the square
+        \draw[black] (0,0) rectangle (1,1);
+        \foreach \x in {0, 1} {
+            \foreach \y in {0, 1} {
+                \fill[red] (\x, \y) circle (2pt);
+            }
+        }
+        \fill[green] (0.5,0.5) circle (3pt);
+    \end{scope}
+\end{tikzpicture}
+    \end{document}"
+img_0017.png,"The image consists of a circular pattern composed of numerous small dots. The dots vary in color, transitioning from a vibrant green on the outer edge to a white at the center, creating a gradient effect. The dots are evenly spaced, forming concentric circles that are denser at the outer edge and gradually become more sparse as they approach the center. The innermost circle is completely white, forming a clean, circular opening. Overall, the design has a bright and dynamic feel, showcasing a vivid interplay of green and white.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \foreach \r in {0.1, 0.2, ..., 1} {
+        \foreach \i in {1, 2, ..., int(10*(1-\r))} {
+            \pgfmathsetmacro{\angle}{360/\i}
+            \pgfmathsetmacro{\x}{\r*cos(\angle*\i)}
+            \pgfmathsetmacro{\y}{\r*sin(\angle*\i)}
+            \pgfmathsetmacro{\color}{int(255*(1-\r))}
+            \fill[RGB={0,\color,0}] (\x,\y) circle (0.02);
+        }
+    }
+    \fill[white] (0,0) circle (0.1);
+\end{tikzpicture}
+    \end{document}"
+img_0018.png,"The image depicts a commutative diagram typically used in category theory. It features several objects and arrows. At the left, there is a labeled object ""Z,"" with an arrow labeled ""c3"" pointing to another object ""X"" on the right. Above ""X,"" there is an object labeled ""U,"" which is connected to ""X"" by two arrows. One arrow is labeled ""c1,"" pointing towards ""U"" from ""X,"" and the other is directed from ""U"" back to ""X."" Below ""U,"" there is another object labeled ""Y,"" with an arrow labeled ""c0"" pointing down toward ""Y"" from ""U."" Additionally, there is an arrow labeled ""c2"" that goes from ""U"" to ""Y."" The configuration establishes relationships among the objects Z, X, U, and Y through the arrows connecting them. All labels and arrows are clearly drawn with appropriate spacing, ensuring readability.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[node distance=1.5cm]
+    \node (Z) {Z};
+    \node (X) [right=of Z] {X};
+    \node (U) [above=of X] {U};
+    \node (Y) [below=of U] {Y};
+    
+    \draw[->] (Z) -- node[above] {c3} (X);
+    \draw[->] (X) -- node[left] {c1} (U);
+    \draw[->] (U) -- node[right] {c0} (Y);
+    \draw[->] (U) -- node[above] {c2} (Y);
+    \draw[->] (U) -- node[below] {c1} (X);
+\end{tikzpicture}
+    \end{document}"
+img_0019.png,"The image depicts a labeled graph consisting of vertices and directed edges. At the top, two horizontal dashed lines separate the upper and lower sections of the graph. In the upper section, there are several nodes labeled with a sequence of letters or variables. The nodes include two black nodes, with labeled coordinates next to them indicating specific values: \( m_{2j+1} - m_{2j} \).
+
+Below, in the middle section, diagonal paths connect these black nodes, forming a zigzag pattern. In addition, there are colored nodes: red and blue squares positioned along the paths between the black nodes. The paths alternate colors: starting with a red node, followed by a blue node, and continuing this pattern. 
+
+At the bottom, there is another dashed line with a similar pattern of black nodes as above, indicated by \( m_{2j+2} - m_{2j+1} \). Finally, at the very bottom of the graph, a node labeled \( w \) appears, suggesting it is a relevant point in the context of the graph. Overall, the graph conveys directional connections, with emphasis on color-coded pathways and defined variable relationships alongside the nodes.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[node distance=1.5cm]
+    % Upper section
+    \draw[dashed] (0,3) -- (6,3);
+    \node[draw, circle, fill=black] (A) at (1,4) {$m_{2j+1}$};
+    \node[draw, circle, fill=black] (B) at (5,4) {$m_{2j}$};
+    \node at (0.5, 4.5) {$m_{2j+1} - m_{2j}$};
+
+    % Middle section
+    \node[draw, square, fill=red] (C) at (1.5,2.5) {};
+    \node[draw, square, fill=blue] (D) at (2.5,2.5) {};
+    \node[draw, square, fill=red] (E) at (3.5,2.5) {};
+    \node[draw, square, fill=blue] (F) at (4.5,2.5) {};
+    
+    \draw[->] (A) -- (C);
+    \draw[->] (C) -- (D);
+    \draw[->] (D) -- (E);
+    \draw[->] (E) -- (F);
+    \draw[->] (F) -- (B);
+
+    % Lower section
+    \draw[dashed] (0,1) -- (6,1);
+    \node[draw, circle, fill=black] (G) at (1,0) {$m_{2j+2}$};
+    \node[draw, circle, fill=black] (H) at (5,0) {$m_{2j+1}$};
+    \node at (0.5, -0.5) {$m_{2j+2} - m_{2j+1}$};
+
+    \draw[->] (G) -- (C);
+    \draw[->] (B) -- (H);
+    
+    % Bottom node
+    \node at (3,-1.5) {$w$};
+\end{tikzpicture}
+    \end{document}"
+img_0020.png,"The image is a rectangular grid divided into four equal sections by two lines: one vertical and one horizontal. The sections are labeled as P1 in the bottom left quadrant and P2 in the top left quadrant. The center of the rectangle features the word ""Image"" in large, bold, and centered font. The background of the entire rectangle is a light gray color, while the lines dividing the sections are thin and gray as well. The outline of the rectangle is black. The text ""Image"" is prominent and covers a significant area in the center, with no other elements or markings present.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \fill[lightgray] (0,0) rectangle (4,4);
+    \draw[black, thick] (0,0) rectangle (4,4);
+    \draw[gray] (2,0) -- (2,4);
+    \draw[gray] (0,2) -- (4,2);
+    \node at (1,1) {P1};
+    \node at (1,3) {P2};
+    \node[font=\bfseries, scale=3] at (2,2) {Image};
+\end{tikzpicture}
+    \end{document}"
+img_0021.png,"The image features a simple black rectangle placed horizontally, with a smaller vertical rectangle connected to its left side. The background is entirely white. The larger rectangle is much wider than it is tall, while the smaller rectangle is taller than it is wide, positioned so that its left edge aligns with the left edge of the larger rectangle.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \fill[white] (0,0) rectangle (4,2);
+    \fill[black] (0,0) rectangle (4,1);
+    \fill[black] (-1,0) rectangle (0,3);
+\end{tikzpicture}
+    \end{document}"
+img_0022.png,"The image features a stylized, geometric design comprising an orange zigzag line forming a stepped pattern. The zigzag line creates a staircase-like appearance, ascending from the left to the right. Each step is supported by vertical brown rectangles of varying heights, aligned along the left side of the zigzag. The first step is the shortest, followed by progressively taller steps as one moves rightward. The overall composition gives a sense of movement and structure. The background is white, which enhances the colors of the figures.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[scale=1]
+    % Background
+    \fill[white] (0,0) rectangle (10,5);
+    
+    % Zigzag line
+    \draw[orange, thick] plot coordinates {(0,0) (1,1) (2,1) (2,2) (3,2) (3,3) (4,3) (4,4) (5,4) (5,5)};
+    
+    % Vertical rectangles
+    \fill[brown] (0,0) rectangle (0.5,1);
+    \fill[brown] (1,0) rectangle (1.5,2);
+    \fill[brown] (2,0) rectangle (2.5,3);
+    \fill[brown] (3,0) rectangle (3.5,4);
+    \fill[brown] (4,0) rectangle (4.5,5);
+\end{tikzpicture}
+    \end{document}"
+img_0023.png,"The image depicts a circular pie chart divided into eight segments of varying colors, each labeled with an angle in degrees. The segments are arranged around the center and are colored as follows: one green, one red, one yellow, one black, one orange, and one purple. The angles of the segments are as follows: 69°, 55°, 42°, 97°, and two segments labeled as 69° (which are identical). The arrangement of the segments appears to be such that colors and angles alternate around the circle. At the top left, the text ""Opgave 7"" is written in a simple font. The pie chart has a thin black outline. Each segment is clearly defined and the angles are marked near the center of the pie chart next to their corresponding segments.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \draw[thick] (0,0) circle(3);
+    \draw[fill=green] (0,0) -- (69:3) arc (69:69+69:3) -- cycle;
+    \node at (34.5:1.5) {69°};
+    
+    \draw[fill=red] (0,0) -- (138:3) arc (138:138+55:3) -- cycle;
+    \node at (109:1.5) {55°};
+    
+    \draw[fill=yellow] (0,0) -- (193:3) arc (193:193+42:3) -- cycle;
+    \node at (214:1.5) {42°};
+    
+    \draw[fill=black] (0,0) -- (235:3) arc (235:235+97:3) -- cycle;
+    \node at (268:1.5) {97°};
+    
+    \draw[fill=orange] (0,0) -- (332:3) arc (332:332+69:3) -- cycle;
+    \node at (351:1.5) {69°};
+    
+    \draw[fill=purple] (0,0) -- (0:3) arc (0:0+69:3) -- cycle;
+    \node at (34.5:1.5) {69°};
+    
+    \draw[fill=orange] (0,0) -- (0:3) arc (0:0+69:3) -- cycle;
+    \node at (34.5:1.5) {69°};
+    
+    \node at (-3.5, 3) {\textbf{Opgave 7}};
+\end{tikzpicture}
+    \end{document}"
+img_0024.png,"The image is a box plot with two boxes side by side, labeled ""1"" and ""2"" on the x-axis. The y-axis is labeled with a scale represented as \( \times 10^5 \), ranging from 0 to approximately 9. The first box (labeled ""1"") has a lower edge at around 2 on the y-axis and an upper edge at around 6. The median line within the first box is positioned slightly above 4. A series of black dots indicates outliers above the first box, some reaching close to 9. The second box (labeled ""2"") is positioned to the right of the first, with its lower edge around 1.5 and upper edge around 5.5; its median line is slightly above 3.5. Similar to the first box, there are multiple outliers above the second box, reaching slightly above 7. Both boxes and lines are represented in a minimalist style with no color fills. The overall plot has a white background and a simple grid.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \begin{axis}[
+        ytick={0,2,...,9},
+        ylabel={Value $\times 10^5$},
+        xlabel={},
+        xtick={1,2},
+        xticklabels={1,2},
+        grid=both,
+        width=10cm,
+        height=6cm,
+        boxplot/draw direction=y,
+        ymin=0, ymax=9,
+        ]
+        
+        % Box 1
+        \addplot+[
+            boxplot prepared={
+                lower quartile=2,
+                median=4.2,
+                upper quartile=6,
+                lower whisker=1.5,
+                upper whisker=8,
+            },
+            boxplot prepared={draw=black, fill=white},
+        ] coordinates {};
+
+        % Box 2
+        \addplot+[
+            boxplot prepared={
+                lower quartile=1.5,
+                median=3.7,
+                upper quartile=5.5,
+                lower whisker=1,
+                upper whisker=7.5,
+            },
+            boxplot prepared={draw=black, fill=white},
+        ] coordinates {};
+
+        % Outliers for Box 1
+        \addplot+[
+            only marks,
+            mark=*,
+            color=black,
+        ] coordinates {(1, 8) (1, 9)};
+
+        % Outliers for Box 2
+        \addplot+[
+            only marks,
+            mark=*,
+            color=black,
+        ] coordinates {(2, 7) (2, 7.5) (2, 6.5)};
+    \end{axis}
+\end{tikzpicture}
+    \end{document}"
+img_0025.png,"The image depicts a directed graph with four nodes and several labeled edges. The nodes are circular and numbered as 0, 1, 2, and 3, with node 0 marked as ""start."" Node 0 is centrally located, with arrows pointing from it to nodes 1, 2, and 3. Node 1 has a self-loop indicating both transitions labeled with ""c"" and ""d."" An arrow labeled ""a"" points from node 1 to node 0. Node 2 has self-loops labeled ""c"" and ""d,"" and an arrow labeled ""b, f"" leads from node 2 to node 0. Node 3 has a self-loop labeled ""d"" and an arrow labeled ""g"" leading from node 3 back to node 0. The nodes are arranged in a somewhat triangular formation, with node 0 at the bottom and the other nodes distributed above it.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[->, >=stealth, node distance=2cm]
+    \node[circle, draw] (0) {0 (start)};
+    \node[circle, draw, above left=of 0] (1) {1};
+    \node[circle, draw, above right=of 0] (2) {2};
+    \node[circle, draw, above=of 0] (3) {3};
+
+    \path (0) edge node[above] {a} (1);
+    \path (0) edge node[above right] {} (2);
+    \path (0) edge node[below right] {} (3);
+    
+    \path (1) edge[loop left] node[left] {c} (1);
+    \path (1) edge[loop right] node[right] {d} (1);
+    \path (1) edge node[below] {a} (0);
+
+    \path (2) edge[loop left] node[left] {c} (2);
+    \path (2) edge[loop right] node[right] {d} (2);
+    \path (2) edge node[below] {b, f} (0);
+
+    \path (3) edge[loop above] node[above] {d} (3);
+    \path (3) edge node[below] {g} (0);
+\end{tikzpicture}
+    \end{document}"
+img_0026.png,"The image features a three-dimensional cylindrical shape. The outermost part is a semi-transparent blue cylinder that has rounded ends. Inside this blue cylinder, there is a slightly smaller, semi-transparent red cylinder that maintains a similar rounded end shape. At the center, there is a solid, gray cylinder extending out of the red cylinder, with its ends flush with the ends of the red cylinder. The entire configuration has a distinct cylindrical appearance, where each component is nested within the other, showcasing different levels of transparency to visualize the relationship between the shapes.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[scale=1.5]
+    % Define styles for the cylinders
+    \tikzset{blue/.style={fill=blue, opacity=0.5}}
+    \tikzset{red/.style={fill=red, opacity=0.5}}
+    \tikzset{gray/.style={fill=gray}}
+
+    % Draw the outer blue cylinder
+    \draw[blue] (0,0,0) -- (0,0,2) arc (0:180:1) -- (0,0,0) arc (180:360:1) -- cycle; % Bottom cap
+    \draw[blue] (0,0,2) -- (0,0,0.5) arc (0:180:1) -- (0,0,2) arc (180:360:1) -- cycle; % Top cap
+    \draw[blue, opacity=0.5] (1,0,0) arc (0:360:1) -- (1,0,2) arc (0:360:1) -- cycle; % Side surface
+
+    % Draw the inner red cylinder
+    \draw[red] (0,0,0.5) -- (0,0,1.5) arc (0:180:0.75) -- (0,0,0.5) arc (180:360:0.75) -- cycle; % Bottom cap
+    \draw[red] (0,0,1.5) -- (0,0,1) arc (0:180:0.75) -- (0,0,1.5) arc (180:360:0.75) -- cycle; % Top cap
+    \draw[red, opacity=0.5] (0.75,0,0.5) arc (0:360:0.75) -- (0.75,0,1.5) arc (0:360:0.75) -- cycle; % Side surface
+
+    % Draw the solid gray cylinder
+    \draw[gray] (0,0,1) -- (0,0,1.5) arc (0:180:0.5) -- (0,0,1) arc (180:360:0.5) -- cycle; % Bottom cap
+    \draw[gray] (0,0,1.5) -- (0,0,1.25) arc (0:180:0.5) -- (0,0,1.5) arc (180:360:0.5) -- cycle; % Top cap
+    \draw[gray] (0.5,0,1) arc (0:360:0.5) -- (0.5,0,1.5) arc (0:360:0.5) -- cycle; % Side surface
+\end{tikzpicture}
+    \end{document}"
+img_0027.png,"The image presents a flowchart-like structure displaying owners and their associated items. On the left side, there are labels for different owners, starting with ""owner 1"" at the top and continuing down to ""owner M,"" followed by ""owner M + 1"" and ending with ""owner M + ℓ"" at the bottom. The owners are stacked vertically in a column.
+
+To the right of the owners, there are horizontal lines representing different quantities of items. The first horizontal line connects to ""N items"" and stretches across the width just below ""owner M."" Below this, there's another horizontal line denoted as ""N + 1 items."" Further down, there are three segments connected by horizontal lines indicating a total of ""N(1 − 1/M)ℓ − 1 + 1 items,"" where several smaller gaps are visually indicated between segments.
+
+Overall, the chart combines vertical owner labels with horizontal lines representing quantities of items they possess. The formatting is clean, and the overall layout is symmetrical, with emphasis on the relationship between owners and item counts.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[node distance=1cm]
+    % Owner nodes
+    \foreach \i in {1, 2, ..., M} {
+        \node (owner\i) at (0, -\i) {owner \i};
+    }
+    \foreach \j in {M+1, M+2, ..., M+\ell} {
+        \node (owner\j) at (0, -\j) {owner \j};
+    }
+
+    % Item lines
+    \node (items1) at (3, -M-0.5) {N items};
+    \draw[thick] (0.5, -M) -- (2.5, -M);
+    
+    \node (items2) at (3, -M-1.5) {N + 1 items};
+    \draw[thick] (0.5, -M-1) -- (2.5, -M-1);
+
+    % Items segments
+    \node (items3) at (3, -M-3) {N(1 - 1/M)ℓ - 1 + 1 items};
+    \draw[thick] (0.5, -M-2) -- (2.5, -M-2);
+    \draw[thick] (0.5, -M-3) -- (2.5, -M-3);
+    \draw[thick] (0.5, -M-4) -- (2.5, -M-4);
+    
+    % Gaps between segments
+    \foreach \k in {1, 2} {
+        \draw[thick] (1.5, -M-\k) -- (1.5, -M-\k-0.5);
+    }
+\end{tikzpicture}
+    \end{document}"
+img_0028.png,"The image shows a plot with a vertical axis ranging from 1 to 5 and a horizontal axis ranging from -2 to 2. The axes are marked with ticks at regular intervals. The plot features a quadratic curve, which opens upwards and is blue in color. Along the curve, there are five blue filled circles placed at specific points, indicating data points. The circles are positioned approximately at (-2, 2), (-1, 4), (0, 5), (1, 4), and (2, 2), aligning with the curve. The overall design is simple and minimalistic, with a clear focus on the curve and the data points.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \draw[->] (-2.5, 0) -- (2.5, 0) node[right] {x};
+    \draw[->] (0, 0.5) -- (0, 5.5) node[above] {y};
+
+    \foreach \x in {-2, -1, 0, 1, 2} \draw (\x, 0.1) -- (\x, -0.1) node[below] {\x};
+    \foreach \y in {1, 2, 3, 4, 5} \draw (0.1, \y) -- (-0.1, \y) node[left] {\y};
+
+    \draw[blue, thick, domain=-2:2] plot (\x, {(\x+2)*(\x+1)*(\x-1)/2 + 1});
+    
+    \foreach \point in {(-2,2), (-1,4), (0,5), (1,4), (2,2)} {
+        \fill[blue] \point circle (3pt);
+    }
+\end{tikzpicture}
+    \end{document}"
+img_0029.png,"The image shows a rectangular, flat surface that appears to be a piece of metal or a panel. The surface has a gradient shading from lighter shades at the top to darker shades at the bottom, giving it a three-dimensional look. Along the center, there are several wavy or zigzag patterns that run horizontally across the panel. These patterns create a textured effect. Additionally, three small circular holes are present near the bottom edge of the rectangle, evenly spaced apart. The overall appearance is sleek and industrial.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Draw the rectangle with gradient shading
+    \fill[gray!20] (0,0) rectangle (4,2);
+    \fill[gray!50] (0,0) rectangle (4,2);
+    \shade[bottom color=gray!30, top color=gray!10] (0,0) rectangle (4,2);
+
+    % Draw the wavy patterns
+    \draw[thick, gray!70] (0,1.5) .. controls (1,2) and (2,1) .. (4,1.5);
+    \draw[thick, gray!70] (0,1.2) .. controls (1,1.7) and (2,0.8) .. (4,1.2);
+    \draw[thick, gray!70] (0,0.9) .. controls (1,1.4) and (2,0.5) .. (4,0.9);
+
+    % Draw the circular holes
+    \fill[black] (1,0) circle (0.1);
+    \fill[black] (2,0) circle (0.1);
+    \fill[black] (3,0) circle (0.1);
+\end{tikzpicture}
+    \end{document}"
+img_0030.png,"The image features a directed graph with a triangular structure. At the top, there is a single node labeled ""x0"". Below this node, there are two rows of nodes. The second row consists of two nodes labeled ""x1"" and ""x2"". The third row has a total of seven nodes, arranged in a horizontal line, with the leftmost node labeled ""x2"" and the rightmost node labeled ""x1"". 
+
+From the top node ""x0"", there are directed edges that connect it to all of the nodes in the second and third rows. Each node in the second row has directed edges connecting down to all nodes in the third row. Ensure that the nodes in the third row are evenly spaced apart. The graph should be drawn with solid lines representing the edges, and all nodes are represented as filled circles.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \node[circle, fill=black, inner sep=2pt] (x0) at (0, 2) {x0};
+    \node[circle, fill=black, inner sep=2pt] (x1) at (-1, 1) {x1};
+    \node[circle, fill=black, inner sep=2pt] (x2) at (1, 1) {x2};
+    
+    \node[circle, fill=black, inner sep=2pt] (x3) at (-3, 0) {x2};
+    \node[circle, fill=black, inner sep=2pt] (x4) at (-2, 0) {};
+    \node[circle, fill=black, inner sep=2pt] (x5) at (-1, 0) {};
+    \node[circle, fill=black, inner sep=2pt] (x6) at (0, 0) {};
+    \node[circle, fill=black, inner sep=2pt] (x7) at (1, 0) {};
+    \node[circle, fill=black, inner sep=2pt] (x8) at (2, 0) {};
+    \node[circle, fill=black, inner sep=2pt] (x9) at (3, 0) {x1};
+
+    \draw[->] (x0) -- (x1);
+    \draw[->] (x0) -- (x2);
+    \draw[->] (x1) -- (x3);
+    \draw[->] (x1) -- (x4);
+    \draw[->] (x1) -- (x5);
+    \draw[->] (x1) -- (x6);
+    \draw[->] (x1) -- (x7);
+    \draw[->] (x1) -- (x8);
+    \draw[->] (x1) -- (x9);
+    \draw[->] (x2) -- (x3);
+    \draw[->] (x2) -- (x4);
+    \draw[->] (x2) -- (x5);
+    \draw[->] (x2) -- (x6);
+    \draw[->] (x2) -- (x7);
+    \draw[->] (x2) -- (x8);
+    \draw[->] (x2) -- (x9);
+\end{tikzpicture}
+    \end{document}"
+img_0031.png,"The image contains two plots side by side, both displaying graphs of the quantity \( \| A - A_{\text{approx}} \|_2 \) against the variable \( d \). 
+
+In the left plot, the x-axis represents \( d \) and ranges from 0 to 24, with ticks indicating values 0, 5, 10, 15, 20, and 25. The y-axis represents \( \| A - A_{\text{approx}} \|_2 \) and ranges from \( 10^{-4} \) to \( 10^{0} \), with logarithmic scaling. There are multiple plotted data points, each representing a different method, indicated by various markers: the SVD method is represented by black crosses, CPQR by red plus signs, p-QLP by red open circles, R-SVD by blue open circles, CoR-UTV by blue stars, and PbP-QLP by green triangles. 
+
+The right plot has a similar x-axis and y-axis, extending from \( 10^{-2} \) to \( 10^{0} \) on the y-axis and also features logarithmic scaling. The same methods are represented with the same color and marker styles as in the left plot, though the data points and trends might differ. 
+
+Both plots include a grid background to help with visualizing the data points more clearly. The legends for each plot are placed in the upper","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    ```latex
+\begin{tikzpicture}
+    \begin{axis}[
+        title={Left Plot},
+        xlabel={d},
+        ylabel={$\| A - A_{\text{approx}} \|_2$},
+        xmajorgrids=true,
+        ymajorgrids=true,
+        grid style=dashed,
+        xlim={0, 24},
+        xticks={0, 5, 10, 15, 20, 25},
+        ymode=log,
+        ymin=1e-4, ymax=1,
+        legend pos=outer north east,
+        legend style={font=\small},
+    ]
+    \addplot[only marks, mark=x, color=black] coordinates {(0,1e-3) (5,1e-2) (10,1e-4) (15,5e-5) (20,1e-4)};
+    \addplot[only marks, mark=+, color=red] coordinates {(0,1e-2) (5,5e-3) (10,1e-3) (15,2e-4) (20,5e-5)};
+    \addplot[only marks, mark=o, color=red, mark options={fill=white}] coordinates {(0,1e-1) (5,1e-2) (10,3e-3) (15,1e-4) (20,1e-5)};
+    \addplot[only marks, mark=o, color=blue, mark options={fill=white}] coordinates {(0,1e-3) (5,2e-3) (10,1e-4) (15,3e-5) (20,1e-6)};
+    \addplot[only marks, mark=*, color=blue] coordinates {(0,1e-2) (5,1e-3) (10,2e-4) (15,4e-5) (20,1e-5)};
+    \addplot[only marks, mark=triangle, color=green] coordinates {(0,1e-1) (5,8e-2) (10,5e-3) (15,2e-4) (20,1e-5)};
+    \legend{SVD, CPQR, p-QLP, R-SVD, CoR-UTV, PbP-QLP}
+    \end{axis}
+
+    \begin{axis}[
+        title={Right Plot},
+        xlabel={d},
+        ylabel={$\| A - A_{\text{approx}} \|_2$},
+        xmajorgrids=true,
+        ymajorgrids=true,
+        grid style=dashed,
+        xlim={0, 24},
+        xticks={0, 5, 10, 15, 20, 25},
+        ymode=log,
+        ymin=1e-2, ymax=1,
+        legend pos=outer north east,
+        legend style={font=\small},
+        at={(5,0)},
+        anchor=south west,
+    ]
+    \addplot[only marks, mark=x, color=black] coordinates {(0,1e-2) (5,5e-3) (10,1e-3) (15,2e-4) (20,1e-5)};
+    \addplot[only marks, mark=+, color=red] coordinates {(0,1e-1) (5,1e-2) (10,3e-3) (15,1e-4) (20,1e-5)};
+    \addplot[only marks, mark=o, color=red, mark options={fill=white}] coordinates {(0,1e-2) (5,1e-1) (10,2e-3) (15,1e-4) (20,5e-6)};
+    \addplot[only marks, mark=o, color=blue, mark options={fill=white}] coordinates {(0,1e-3) (5,2e-3) (10,5e-4) (15,3e-5) (20,1e-6)};
+    \addplot[only marks, mark=*, color=blue] coordinates {(0,1e-2) (5,1e-3) (10,2e-4) (15,4e-5) (20,1e-5)};
+    \addplot[only marks, mark=triangle, color=green] coordinates {(0,1e-1) (5,8e-2) (10,5e-3) (15,2e-4)
+\end{tikzpicture}
+    \end{document}"
+img_0032.png,"The image depicts a diagram characterized by several labeled points and lines representing relationships among them. 
+
+At the top, there are two points: \( q_2 \) and \( q'_2 \). The point \( q_2 \) is connected to \( q'_2 \) by a dashed line, indicating they are approximately equal, labeled with a tilde symbol (≈) and an epsilon (ε) nearby. Below, there is a vertical dashed line connecting points labeled \( t \) to another \( t \). 
+
+On the left side, the points \( u \) and \( q_1 \) are connected by a solid line, with point \( u \) positioned higher than \( q_1 \). There's also a dashed line labeled \( u q'_1 \) that extends from \( u \) towards another point \( q'_1 \) slightly horizontally to the right. 
+
+Towards the center and bottom, there are points \( q_1 \), \( q'_1 \), \( q \), and \( q' \). The point \( q_1 \) connects downward to point \( q \), while point \( q'_1 \) connects downward to point \( q' \). 
+
+Additionally, there are two parallel lines labeled \( \ell \), extending vertically and positioned between points \( q \) and \( q' \). 
+
+On the right side of the diagram, there's another point labeled \( q_3 \) positioned above a point","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Points
+    \coordinate (q2) at (0, 2);
+    \coordinate (q2p) at (2, 2);
+    \coordinate (u) at (-2, 1);
+    \coordinate (q1) at (-2, 0);
+    \coordinate (q1p) at (0, 0);
+    \coordinate (q) at (-2, -1);
+    \coordinate (q2p) at (2, 0);
+    \coordinate (q3) at (2, -1);
+    
+    % Dashed lines
+    \draw[dashed] (q2) -- (q2p) node[midway, above] {$\approx$};
+    \node at (0.5, 2.1) {$\epsilon$};
+    \draw[dashed] (u) -- (q1);
+    \draw[dashed] (u) -- (q1p);
+    
+    % Solid lines
+    \draw[solid] (u) -- (q1);
+    \draw[solid] (q1) -- (q);
+    \draw[solid] (q1p) -- (q1p |- q);
+    \draw[solid] (q1p) -- (q3);
+    
+    % Parallel lines
+    \draw[thick] (-1, -1) -- (-1, -2) node[midway, right] {$\ell$};
+    \draw[thick] (1, -1) -- (1, -2) node[midway, right] {$\ell$};
+    
+    % Points labels
+    \node at (u) [left] {$u$};
+    \node at (q1) [left] {$q_1$};
+    \node at (q1p) [right] {$q'_1$};
+    \node at (q) [left] {$q$};
+    \node at (q2) [above] {$q_2$};
+    \node at (q2p) [above] {$q'_2$};
+    \node at (q3) [right] {$q_3$};
+\end{tikzpicture}
+    \end{document}"
+img_0033.png,"The image depicts a unit circle with a centered coordinate system. The circle is drawn with a radius of one. Inside the circle, there is an isosceles triangle formed by two straight lines emanating from the center (0, 0) of the circle, angling outward to touch the circle at points labeled z* and w*. The angle at the center of the triangle is labeled as θ. The two equal sides of the triangle are marked with the length of 1 unit each. The base of the triangle, which connects points z* and w*, is labeled ""2 sen(θ/2)"" to indicate its length. There are dashed lines indicating angles at z* and w* equal to θ/2. The figure's overall layout is symmetrical, with the triangle centered vertically within the circle.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \draw[thick] (0,0) circle(1);
+    \draw[thick] (0,0) -- (30:1) node[midway, right] {1} coordinate (z);
+    \draw[thick] (0,0) -- (-30:1) node[midway, left] {1} coordinate (w);
+    \draw[dashed] (30:1) -- (0,0) node[midway, right] {$\frac{\theta}{2}$};
+    \draw[dashed] (-30:1) -- (0,0) node[midway, left] {$\frac{\theta}{2}$};
+    \draw[thick] (30:1) -- (-30:1) node[midway, below] {$2 \sin\left(\frac{\theta}{2}\right)$};
+    \node at (0,0) {O};
+    \node at (30:1) {$z^*$};
+    \node at (-30:1) {$w^*$};
+    \node at (0,1.2) {$\theta$};
+\end{tikzpicture}
+    \end{document}"
+img_0034.png,"The image features a stylized bar chart with a simple design. The background consists of a bright orange section at the top and a dark gray section at the bottom. In the middle, there are several vertical bars of varying heights. The leftmost bar is wider and slightly shorter than the others, colored in a soft yellow. The subsequent bars, which appear to be narrower, alternate between short and tall heights, primarily in shades of light yellow and cream. Each bar has a small black outline. Below the bars, there is a dark gray horizontal line that runs across the width of the image, representing the x-axis of the chart.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Background
+    \fill[orange] (0,2) rectangle (6,4);
+    \fill[gray!20] (0,0) rectangle (6,2);
+    
+    % Bars
+    \draw[black, fill=yellow!50] (0.5,0) rectangle (1.5,1.5); % Leftmost bar
+    \draw[black, fill=yellow!20] (2,0) rectangle (2.5,2);   % Second bar
+    \draw[black, fill=cream] (3,0) rectangle (3.5,1);      % Third bar
+    \draw[black, fill=yellow!20] (4,0) rectangle (4.5,2.5); % Fourth bar
+    \draw[black, fill=cream] (5,0) rectangle (5.5,1);      % Fifth bar
+    
+    % X-axis
+    \draw[black, thick] (0,0) -- (6,0);
+\end{tikzpicture}
+    \end{document}"
+img_0035.png,"The image shows a coordinate system in two dimensions. The horizontal axis is labeled ""s,"" while the vertical axis is indicated by an upward-pointing arrow. At the center of the image, there is a point labeled ""0,"" which represents the origin of the axes. 
+
+A dashed circular outline surrounds the point at the origin, indicating a region of interest. Within this region, there is a red point labeled ""t"" placed along the vertical axis. 
+
+Additionally, there is a label ""M²"" positioned within the circular area, possibly indicating a mathematical quantity or concept relevant to the diagram. 
+
+The background is white, and the axis lines extend horizontally and vertically without any markings or additional details. The overall composition is simple and geometric, focusing on the relationship between the points and the axes.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \draw[->] (-3,0) -- (3,0) node[right] {$s$};
+    \draw[->] (0,-3) -- (0,3);
+    \node at (0,0) {0};
+    \draw[dashed] (0,0) circle(2);
+    \fill[red] (0,1) circle(2pt) node[above right] {$t$};
+    \node at (0,0) [font=\small] {M²};
+\end{tikzpicture}
+    \end{document}"
+img_0036.png,"The image consists of two geometric figures, both featuring pentagonal shapes.
+
+On the left, there is a non-convex pentagon. The vertices are labeled as follows: the top vertex is labeled with a single arrow pointing upwards at the top vertex, which is labeled ""b"" directly below it. The left vertex is labeled ""a,"" and the right vertex is labeled ""ā"" (a with a bar above it). The bottom left vertex is labeled ""b̄"" (b with a bar above it). Inside the pentagon, there are two blue segments drawn horizontally between points ""a"" and ""b̄,"" and ""ā"" and ""b,"" connecting the left and right sides of the shape. 
+
+On the right, a three-dimensional view of a pentagon is depicted, likely representing a prism-like structure. This pentagon has a similar labeling as the first, with the top point labeled with an asterisk (*) and two vertices labeled ""a"" and ""b̄"" on the bottom. There are two blue line segments running diagonally across the figure, labeled ""γ1"" and ""γ2.""
+
+In summary, there are two pentagonal figures in the image, each with labeled vertices and specific blue segments that connect various points. The left figure is more two-dimensional and non-convex, while the right figure shows a three-dimensional aspect.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Left Non-Convex Pentagon
+    \begin{scope}
+        \draw[thick] (0,0) -- (1,2) -- (2,0) -- (1.5,-1) -- (0.5,-1) -- cycle;
+        \node at (1,2.2) {\textbf{b}};
+        \node at (0,-0.5) {\textbf{a}};
+        \node at (2,-0.5) {\textbf{ā}};
+        \node at (0.5,-1.5) {\textbf{b̄}};
+        \draw[blue, thick] (0,0) -- (0.5,-1);
+        \draw[blue, thick] (1,2) -- (2,0);
+    \end{scope}
+    
+    % Right 3D Pentagon
+    \begin{scope}[xshift=4cm, yshift=0cm]
+        \draw[thick] (0,0) -- (1,2) -- (2,0) -- (1.5,-1) -- (0.5,-1) -- cycle;
+        \draw[thick] (0,0) -- (0,0,-1);
+        \draw[thick] (1,2) -- (1,2,-1);
+        \draw[thick] (2,0) -- (2,0,-1);
+        \draw[thick] (1.5,-1) -- (1.5,-1,-1);
+        \draw[thick] (0.5,-1) -- (0.5,-1,-1);
+        
+        \node at (1,2.2) {\textbf{*}};
+        \node at (0,-0.5) {\textbf{a}};
+        \node at (2,-0.5) {\textbf{b̄}};
+        
+        \draw[blue, thick] (0,0) -- (1.5,-1);
+        \draw[blue, thick] (1,2) -- (2,0);
+        
+        \node at (1,-1.5) {\textbf{γ1}};
+        \node at (1.5,-0.5) {\textbf{γ2}};
+    \end{scope}
+\end{tikzpicture}
+    \end{document}"
+img_0037.png,"The image features a zigzag graph that consists of nodes connected by edges. At the top, there are two labeled nodes: (1, 1) on the left and (7, 1) on the right. Below these, there are two rows of nodes connected horizontally and diagonally. The first row contains nodes that are alternately filled and unfilled, starting with a filled node directly under (1, 1) followed by an unfilled node, and this pattern continues to the node below (7, 1) which is filled. 
+
+The second row is located below the first and similarly contains nodes that alternate between filled and unfilled, starting with an unfilled node directly under (5, 1) which is on the left, continuing with filled nodes, and ending with an unfilled node directly below (5, 7) at the bottom left. The nodes on the left side, starting with the lower left corner, are labeled (5, 1) at the bottom left and (5, 7) directly below it while the top row of the second column contains filled nodes leading up to (7, 1).
+
+The overall shape has a symmetrical pattern resembling a series of diamonds. The filled nodes are represented by solid black dots while the unfilled nodes are shown as open circles. The connections between the nodes create a consistent diagonal flow throughout the graph.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Nodes
+    \foreach \x in {1, 3, 5, 7} {
+        \node[fill=black, circle, inner sep=2pt] at (\x, 1) {};
+    }
+    \foreach \x in {2, 4, 6} {
+        \node[circle, draw, inner sep=2pt] at (\x, 1) {};
+    }
+    
+    \foreach \x in {5} {
+        \node[circle, draw, inner sep=2pt] at (\x, 0) {};
+    }
+    \foreach \x in {1, 3, 5, 7} {
+        \node[fill=black, circle, inner sep=2pt] at (\x, 0) {};
+    }
+    \foreach \x in {2, 4, 6} {
+        \node[circle, draw, inner sep=2pt] at (\x, 0) {};
+    }
+    
+    % Labels
+    \node at (1, 1.2) {(1, 1)};
+    \node at (7, 1.2) {(7, 1)};
+    \node at (5, -0.2) {(5, 1)};
+    \node at (5, -1.2) {(5, 7)};
+    
+    % Edges
+    \foreach \x in {1, 3, 5, 7} {
+        \draw (\x, 1) -- (\x, 0);
+    }
+    \foreach \x in {2, 4, 6} {
+        \draw (\x, 1) -- (\x, 0);
+    }
+    \foreach \x in {1, 3, 5, 7} {
+        \draw (\x, 1) -- (\x+1, 0);
+    }
+    \foreach \x in {2, 4, 6} {
+        \draw (\x, 1) -- (\x+1, 0);
+    }
+\end{tikzpicture}
+    \end{document}"
+img_0038.png,"The image features two circular shapes representing AC voltage sources. Each circle has a ""+"" sign on the top and a ""−"" sign on the bottom, indicating the positive and negative terminals. They are connected by a horizontal line at the top, leading to a vertical line on the right side which branches off from the connection. The first circle is positioned above the second circle, with the vertical line extending down from the lower circle. The circles are drawn with a simple outline and contain a wavy line inside, symbolizing alternating current (AC).","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Draw the first circle (AC source)
+    \draw (0, 1) circle (0.5) node[above] {+} node[below] {-};
+    \draw[decorate, decoration={snake, amplitude=0.2mm, segment length=2mm}] (0, 1) circle (0.5);
+    
+    % Draw the second circle (AC source)
+    \draw (0, -1) circle (0.5) node[above] {+} node[below] {-};
+    \draw[decorate, decoration={snake, amplitude=0.2mm, segment length=2mm}] (0, -1) circle (0.5);
+    
+    % Draw the top horizontal line
+    \draw[thick] (-0.5, 1) -- (0.5, 1);
+    
+    % Draw the vertical line
+    \draw[thick] (0.5, 1) -- (0.5, -1);
+    
+    % Branch off the vertical line
+    \draw[thick] (0.5, -1) -- (1, -1);
+\end{tikzpicture}
+    \end{document}"
+img_0039.png,"The image shows two circular structures, each represented as a ring or torus shape. The left ring is labeled ""P"" at the top and ""Q"" at the bottom. Within the left ring, there is another smaller curved shape resembling a smile or a dip, which is labeled ""μ(n)."" The entire left ring is shaded in a light blue color.
+
+The right ring is similar in shape and is also labeled ""P"" at the top and ""Q"" at the bottom. Inside the right ring, there are two small curved shapes resembling dips or valleys, one labeled ""n"" and the other labeled ""n̄,"" both shaded in the same light blue color. 
+
+Between the two rings is an arrow pointing from the left ring to the right ring, indicating some form of transformation. The background across both rings is filled with a light yellow color. The outlines of the rings are black, and the overall design has a clean, simple look.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[background color=yellow!20]
+    % Left ring
+    \fill[blue!20] (0,0) circle (2) -- (0,0) arc[start angle=0,end angle=360,radius=2.5] -- cycle;
+    \draw[black, thick] (0,0) circle (2.5);
+    \draw[black, thick] (0,0) circle (2);
+    \node at (0,2.5) {P};
+    \node at (0,-2.5) {Q};
+    \node at (0,0) {$\mu(n)$};
+
+    % Right ring
+    \fill[blue!20] (5,0) circle (2) -- (5,0) arc[start angle=0,end angle=360,radius=2.5] -- cycle;
+    \draw[black, thick] (5,0) circle (2.5);
+    \draw[black, thick] (5,0) circle (2);
+    \node at (5,2.5) {P};
+    \node at (5,-2.5) {Q};
+    \node at (5,0.5) {$n$};
+    \node at (5,-0.5) {$\bar{n}$};
+
+    % Arrow between rings
+    \draw[->, thick] (2.5,0) -- (4.5,0);
+\end{tikzpicture}
+    \end{document}"
+img_0040.png,"The image consists of a straight horizontal line with circles at five evenly spaced points along the line. These points are labeled with numbers from 0 to 4. The circle containing the number 0 is on the leftmost side, followed by the circles containing the numbers 1, 2, 3, and ending with the circle containing the number 4 on the rightmost side. Each circle is outlined but not filled in, and there are straight lines connecting each consecutive pair of circles. The overall appearance is simple and linear, creating a clear sequence from 0 to 4.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Draw the horizontal line
+    \draw[thick] (0,0) -- (10,0);
+    
+    % Draw the circles and labels
+    \foreach \i in {0, 1, 2, 3, 4} {
+        \draw[thick] (\i*2,0) circle (0.5);
+        \node at (\i*2, 0) {\i};
+    }
+    
+    % Draw the connecting lines
+    \foreach \i in {0, 1, 2, 3} {
+        \draw[thick] (\i*2,0) -- ({(\i+1)*2},0);
+    }
+\end{tikzpicture}
+    \end{document}"
+img_0041.png,"The image depicts a graph structure, characterized by a circular arrangement with various nodes and connections. The central part of the graph consists of a large circle, outlined with a series of small filled black circles and empty circles. The filled circles represent vertices labeled in a specific format, while the empty circles indicate other vertices. 
+
+There are dashed lines connecting various vertices throughout the graph, suggesting relationships or edges between them. Extending from this circular structure are several branches or ""arms,"" each made up of additional vertices. The ends of these branches feature smaller filled and empty circles as well. Connectivity is indicated through dotted lines, which also link some of these outer vertices to the main structure.
+
+Labels are present adjacent to certain vertices, such as \(v^i_0\), \(c_i\), \(v^{i}_{21}\), and \(u_9\), with mathematical notation and subscripts indicating their relationships. The overall layout is both symmetrical and complex, contributing to the impression of a network-like topology.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \usetikzlibrary{positioning}
+    \draw[thick] (0,0) circle (4cm);
+    
+    % Filled circles
+    \foreach \i in {1,2,3,4,5,6} {
+        \fill (90+\i*60:3.5cm) circle (3pt);
+        \node at (90+\i*60:3.5cm) {$v^i_{\i}$};
+    }
+    
+    % Empty circles
+    \foreach \i in {1,2,3,4} {
+        \draw (90+\i*90:3.5cm) circle (3pt);
+        \node at (90+\i*90:3.5cm) {$c_{\i}$};
+    }
+
+    % Dotted lines
+    \foreach \i in {1,2,3,4,5,6} {
+        \draw[dotted] (0,0) -- (90+\i*60:3.5cm);
+    }
+
+    % Branches
+    \foreach \i in {1,2,3} {
+        \draw[thick] (90+\i*120:4cm) -- (90+\i*120:5cm);
+        \fill (90+\i*120:5cm) circle (3pt);
+        \node at (90+\i*120:5cm) {$u_{\i}$};
+        
+        \foreach \j in {1,2} {
+            \draw[thick] (90+\i*120:5cm) -- (90+\i*120:5.5cm + \j*0.2);
+            \fill (90+\i*120:5.5cm + \j*0.2) circle (3pt);
+            \node at (90+\i*120:5.5cm + \j*0.2) {$v^{i}_{2\j+1}$};
+        }
+    }
+
+    % Additional empty circles connected to main structure
+    \foreach \i in {1,2} {
+        \draw (90+\i*180:4cm) circle (3pt);
+        \node at (90+\i*180:4cm) {$v^{i}_{21}$};
+        \draw[dotted] (90+\i*180:4cm) -- (0,0);
+    }
+\end{tikzpicture}
+    \end{document}"
+img_0042.png,"The image features a horizontal line divided into several sections with colored blocks above each section. From left to right, the first section is the smallest and it is colored yellow. It contains the symbol ""∅"" inside it, indicating an empty set. Next to it is a larger pink section labeled ""DA + RD"". Following this, there is another section that is a teal color, labeled ""DA + ∼RD"". 
+
+The sections are separated by vertical lines, and below each colored block are three labels: ""u^d"" under the yellow section, ""u^r"" under the pink section, and ""u_i"" under the teal section. The entire layout has an arrow pointing to the right at the end, suggesting a continuum or progression.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Draw the horizontal line
+    \draw[thick] (0,0) -- (10,0);
+    
+    % Draw the sections
+    \fill[yellow] (0,0.5) rectangle (1,1.5);
+    \fill[pink] (1,0.5) rectangle (4,1.5);
+    \fill[teal] (4,0.5) rectangle (7,1.5);
+    
+    % Draw vertical lines
+    \draw[thick] (1,0) -- (1,2);
+    \draw[thick] (4,0) -- (4,2);
+    
+    % Add labels inside the blocks
+    \node at (0.5,1) {\textbf{∅}};
+    \node at (2.5,1) {\textbf{DA + RD}};
+    \node at (5.5,1) {\textbf{DA + ∼RD}};
+    
+    % Add labels below the sections
+    \node at (0.5,0) {\textbf{u\textsuperscript{d}}};
+    \node at (2.5,0) {\textbf{u\textsuperscript{r}}};
+    \node at (5.5,0) {\textbf{u\textsubscript{i}}};
+    
+    % Draw the arrow at the end
+    \draw[->, thick] (7,1) -- (10,1);
+\end{tikzpicture}
+    \end{document}"
+img_0043.png,"The image consists of a central vertical line with a point at the center, which is intersected horizontally by another line that extends equally to the left and right. At the ends of the horizontal line, there are two smaller lines extending diagonally outward, one leading to the left and one to the right. Each of these diagonal lines ends with a small circle (dot). There are also two smaller diagonal lines on each side of the vertical line, extending downward from the main horizontal line and ending in small circles as well. The entire arrangement resembles a simplified starburst or a schematic representation of connections. The central point is larger than the other dots, which are uniformly smaller and equally spaced.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Central vertical line
+    \draw[thick] (0,0) -- (0,3);
+    % Central point
+    \fill[black] (0,3) circle (0.1);
+    
+    % Horizontal line
+    \draw[thick] (-2,2.5) -- (2,2.5);
+    
+    % Diagonal lines to the left and right
+    \draw[thick] (-2,2.5) -- (-3,3);
+    \draw[thick] (-2,2.5) -- (-3,2);
+    \draw[thick] (2,2.5) -- (3,3);
+    \draw[thick] (2,2.5) -- (3,2);
+    
+    % Small circles at the ends of diagonal lines
+    \fill[black] (-3,3) circle (0.05);
+    \fill[black] (-3,2) circle (0.05);
+    \fill[black] (3,3) circle (0.05);
+    \fill[black] (3,2) circle (0.05);
+    
+    % Smaller diagonal lines downward
+    \draw[thick] (-1,2.5) -- (-1,1);
+    \draw[thick] (1,2.5) -- (1,1);
+    
+    % Small circles at the ends of downward lines
+    \fill[black] (-1,1) circle (0.05);
+    \fill[black] (1,1) circle (0.05);
+\end{tikzpicture}
+    \end{document}"
+img_0044.png,"The image depicts a graph structure consisting of several labeled components. At the center is a sequence of six nodes labeled H1, H2, H3, H4, H5, and H6 arranged in a horizontal line. Each of these nodes is enclosed in a circle. There are dotted lines connecting them in pairs: H1 connects to H2, H3 connects to H4, and H5 connects to H6, creating a zigzag pattern. 
+
+Above this central sequence, there is a node labeled ""e"" connected by a line to H2 and H4. Below the central sequence, there are additional nodes labeled v1, v2, ..., vk, connected to pairs of empty nodes labeled H2k-1 and H2k, which are also enclosed in circles. The v nodes are connected with lines back to certain nodes in the upper layout. 
+
+The background is clean, with no additional markings, and the overall design is symmetrical, emphasizing the relationships between the nodes.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Central nodes
+    \foreach \i in {1,2,3,4,5,6} {
+        \node[circle, draw] (H\i) at (\i, 0) {H\i};
+    }
+
+    % Dotted connections
+    \foreach \i/\j in {1/2, 3/4, 5/6} {
+        \draw[dotted] (H\i) -- (H\j);
+    }
+
+    % Upper node
+    \node (e) at (3.5, 1) {e};
+    \draw (e) -- (H2);
+    \draw (e) -- (H4);
+
+    % Lower nodes
+    \foreach \k in {1,2,3} {
+        \node[circle, draw] (H2k-1) at (\k*2-1, -2) {H\k};
+        \node[circle, draw] (H2k) at (\k*2, -2) {H\k};
+        \node[v\k] at (\k*2-0.5, -3) {v\k};
+        \draw (v\k) -- (H2k-1);
+        \draw (v\k) -- (H2k);
+    }
+
+    % Connections from v nodes to upper layout
+    \foreach \k in {1,2,3} {
+        \draw (v\k) -- (H\k);
+    }
+\end{tikzpicture}
+    \end{document}"
+img_0045.png,"The image consists of a series of interconnected hexagons arranged horizontally, with three hexagons in the top row and three in the bottom row, forming a zigzag pattern. Each hexagon is labeled with vertices marked as \( v \) for the top row and \( w \) for the bottom row, followed by a subscript indicating their order. The top row includes hexagons with vertices \( v_0, v_1, v_2, v_3, v_4, v_5, v_6, v_7 \), and the bottom row has vertices \( w_0, w_1, w_2, w_3, w_4, w_5, w_6, w_7 \). 
+
+Vertical edges connecting these hexagons are represented as dashed or solid lines, particularly highlighting \( z_1, z_2, z_3, z_4, z_5, z_6 \) between the rows of hexagons. There are also three red edges marked as \( w_4, w_3 \) and \( v_4, v_5 \), indicating possibly highlighted connections or separations. Additionally, there is a horizontal blue line connecting vertices \( v_0 \) and \( v_5 \) to signify another connection between the two rows of hexagons. 
+
+The overall structure forms a repeating pattern of hexagons alternating between two levels, with distinct connections","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    ```latex
+\begin{tikzpicture}[scale=1]
+    % Define hexagon drawing command
+    \newcommand{\hexagon}[2]{
+        \draw (#1, #2) -- ++(30:1) -- ++(90:1) -- ++(150:1) -- ++(210:1) -- ++(270:1) -- ++(330:1) -- cycle;
+    }
+
+    % Draw top row hexagons
+    \foreach \i in {0, 1, 2} {
+        \hexagon{2*\i}{1}
+        \node at (2*\i + 0.5, 1.5) {$v_{\i}$};
+    }
+
+    % Draw bottom row hexagons
+    \foreach \i in {0, 1, 2} {
+        \hexagon{2*\i + 1}{0}
+        \node at (2*\i + 1.5, 0.5) {$w_{\i}$};
+    }
+
+    % Draw vertical edges between hexagons
+    \foreach \i in {0, 1, 2} {
+        \draw[dashed] (2*\i + 0.5, 1) -- (2*\i + 1.5, 0);
+    }
+
+    % Highlight vertical edges
+    \draw[thick] (2.5, 1) -- (3.5, 0);
+    \draw[thick] (1.5, 1) -- (2.5, 0);
+    \draw[thick] (0.5, 1) -- (1.5, 0);
+    
+    % Draw red edges
+    \draw[red, thick] (1.5, 0) -- (3.5, 0);
+    \draw[red, thick] (2, 1) -- (2.5, 1);
+
+    % Draw horizontal blue line
+    \draw[blue, thick] (0.5, 1.5) -- (3.5, 1.5);
+\end{tikzpicture}
+    \end{document}"
+img_0046.png,"The image depicts a parabolic curve, which opens upwards. At the lowest point of the curve, a segment is highlighted in red, indicating the minimum point. Two dashed lines extend from this point outward, illustrating the paths of projectiles or particles approaching and leaving the curve. 
+
+The horizontal axis runs left to right, with a point marked as “-x0” positioned to the left of the minimum point. Above this, there is a vertical line labeled “y0,” pointing upwards from the minimum point to indicate the height. The notation “rm” is positioned at the minimum point, and there are arrows pointing horizontally labeled as “iy” and “ix,” which likely represent the respective components of some quantity at that location.
+
+At the bottom left, there is a vector labeled “v∞,” pointing diagonally towards the left, signifying an incoming velocity. At the bottom right, there is another vector labeled “v+,” also pointing diagonally but in the opposite direction, suggesting an outgoing velocity. The vectors are drawn with arrows to indicate direction but have different styles to differentiate their significance.
+
+The overall composition centers on the parabolic curve with accompanying labels and vectors that denote measurements and directions relevant to the described interactions.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Draw the parabola
+    \draw[thick, domain=-3:3, smooth, variable=\x] plot ({\x}, {\x*\x});
+    
+    % Highlight the minimum point
+    \fill[red] (0,0) circle (2pt);
+    \node at (0,-0.3) {rm};
+
+    % Draw the dashed lines
+    \draw[dashed] (0,0) -- (-2,2);
+    \draw[dashed] (0,0) -- (2,2);
+    
+    % Draw the horizontal axis
+    \draw[->] (-3,0) -- (3,0) node[right] {$x$};
+    
+    % Mark the point -x0
+    \node at (-2,-0.3) {-x0};
+
+    % Draw the vertical line for y0
+    \draw[->] (0,0) -- (0,2) node[above] {y0};
+    
+    % Draw the arrows for iy and ix
+    \draw[->] (0,0) -- (1,0) node[below] {ix};
+    \draw[->] (0,0) -- (0.5,0.5) node[above right] {iy};
+    
+    % Draw the incoming velocity vector v∞
+    \draw[->, thick, blue] (-2,-2) -- (-1, -1) node[midway, below left] {v∞};
+    
+    % Draw the outgoing velocity vector v+
+    \draw[->, thick, green] (1,-1) -- (2,-2) node[midway, below right] {v+};
+\end{tikzpicture}
+    \end{document}"
+img_0047.png,"The image consists of a diagram featuring two main elements, which are labeled ""A"" and ""B."" 
+
+On the left side, a red rectangle contains the text ""μα"" and ""T"" at the top and ""ϵkα(t)"" at the bottom, with the text arranged one above the other. Below this, there is a red circle labeled ""ϵA."" An arrow labeled ""Γα"" points towards this red circle from the rectangle.
+
+In the center of the image, there is a double-headed arrow labeled ""U"" that connects the two circles. 
+
+On the right side, a blue rectangle contains the text ""μβ"" and ""T"" at the top and ""ϵkβ"" at the bottom, also arranged one above the other. Below this, a blue circle is labeled ""ϵB."" An arrow labeled ""Γβ"" points from the rectangle towards this blue circle.
+
+The layout consists of a horizontal alignment of the two rectangles on either side with the circles in the center, connected by the double-headed arrow. All elements are neatly centered, creating a balanced visual effect.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Red Rectangle A
+    \node[draw=red, fill=red!20, minimum width=2.5cm, minimum height=3cm] (A) at (0,0) {
+        \begin{minipage}{2.5cm}
+            \centering
+            μα \\[0.5cm]
+            T \\[1cm]
+            ϵkα(t)
+        \end{minipage}
+    };
+    
+    % Red Circle
+    \node[draw=red, circle, minimum size=1cm, inner sep=0pt] (circleA) at (0,-2) {ϵA};
+    
+    % Arrow from Rectangle A to Circle A
+    \draw[->, red] (A.south) -- (circleA.north) node[midway, right] {Γα};
+    
+    % Blue Rectangle B
+    \node[draw=blue, fill=blue!20, minimum width=2.5cm, minimum height=3cm] (B) at (5,0) {
+        \begin{minipage}{2.5cm}
+            \centering
+            μβ \\[0.5cm]
+            T \\[1cm]
+            ϵkβ
+        \end{minipage}
+    };
+    
+    % Blue Circle
+    \node[draw=blue, circle, minimum size=1cm, inner sep=0pt] (circleB) at (5,-2) {ϵB};
+    
+    % Arrow from Rectangle B to Circle B
+    \draw[->, blue] (B.south) -- (circleB.north) node[midway, right] {Γβ};
+    
+    % Double-headed arrow between circles
+    \draw[<->] (circleA.east) -- (circleB.west) node[midway, above] {U};
+\end{tikzpicture}
+    \end{document}"
+img_0048.png,"The image depicts a semicircle with a horizontal diameter line labeled with points P and Q at each endpoint. The center of the semicircle is marked with point O, positioned directly below the midpoint of the diameter. A blue line extends from point P towards the upper part of the semicircle, connecting to an internal point on the arc of the semicircle. Another blue line extends from point Q to the same internal point on the arc, creating a triangular shape with points P, Q, and the apex on the arc. There is a small angle marked at the apex with a symbol for theta (θ) written in red, indicating the angle formed between the lines from P and Q. The semicircle itself has a smooth, curved outline, while the diameter is a straight horizontal line.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \draw[thick] (0,0) arc[start angle=0, end angle=180, radius=2cm];
+    \draw[thick] (-2,0) -- (2,0);
+    \node at (-2,-0.2) {P};
+    \node at (2,-0.2) {Q};
+    \node at (0,-1) {O};
+    
+    \draw[blue, thick] (-2,0) -- (1,1.5);
+    \draw[blue, thick] (2,0) -- (1,1.5);
+    
+    \node at (1,1.5) (A) {};
+    
+    \draw[red, thick] (1,1.5) ++(0.2,0) arc[start angle=0, end angle=30, radius=0.2cm];
+    \node at (1.2, 1.7) {\textcolor{red}{$\theta$}};
+\end{tikzpicture}
+    \end{document}"
+img_0049.png,"The image is a flowchart that outlines a process involving a driver script, a Diophantine solver with a Fourier transform, a programmatic SAT solver, and various connections between these components. At the top left, there is a box labeled ""Diophantine solver / Fourier transform."" Below this box is another box labeled ""Driver script,"" which indicates a connection leading to an ""External call"" on the left edge and a ""Result"" at the bottom.
+
+From the ""Driver script,"" an arrow points to another box labeled ""SAT instances."" There is a dashed line linking ""SAT instances"" to a box labeled ""Partial assignment"" in the center of the image. This center box is connected to a second box labeled ""Fourier transform"" on the right.
+
+The ""Fourier transform"" box leads to a box labeled ""Conflict clause,"" which is connected to a box on the far right labeled ""Programmatic SAT solver."" This box further connects to another label that reads ""Enumeration in order n"" at the bottom right. 
+
+The entire diagram has directional arrows to indicate the flow of information, and the layout follows a clear, structured, and organized design that aids in understanding the relationships between the different components involved in the process.","\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[node distance=1.5cm, auto]
+    % Define blocks
+    \node (diophantine) [draw, rectangle] {Diophantine solver / Fourier transform};
+    \node (driver) [draw, rectangle, below=of diophantine] {Driver script};
+    \node (sat) [draw, rectangle, below=of driver] {SAT instances};
+    \node (partial) [draw, rectangle, right=of sat] {Partial assignment};
+    \node (fourier) [draw, rectangle, right=of partial] {Fourier transform};
+    \node (conflict) [draw, rectangle, below=of fourier] {Conflict clause};
+    \node (solver) [draw, rectangle, right=of conflict] {Programmatic SAT solver};
+    \node (enumeration) [draw, rectangle, below=of solver] {Enumeration in order n};
+
+    % Define connections
+    \draw[->] (diophantine) -- (driver);
+    \draw[->] (driver) -- (sat);
+    \draw[->] (driver.east) -- ++(0.5,0) node[midway, above] {External call} |- (driver.east);
+    \draw[->] (sat) -- (partial);
+    \draw[dashed] (sat.east) -- (partial.west);
+    \draw[->] (partial) -- (fourier);
+    \draw[->] (fourier) -- (conflict);
+    \draw[->] (conflict) -- (solver);
+    \draw[->] (solver) -- (enumeration);
+    
+    % Add result connection
+    \draw[->] (driver.south) -- ++(0,-0.5) node[midway, left] {Result} -- ++(0,-1) -- ++(-1,0) |- (driver.south);
+\end{tikzpicture}
+    \end{document}"

@@ -1,0 +1,954 @@
+Sample,Caption,LaTeX_Document
+Image,Caption,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+\node[draw] {Caption};
+\end{tikzpicture}
+    \end{document}"
+img_0000.png,a white and green page with the words random,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[remember picture, overlay]
+    \fill[green] (current page.south west) rectangle (current page.north east);
+    \fill[white] (current page.south west) rectangle (current page.north east);
+    \node[align=center, text=black, font=\huge] at (current page.center) {random};
+\end{tikzpicture}
+    \end{document}"
+img_0001.png,a diagram showing the number of dots in a triangle,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \foreach \i in {1,2,3,4,5} {
+        \foreach \j in {1,...,\i} {
+            \node[draw,circle,inner sep=1.5pt] at (\j - 1, -\i) {};
+        }
+    }
+    \foreach \i in {1,2,3,4,5} {
+        \node at (0.5, -\i - 0.5) {\i};
+    }
+\end{tikzpicture}
+    \end{document}"
+img_0002.png,a diagram of a rectangular box with two lines,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \draw[thick] (0,0,0) -- (2,0,0) -- (2,1,0) -- (0,1,0) -- cycle; % bottom face
+    \draw[thick] (0,0,1) -- (2,0,1) -- (2,1,1) -- (0,1,1) -- cycle; % top face
+    \draw[thick] (0,0,0) -- (0,0,1); % vertical edge
+    \draw[thick] (2,0,0) -- (2,0,1); % vertical edge
+    \draw[thick] (2,1,0) -- (2,1,1); % vertical edge
+    \draw[thick] (0,1,0) -- (0,1,1); % vertical edge
+    \draw[dashed] (0,0,0) -- (2,1,1); % diagonal line 1
+    \draw[dashed] (2,0,0) -- (0,1,1); % diagonal line 2
+\end{tikzpicture}
+    \end{document}"
+img_0003.png,a graph showing the average temperature and precipitation,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \begin{axis}[
+        title={Average Temperature and Precipitation},
+        xlabel={Month},
+        ylabel={Temperature (°C) / Precipitation (mm)},
+        xtick={1,2,3,4,5,6,7,8,9,10,11,12},
+        xticklabels={Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec},
+        ytick={-10,0,10,20,30,40,50},
+        ymajorgrids=true,
+        grid style=dashed,
+        legend pos=outer north east,
+        ymin=-10, ymax=50,
+        domain=1:12
+    ]
+    \addplot[
+        color=red,
+        thick,
+        smooth
+    ]
+    coordinates {(1,0)(2,2)(3,5)(4,10)(5,15)(6,20)(7,25)(8,24)(9,18)(10,12)(11,5)(12,2)};
+    \addlegendentry{Average Temperature}
+
+    \addplot[
+        color=blue,
+        thick,
+        smooth
+    ]
+    coordinates {(1,40)(2,35)(3,30)(4,25)(5,20)(6,15)(7,10)(8,15)(9,25)(10,30)(11,35)(12,40)};
+    \addlegendentry{Average Precipitation}
+    \end{axis}
+\end{tikzpicture}
+    \end{document}"
+img_0004.png,a graph showing the number of different numbers of different numbers,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \begin{axis}[
+        xlabel={Different Numbers},
+        ylabel={Count},
+        title={Count of Different Numbers},
+        grid=major,
+        xtick={1,2,3,4,5},
+        ytick={0,1,2,3,4,5},
+        ymin=0, ymax=5,
+        xmin=0, xmax=6,
+    ]
+    \addplot coordinates {(1,2) (2,3) (3,1) (4,4) (5,2)};
+    \end{axis}
+\end{tikzpicture}
+    \end{document}"
+img_0005.png,a triangle with two sides and one side,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \draw[thick] (0, 0) -- (2, 0) -- (1, 1.732) -- cycle;
+    \draw[dashed, thick] (2, 0) -- (1, 1.732);
+\end{tikzpicture}
+    \end{document}"
+img_0006.png,two diagrams showing the different types of people,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \begin{scope}[xshift=0cm]
+        \draw[thick] (0,0) rectangle (4,4);
+        \node at (2,4.5) {Types of People};
+        \node at (2,3.5) {1. Introverts};
+        \node at (2,2.5) {2. Extroverts};
+        \node at (2,1.5) {3. Ambiverts};
+        \node at (2,0.5) {4. Observers};
+    \end{scope}
+    
+    \begin{scope}[xshift=6cm]
+        \draw[thick] (0,0) rectangle (4,4);
+        \node at (2,4.5) {Personality Types};
+        \node at (2,3.5) {1. Thinkers};
+        \node at (2,2.5) {2. Feelers};
+        \node at (2,1.5) {3. Judgers};
+        \node at (2,0.5) {4. Perceivers};
+    \end{scope}
+\end{tikzpicture}
+    \end{document}"
+img_0007.png,the plot shows the number of z - bins and the number of z - bins,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \begin{axis}[
+        xlabel={Number of z-bins},
+        ylabel={Number of z-bins},
+        title={Z-bins Plot},
+        grid=both,
+        width=10cm,
+        height=6cm,
+        xmin=0, xmax=10,
+        ymin=0, ymax=10,
+        xtick={0,1,...,10},
+        ytick={0,1,...,10},
+        legend pos=outer north east,
+        legend style={font=\footnotesize}
+    ]
+    \addplot coordinates {(0,0) (1,1) (2,2) (3,3) (4,4) (5,5) (6,6) (7,7) (8,8) (9,9) (10,10)};
+    \addlegendentry{z-bins}
+    \end{axis}
+\end{tikzpicture}
+    \end{document}"
+img_0008.png,four diagrams showing the different types of triangles,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Equilateral Triangle
+    \begin{scope}
+        \draw[thick] (0,0) -- (2,0) -- (1,1.732) -- cycle;
+        \node at (1, -0.3) {Equilateral};
+    \end{scope}
+
+    % Isosceles Triangle
+    \begin{scope}[xshift=4cm]
+        \draw[thick] (0,0) -- (2,0) -- (1,1) -- cycle;
+        \node at (1, -0.3) {Isosceles};
+    \end{scope}
+
+    % Scalene Triangle
+    \begin{scope}[xshift=8cm]
+        \draw[thick] (0,0) -- (2,1) -- (1,2) -- cycle;
+        \node at (1, -0.3) {Scalene};
+    \end{scope}
+
+    % Right Triangle
+    \begin{scope}[xshift=12cm]
+        \draw[thick] (0,0) -- (2,0) -- (2,1.5) -- cycle;
+        \node at (1, -0.3) {Right};
+    \end{scope}
+\end{tikzpicture}
+    \end{document}"
+img_0009.png,a black square with a diamond in the middle,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \fill[black] (0,0) rectangle (2,2);
+    \fill[white] (1,0) -- (2,1) -- (1,2) -- (0,1) -- cycle;
+\end{tikzpicture}
+    \end{document}"
+img_0010.png,a diagram shows the motion of a sphere,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \draw[->, thick] (0,0) -- (4,0) node[below right] {Direction of motion};
+    \draw[->, thick] (0,0) -- (0,4) node[left] {Height};
+    \draw[thick] (2,0) circle (0.5) node {Sphere};
+    \draw[dashed] (2,0) -- (2,3) node[midway,right] {Path of motion};
+    \draw[->, thick] (2,0.5) -- (2,2.5) node[midway,right] {Upward motion};
+    \draw[->, thick] (2,2.5) -- (2,0.5) node[midway,left] {Downward motion};
+\end{tikzpicture}
+    \end{document}"
+img_0011.png,a diagram showing the root of a tree,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+  \node {Root}
+    child { node {Child 1} }
+    child { node {Child 2} }
+    child { node {Child 3} };
+\end{tikzpicture}
+    \end{document}"
+img_0012.png,two diagrams showing the same number of nodes,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % First diagram
+    \node[circle, draw] (A) at (0, 0) {1};
+    \node[circle, draw] (B) at (2, 0) {2};
+    \node[circle, draw] (C) at (1, 1.5) {3};
+    \node[circle, draw] (D) at (1, -1.5) {4};
+    
+    \draw (A) -- (B);
+    \draw (A) -- (C);
+    \draw (A) -- (D);
+    \draw (B) -- (C);
+    \draw (B) -- (D);
+    \draw (C) -- (D);
+\end{tikzpicture}
+    \end{document}"
+img_0013.png,a diagram showing the different stages of a project,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[node distance=2cm]
+    \node (start) [draw, rectangle] {Start};
+    \node (planning) [draw, rectangle, below of=start] {Planning};
+    \node (execution) [draw, rectangle, below of=planning] {Execution};
+    \node (monitoring) [draw, rectangle, below of=execution] {Monitoring};
+    \node (closure) [draw, rectangle, below of=monitoring] {Closure};
+
+    \draw[->] (start) -- (planning);
+    \draw[->] (planning) -- (execution);
+    \draw[->] (execution) -- (monitoring);
+    \draw[->] (monitoring) -- (closure);
+\end{tikzpicture}
+    \end{document}"
+img_0014.png,a diagram of the process for generating a new generation of feasible region,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[node distance=2cm]
+    \node (start) [draw, rectangle] {Start};
+    \node (evaluate) [draw, rectangle, below of=start] {Evaluate Current Generation};
+    \node (select) [draw, rectangle, below of=evaluate] {Select Feasible Solutions};
+    \node (crossover) [draw, rectangle, below of=select] {Crossover Solutions};
+    \node (mutate) [draw, rectangle, below of=crossover] {Mutate Solutions};
+    \node (newgen) [draw, rectangle, below of=mutate] {Generate New Generation};
+    \node (end) [draw, rectangle, below of=newgen] {End};
+
+    \draw[->] (start) -- (evaluate);
+    \draw[->] (evaluate) -- (select);
+    \draw[->] (select) -- (crossover);
+    \draw[->] (crossover) -- (mutate);
+    \draw[->] (mutate) -- (newgen);
+    \draw[->] (newgen) -- (end);
+\end{tikzpicture}
+    \end{document}"
+img_0015.png,a plot of the number of nodes in a ring,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+\begin{axis}[
+    xlabel={Number of Nodes},
+    ylabel={Value},
+    title={Number of Nodes in a Ring},
+    grid=both,
+    xtick={1,2,...,10},
+    ytick={0,1,...,10},
+    ymin=0, ymax=10,
+    samples=10,
+    domain=1:10
+]
+\addplot[mark=*] {x};
+\end{axis}
+\end{tikzpicture}
+    \end{document}"
+img_0016.png,two different types of polygons with different shapes,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Draw a pentagon
+    \draw[thick] (0,0) -- (1,1.5) -- (2,1) -- (1.5,-0.5) -- (0.5,-0.5) -- cycle;
+    
+    % Draw a hexagon
+    \draw[thick] (4,0) -- (5,1) -- (6,1) -- (7,0) -- (6,-1) -- (5,-1) -- cycle;
+\end{tikzpicture}
+    \end{document}"
+img_0017.png,green halftone circle with white background,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \fill[white] (0,0) circle (3);
+    \fill[green] (0,0) circle (3);
+    \foreach \i in {-2.5,-2.0,...,2.5} {
+        \foreach \j in {-2.5,-2.0,...,2.5} {
+            \ifnum\i=\j
+                \fill[white] (\i,\j) circle (0.2);
+            \else
+                \fill[white] (\i,\j) circle (0.1);
+            \fi
+        }
+    }
+\end{tikzpicture}
+    \end{document}"
+img_0018.png,the diagram shows the relationship between two equations,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \begin{axis}[
+        axis lines = middle,
+        xlabel = {x},
+        ylabel = {y},
+        grid = both,
+        xmin = -5, xmax = 5,
+        ymin = -5, ymax = 5,
+        domain = -5:5,
+        samples = 100,
+        legend pos = north east,
+        legend style={at={(1,1)}, anchor=south east}
+    ]
+    \addplot[color=blue, thick] {x^2};
+    \addlegendentry{$y = x^2$}
+
+    \addplot[color=red, thick] {2*x + 1};
+    \addlegendentry{$y = 2x + 1$}
+    
+    \addplot[color=green, thick] {0};
+    \addlegendentry{$y = 0$}
+    
+    \end{axis}
+\end{tikzpicture}
+    \end{document}"
+img_0019.png,a diagram showing the different types of lines,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \draw[solid] (0,0) -- (3,0) node[midway, above] {Solid Line};
+    \draw[dashed] (0,-1) -- (3,-1) node[midway, above] {Dashed Line};
+    \draw[dotted] (0,-2) -- (3,-2) node[midway, above] {Dotted Line};
+    \draw[thick] (0,-3) -- (3,-3) node[midway, above] {Thick Solid Line};
+    \draw[ultra thick] (0,-4) -- (3,-4) node[midway, above] {Ultra Thick Line};
+    \draw[decorate, decoration={snake, amplitude=.4mm, segment length=2mm}] (0,-5) -- (3,-5) node[midway, above] {Wavy Line};
+\end{tikzpicture}
+    \end{document}"
+img_0020.png,a square with the words image and the word p,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \draw (0,0) rectangle (2,2);
+    \node at (1,1) {image};
+    \node at (1,0.5) {p};
+\end{tikzpicture}
+    \end{document}"
+img_0021.png,a black and white image of a black and white cat,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Cat body
+    \fill[black] (0,0) ellipse (1.5 and 1);
+    \fill[white] (-0.5,0) ellipse (0.5 and 0.7);
+    \fill[white] (0.5,0) ellipse (0.5 and 0.7);
+    
+    % Cat head
+    \fill[black] (0,1.2) circle (0.8);
+    \fill[white] (-0.3,1.5) circle (0.1);
+    \fill[white] (0.3,1.5) circle (0.1);
+    
+    % Cat eyes
+    \fill[white] (-0.3,1.2) circle (0.1);
+    \fill[white] (0.3,1.2) circle (0.1);
+    \fill[black] (-0.3,1.2) circle (0.05);
+    \fill[black] (0.3,1.2) circle (0.05);
+    
+    % Cat nose
+    \fill[black] (0,1) circle (0.05);
+    
+    % Cat mouth
+    \draw[black] (0,1) -- (-0.1,0.9);
+    \draw[black] (0,1) -- (0.1,0.9);
+    
+    % Cat ears
+    \fill[black] (-0.7,1.4) -- (-0.5,1.2) -- (-0.3,1.4) -- cycle;
+    \fill[black] (0.7,1.4) -- (0.5,1.2) -- (0.3,1.4) -- cycle;
+\end{tikzpicture}
+    \end{document}"
+img_0022.png,a wooden ladder with orange and white stripes,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Draw the ladder
+    \draw[thick] (0,0) -- (0,5); % Left side
+    \draw[thick] (2,0) -- (2,5); % Right side
+    
+    % Draw the rungs
+    \foreach \y in {1, 2, 3, 4} {
+        \draw[thick] (0,\y) -- (2,\y);
+    }
+
+    % Draw orange and white stripes
+    \foreach \y in {1, 3} {
+        \fill[orange] (0.1,\y-0.1) rectangle (1.9,\y+0.1);
+    }
+    \foreach \y in {2, 4} {
+        \fill[white] (0.1,\y-0.1) rectangle (1.9,\y+0.1);
+    }
+\end{tikzpicture}
+    \end{document}"
+img_0023.png,a pie chart with the words'opegave 7 'on it,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+\pie[text=legend, radius=3, color={red, blue, green, yellow, orange, cyan, magenta}]{10/Opegave 7, 20/Other 1, 30/Other 2, 40/Other 3}
+\end{tikzpicture}
+    \end{document}"
+img_0024.png,a plot of the number of dots on a line,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \draw[->] (0,0) -- (10,0) node[right] {x};
+    \foreach \x in {1,2,...,9} {
+        \fill (\x,0) circle (2pt);
+    }
+\end{tikzpicture}
+    \end{document}"
+img_0025.png,a diagram showing the start of a network,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \node[circle, draw, minimum size=1cm] (A) at (0, 0) {A};
+    \node[circle, draw, minimum size=1cm] (B) at (2, 1) {B};
+    \node[circle, draw, minimum size=1cm] (C) at (2, -1) {C};
+    \node[circle, draw, minimum size=1cm] (D) at (4, 0) {D};
+
+    \draw[->] (A) -- (B);
+    \draw[->] (A) -- (C);
+    \draw[->] (B) -- (D);
+    \draw[->] (C) -- (D);
+\end{tikzpicture}
+    \end{document}"
+img_0026.png,a cylinder with a red and blue line,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \draw[thick] (0,0) -- (0,2);
+    \draw[thick] (2,0) -- (2,2);
+    \draw[thick] (0,0) arc[start angle=180,end angle=360,radius=1cm];
+    \draw[thick] (2,0) arc[start angle=0,end angle=180,radius=1cm];
+    \draw[red, thick] (0,1) -- (2,1);
+    \draw[blue, thick] (0,0) -- (2,0);
+\end{tikzpicture}
+    \end{document}"
+img_0027.png,a diagram showing the different types of the same function,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \begin{axis}[
+        axis lines=middle,
+        xlabel={$x$},
+        ylabel={$f(x)$},
+        xtick={-5,-4,...,5},
+        ytick={-5,-4,...,5},
+        grid=both,
+        minor tick num=1,
+        domain=-5:5,
+        samples=100,
+        legend style={at={(1,1)}, anchor=south east},
+        title={Different Types of Functions}
+    ]
+    % Linear function
+    \addplot[blue, thick] {2*x + 1};
+    \addlegendentry{Linear: $f(x) = 2x + 1$}
+
+    % Quadratic function
+    \addplot[red, thick] {x^2 - 4};
+    \addlegendentry{Quadratic: $f(x) = x^2 - 4$}
+
+    % Cubic function
+    \addplot[green, thick] {x^3 - 3*x};
+    \addlegendentry{Cubic: $f(x) = x^3 - 3x$}
+
+    % Exponential function
+    \addplot[orange, thick] {exp(x) - 5};
+    \addlegendentry{Exponential: $f(x) = e^x - 5$}
+
+    % Logarithmic function
+    \addplot[purple, thick, domain=0.01:5] {ln(x)};
+    \addlegendentry{Logarithmic: $f(x) = \ln(x)$}
+    \end{axis}
+\end{tikzpicture}
+    \end{document}"
+img_0028.png,a plot of a line with dots on it,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+\begin{axis}[
+    xlabel={x},
+    ylabel={y},
+    grid=both,
+    xmin=0, xmax=10,
+    ymin=0, ymax=10,
+]
+\addplot[color=blue, thick] {0.5*x};
+\addplot[color=red, only marks] coordinates {(0,0) (2,1) (4,2) (6,3) (8,4) (10,5)};
+\end{axis}
+\end{tikzpicture}
+    \end{document}"
+img_0029.png,a black and white drawing of a black and white floor,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \draw[black, fill=white] (0,0) rectangle (4,4);
+    \foreach \i in {0, 1, 2, 3} {
+        \foreach \j in {0, 1, 2, 3} {
+            \ifnum\i mod 2=0
+                \ifnum\j mod 2=0
+                    \fill[black] (\i, \j) rectangle (\i+1, \j+1);
+                \else
+                    \fill[white] (\i, \j) rectangle (\i+1, \j+1);
+                \fi
+            \else
+                \ifnum\j mod 2=0
+                    \fill[white] (\i, \j) rectangle (\i+1, \j+1);
+                \else
+                    \fill[black] (\i, \j) rectangle (\i+1, \j+1);
+                \fi
+            \fi
+        }
+    }
+\end{tikzpicture}
+    \end{document}"
+img_0030.png,a graph with three points and two lines,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \draw[->] (-1,0) -- (3,0) node[right] {x};
+    \draw[->] (0,-1) -- (0,3) node[above] {y};
+    \filldraw[black] (1,1) circle (2pt) node[anchor southeast] {A};
+    \filldraw[black] (2,2) circle (2pt) node[anchor southwest] {B};
+    \filldraw[black] (0,2) circle (2pt) node[anchor east] {C};
+    \draw (1,1) -- (2,2);
+    \draw (2,2) -- (0,2);
+\end{tikzpicture}
+    \end{document}"
+img_0031.png,two plots showing the same data for different types of data,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \begin{axis}[
+        title={Plot 1: Type A Data},
+        xlabel={X-axis},
+        ylabel={Y-axis},
+        legend pos=outer north east,
+        grid=major,
+        width=0.45\textwidth,
+        height=0.3\textwidth,
+        domain=0:10,
+        samples=100
+    ]
+    \addplot[color=blue, thick] {sin(deg(x))};
+    \addlegendentry{sin(x)}
+    \addplot[color=red, thick] {cos(deg(x))};
+    \addlegendentry{cos(x)}
+    \end{axis}
+
+    \begin{axis}[
+        title={Plot 2: Type B Data},
+        xlabel={X-axis},
+        ylabel={Y-axis},
+        legend pos=outer north east,
+        grid=major,
+        width=0.45\textwidth,
+        height=0.3\textwidth,
+        at={(5,0)},
+        anchor=west,
+        domain=0:10,
+        samples=100
+    ]
+    \addplot[color=green, thick] {exp(x/10)};
+    \addlegendentry{exp(x/10)}
+    \addplot[color=orange, thick] {log(x+1)};
+    \addlegendentry{log(x+1)}
+    \end{axis}
+\end{tikzpicture}
+    \end{document}"
+img_0032.png,a diagram showing the position of a line,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \draw[->] (-3,0) -- (3,0) node[right] {x};
+    \draw[->] (0,-3) -- (0,3) node[above] {y};
+    \draw[thick, blue] (-3,1) -- (3,1) node[right] {y = 1};
+    \foreach \x in {-2, -1, 0, 1, 2} {
+        \draw[fill=black] (\x, 1) circle (2pt);
+    }
+\end{tikzpicture}
+    \end{document}"
+img_0033.png,a diagram showing the area of a circle,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \draw[thick] (0,0) circle(2);
+    \fill[blue!20] (0,0) circle(2);
+    \draw[->] (-3,0) -- (3,0) node[right] {x};
+    \draw[->] (0,-3) -- (0,3) node[above] {y};
+    \node at (0,-2.5) {Area = $\pi r^2$};
+    \node at (0,2.5) {Circle};
+\end{tikzpicture}
+    \end{document}"
+img_0034.png,a city skyline with buildings on an orange background,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[background rectangle/.style={fill=orange}, show background rectangle]
+    \fill[orange] (0,0) rectangle (10,5);
+    \fill[gray] (0.5,0) rectangle (1.5,2.5);
+    \fill[gray] (2,0) rectangle (3,4);
+    \fill[gray] (3.5,0) rectangle (4.5,3);
+    \fill[gray] (5,0) rectangle (6,4.5);
+    \fill[gray] (6.5,0) rectangle (7.5,2);
+    \fill[gray] (8,0) rectangle (9,3.5);
+    \fill[gray] (9.5,0) rectangle (10,1.5);
+\end{tikzpicture}
+    \end{document}"
+img_0035.png,a diagram showing the position of a point on a line,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \draw[->] (-3,0) -- (3,0) node[right] {x};
+    \draw (1,0) node[below] {P} -- (1,0.1) node[above] {1};
+    \fill (1,0) circle (2pt);
+\end{tikzpicture}
+    \end{document}"
+img_0036.png,two diagrams showing the same polygon with different angles,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % First diagram with angles
+    \draw[thick] (0,0) -- (2,0) -- (2,2) -- (1,3) -- (0,2) -- cycle;
+    \foreach \i in {0, 1, 2, 3, 4} {
+        \node at (0.5 + \i*0.5, 0) [below] {\footnotesize $\angle A_{\i+1}$};
+    }
+    \node at (1, 1.5) {Polygon with Angles};
+
+    % Second diagram with different angles
+    \begin{scope}[xshift=5cm]
+        \draw[thick] (0,0) -- (1.5,0) -- (1.5,1.5) -- (0.75,2.5) -- (0,1.5) -- cycle;
+        \foreach \i in {0, 1, 2, 3, 4} {
+            \node at (0.5 + \i*0.5, 0) [below] {\footnotesize $\angle B_{\i+1}$};
+        }
+        \node at (0.75, 1.25) {Polygon with Different Angles};
+    \end{scope}
+\end{tikzpicture}
+    \end{document}"
+img_0037.png,a diagram showing the number of nodes in a network,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \node[circle, draw] (A) at (0, 0) {Node 1};
+    \node[circle, draw] (B) at (2, 1) {Node 2};
+    \node[circle, draw] (C) at (2, -1) {Node 3};
+    \node[circle, draw] (D) at (4, 0) {Node 4};
+    
+    \draw[->] (A) -- (B);
+    \draw[->] (A) -- (C);
+    \draw[->] (B) -- (D);
+    \draw[->] (C) -- (D);
+    
+    \node at (1, 2) {Number of Nodes: 4};
+\end{tikzpicture}
+    \end{document}"
+img_0038.png,two resistors are connected to each other,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \draw (0,0) to[R, l=$R_1$] (0,2) -- (2,2) to[R, l=$R_2$] (2,0) -- (0,0);
+\end{tikzpicture}
+    \end{document}"
+img_0039.png,two diagrams showing the same process of a circular object,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % First diagram
+    \draw[thick] (0,0) circle (1.5);
+    \draw[->, thick] (1.5,0) -- (2.5,0) node[midway, above] {Process A};
+    \node at (0,0) {Object};
+
+    % Second diagram
+    \draw[thick] (4,0) circle (1.5);
+    \draw[->, thick] (5.5,0) -- (6.5,0) node[midway, above] {Process B};
+    \node at (4,0) {Object};
+\end{tikzpicture}
+    \end{document}"
+img_0040.png,a line with numbers on it,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \draw[->] (0,0) -- (10,0);
+    \foreach \x in {1,2,...,9} {
+        \draw (\x,1pt) -- (\x,-3pt) node[below] {\x};
+    }
+\end{tikzpicture}
+    \end{document}"
+img_0041.png,a diagram of a network with a circle and lines,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \draw[thick] (0,0) circle (2cm);
+    \draw[thick] (0,0) -- (2,1);
+    \draw[thick] (0,0) -- (1.5,-1.5);
+    \draw[thick] (0,0) -- (-1.5,-1.5);
+    \draw[thick] (0,0) -- (-2,1);
+    \draw[thick] (0,0) -- (1,-2);
+    \draw[thick] (0,0) -- (-1,2);
+\end{tikzpicture}
+    \end{document}"
+img_0042.png,a diagram showing the number of d and e,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \begin{axis}[
+        ybar,
+        xlabel={Categories},
+        ylabel={Count},
+        xtick={1,2},
+        xticklabels={d,e},
+        ymin=0,
+        bar width=0.5cm,
+        enlarge x limits=0.5,
+        grid=major
+    ]
+    \addplot coordinates {(1,5) (2,3)};
+    \end{axis}
+\end{tikzpicture}
+    \end{document}"
+img_0043.png,a diagram of a network with three dots,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \node[circle, draw, fill=blue!20] (A) at (0, 0) {A};
+    \node[circle, draw, fill=blue!20] (B) at (2, 2) {B};
+    \node[circle, draw, fill=blue!20] (C) at (4, 0) {C};
+    
+    \draw[->] (A) -- (B);
+    \draw[->] (B) -- (C);
+    \draw[->] (C) -- (A);
+\end{tikzpicture}
+    \end{document}"
+img_0044.png,a diagram showing the different types of circles,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    % Draw the main circle
+    \draw[thick] (0,0) circle (2cm) node {Circle};
+
+    % Draw the diameter
+    \draw[dashed] (-2,0) -- (2,0) node[midway, below] {Diameter};
+
+    % Draw the radius
+    \draw[dotted] (0,0) -- (2,0) node[midway, above] {Radius};
+
+    % Draw the chord
+    \draw[->, thick] (-1,1.5) -- (1,1.5) node[midway, above] {Chord};
+
+    % Draw the tangent
+    \draw[->, thick] (2,0) -- (3,1) node[midway, above] {Tangent};
+
+    % Draw the secant
+    \draw[->, thick] (-3,0) -- (3,0) node[midway, below] {Secant};
+
+    % Draw the arc
+    \draw[->, thick] (0,0) arc[start angle=0,end angle=90,radius=2cm] node[midway, right] {Arc};
+
+    % Draw the sector
+    \fill[blue!20] (0,0) -- (2,0) arc[start angle=0,end angle=90,radius=2cm) -- cycle;
+    \node at (1,0.5) {Sector};
+\end{tikzpicture}
+    \end{document}"
+img_0045.png,a diagram of a triangular triangle with two lines,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \draw[thick] (0,0) -- (3,0) -- (1.5,2.6) -- cycle; % Triangle
+    \draw[dashed] (1.5,2.6) -- (0,0); % First line
+    \draw[dotted] (1.5,2.6) -- (3,0); % Second line
+\end{tikzpicture}
+    \end{document}"
+img_0046.png,a diagram showing the angle of a curve,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \draw[->] (0,0) -- (4,0) node[right] {x};
+    \draw[->] (0,0) -- (0,4) node[above] {y};
+    \draw[thick,domain=0:3.5,smooth,variable=\x] plot ({\x},{0.5*\x*\x});
+    \draw[dashed] (2,0) -- (2,2) node[midway,right] {f(2)};
+    \draw[dashed] (0,2) -- (2,2);
+    \draw[->] (2,2) -- (2.5,2.5) node[midway,right] {Tangent};
+    \draw[->] (2,2) -- (1.5,2.5) node[midway,left] {Angle};
+    \draw[->] (2,2) -- (2.5,1.5) node[midway,right] {Normal};
+    \draw[thick] (2,2) -- (1.5,2.5) -- (2.5,2.5);
+\end{tikzpicture}
+    \end{document}"
+img_0047.png,a diagram showing the different types of the same process,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[node distance=2cm]
+    \node (process) [draw, rectangle] {Process};
+    \node (type1) [draw, rectangle, below of=process] {Type 1};
+    \node (type2) [draw, rectangle, below of=type1] {Type 2};
+    \node (type3) [draw, rectangle, below of=type2] {Type 3};
+    \node (type4) [draw, rectangle, below of=type3] {Type 4};
+
+    \draw[->] (process) -- (type1);
+    \draw[->] (type1) -- (type2);
+    \draw[->] (type2) -- (type3);
+    \draw[->] (type3) -- (type4);
+\end{tikzpicture}
+    \end{document}"
+img_0048.png,a diagram showing the area of a circle,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}
+    \draw[thick] (0,0) circle(2);
+    \fill[blue!20] (0,0) circle(2);
+    \draw[->] (-3,0) -- (3,0) node[right] {x};
+    \draw[->] (0,-3) -- (0,3) node[above] {y};
+    \node at (0,-2.5) {Area = $\pi r^2$};
+    \node at (2.5,0) {r};
+\end{tikzpicture}
+    \end{document}"
+img_0049.png,a diagram of the process of a computer program,"\documentclass[tikz,border=10pt]{standalone}
+    \usepackage{tikz}
+    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+    
+    \begin{document}
+    \begin{tikzpicture}[node distance=2cm]
+    \node (start) [draw, rectangle, rounded corners] {Start};
+    \node (input) [draw, rectangle, below of=start] {Input Data};
+    \node (process) [draw, rectangle, below of=input] {Process Data};
+    \node (output) [draw, rectangle, below of=process] {Output Results};
+    \node (end) [draw, rectangle, rounded corners, below of=output] {End};
+
+    \draw[->] (start) -- (input);
+    \draw[->] (input) -- (process);
+    \draw[->] (process) -- (output);
+    \draw[->] (output) -- (end);
+\end{tikzpicture}
+    \end{document}"
