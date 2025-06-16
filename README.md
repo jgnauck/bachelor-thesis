@@ -39,7 +39,7 @@ Caption Analysis/
 ```
 
 ```md
-## 📜 Scripts
+## Scripts
 
 | Script              | Description                                        |
 |---------------------|----------------------------------------------------|
@@ -49,9 +49,10 @@ Caption Analysis/
 | `load_gpt4omini.py` | Generates image captions using GPT-4o-mini         |
 | `large_scale.py`    | Processes a large image set using Qwen             |
 | `tikz.py`           | Converts captions into LaTeX TikZ using GPT-4o     |
-
+```
 
 ## Installation Instructions
-Install required packages vis 'pip':
+Install required packages via 'pip':
 ```bash
 pip install torch transformers openai pandas tqdm pillow
+```
