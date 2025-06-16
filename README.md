@@ -1,5 +1,5 @@
 # Bachelor Thesis
-This repository contains code and data for my Bachelor Thesis:
+This repository contains code and data for the Bachelor Thesis:
 **"Caption Quality Comparison with the DaTikZ Dataset"**.
 
 ## Project Structure
@@ -86,4 +86,4 @@ set OPENAI_API_KEY=your-api-key
 ```
 
 ## Thesis
-This project was developed as part of my Bachelor Thesis at University of Mannheim. Please refer to Bachelor Thesis.pdf for methodology and detailed analysis.
+This project was developed as part of the Bachelor Thesis "Caption Quality Comparison with the DaTikZ Dataset" at University of Mannheim. Please refer to Bachelor Thesis.pdf for methodology and detailed analysis.
