@@ -4,9 +4,6 @@ from PIL import Image
 from transformers import Qwen2_5_VLForConditionalGeneration, AutoProcessor
 from qwen_vl_utils import process_vision_info
 
-print("Current working directory:", os.getcwd())
-
-os.environ['HF_HOME'] = '/work/jgnauck'
 
 # Load the model and processor
 model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
@@ -15,12 +12,12 @@ model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
 processor = AutoProcessor.from_pretrained("Qwen/Qwen2.5-VL-7B-Instruct")
 
 # Input and output paths
-input_folder = "/home/jgnauck/4001-6000"
-output_csv = "qwen_4001_6000.csv"
+input_folder = "../images"
+output_csv = "../qwen_4001_6000.csv"
 
 # Caption prompt
 caption_prompt = (
-    "Describe this image in precisely so someone could redraw it exactly."
+    "Describe this image precisely so someone could redraw it exactly."
 )
 
 # Prepare CSV file

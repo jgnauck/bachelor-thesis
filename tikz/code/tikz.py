@@ -5,26 +5,29 @@ from tqdm import tqdm
 
 # Configuration
 #Qwen
-CSV_INPUT = "qwenn_captions_200.csv"
-CSV_OUTPUT = "qwenn_tikz.csv"
+CSV_INPUT = "../model caption/qwen_captions_200.csv"
+CSV_OUTPUT = "tikz/qwen_tikz.csv"
 
 #BLIP
-#CSV_INPUT = "blip_captions_200.csv"
-#CSV_OUTPUT = "blip_tikz.csv"
+#CSV_INPUT = "../model caption/blip_captions_200.csv"
+#CSV_OUTPUT = "../blip_tikz.csv"
 
 #gpt4o-mini
-#CSV_INPUT = "gpt_captions_200.csv"
-#CSV_OUTPUT = "gpt_tikz.csv"
+#CSV_INPUT = "../model captions/gpt_captions_200.csv"
+#CSV_OUTPUT = "../gpt_tikz.csv"
 
 #LLaVA
-#CSV_INPUT = "llava_captions_200.csv"
-#CSV_OUTPUT = "llava_tikz.csv"
+#CSV_INPUT = "../model captions/llava_captions_200.csv"
+#CSV_OUTPUT = "../llava_tikz.csv"
 
-API_KEY = "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"
 MODEL = "gpt-4o-mini" 
 MAX_SAMPLES = 51
 
-# Initialize client
+#Load API_KEY
+API_KEY = os.getenv("OPENAI_API_KEY")
+if not API_KEY:
+    raise ValueError("Please set your OPENAI_API_KEY environment variable.")
+
 client = OpenAI(api_key=API_KEY)
 
 # Load CSV
@@ -39,7 +42,7 @@ system_prompt = (
     "Do not include explanations, LaTeX preambles, or any text outside \\begin{tikzpicture} ... \\end{tikzpicture}."
 )
 
-# Wrap tikz code with latex code
+# Wrap tikz code into standalone LaTeX document
 def wrap_tikz_code(tikz_code: str) -> str:
     return f"""\\documentclass[tikz,border=10pt]{{standalone}}
     \\usepackage{{tikz}}
@@ -49,7 +52,7 @@ def wrap_tikz_code(tikz_code: str) -> str:
     {tikz_code}
     \\end{{document}}"""
 
-# Process each caption
+# Generate LaTeX for each caption
 for caption in tqdm(df["Caption"], desc="Generating TikZ"):
     try:
         response = client.chat.completions.create(
@@ -74,8 +77,6 @@ for caption in tqdm(df["Caption"], desc="Generating TikZ"):
     full_latex = wrap_tikz_code(content)
     tikz_documents.append(full_latex)
 
-# Add TikZ code to DataFrame
+# Save result
 df["LaTeX_Document"] = tikz_documents
-
-# Save to output CSV
 df.to_csv(CSV_OUTPUT, index=False)

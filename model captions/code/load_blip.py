@@ -4,8 +4,6 @@ from PIL import Image
 import torch
 from transformers import Blip2Processor, Blip2ForConditionalGeneration
 
-os.environ['HF_HOME'] = '/work/jgnauck'
-
 # Load processor and model
 processor = Blip2Processor.from_pretrained("Salesforce/blip2-opt-6.7b")
 model = Blip2ForConditionalGeneration.from_pretrained(
@@ -15,8 +13,8 @@ model = Blip2ForConditionalGeneration.from_pretrained(
 )
 
 # Input/output
-input_folder = "/home/jgnauck/images200"
-output_csv = "blip2_captions_200.csv"
+input_folder = "../../sample dataset/images"
+output_csv = "../blip2_captions_200.csv"
 
 # Create CSV
 with open(output_csv, mode='w', newline='') as file:

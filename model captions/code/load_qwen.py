@@ -4,10 +4,6 @@ from PIL import Image
 from transformers import Qwen2_5_VLForConditionalGeneration, AutoProcessor
 from qwen_vl_utils import process_vision_info
 
-print("Current working directory:", os.getcwd())
-
-os.environ['HF_HOME'] = '/work/jgnauck'
-
 # Load the model and processor
 model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
     "Qwen/Qwen2.5-VL-7B-Instruct", torch_dtype="auto", device_map="auto"
@@ -15,15 +11,15 @@ model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
 processor = AutoProcessor.from_pretrained("Qwen/Qwen2.5-VL-7B-Instruct")
 
 # Input and output paths
-input_folder = "/home/jgnauck/images200"
-output_csv = "qwen_captions_200.csv"
+input_folder = "../../sample dataset/images"
+output_csv = "../qwen_captions_200.csv"
 
 # Caption prompt
 caption_prompt = (
-    "Describe this image in precisely so someone could redraw it exactly."
+    "Describe this image precisely so someone could redraw it exactly."
 )
 
-# Prepare CSV file
+# Generate captions and write to csv
 with open(output_csv, mode='w', newline='') as file:
     writer = csv.writer(file)
     writer.writerow(["Image", "Caption"])
@@ -64,12 +60,11 @@ with open(output_csv, mode='w', newline='') as file:
                 outputs = model.generate(**inputs, max_new_tokens=256)
                 caption_raw = processor.tokenizer.batch_decode(outputs, skip_special_tokens=True)[0]
 
-                # Clean up caption
+                # Clean output
                 cleaned_caption = caption_raw.strip()
                 if cleaned_caption.lower().startswith(caption_prompt.lower()):
                     cleaned_caption = cleaned_caption[len(caption_prompt):].strip(": \n")
 
-                # Remove other known text
                 for prefix in [
                     "You are a helpful assistant.",
                     "system\nYou are a helpful assistant.\nuser",

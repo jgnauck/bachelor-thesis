@@ -5,15 +5,22 @@ from openai import OpenAI
 from PIL import Image
 from io import BytesIO
 
-# Initialize OpenAI client
-client = OpenAI(api_key="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")  # Replace with your actual key or set via env
+# Load API Key from Environment
+API_KEY = os.getenv("OPENAI_API_KEY")
+if not API_KEY:
+    raise ValueError("Please set the OPENAI_API_KEY environment variable.")
 
+#Initialize OpenAI client
+client = OpenAI(api_key=API_KEY)
+
+# Function to encode image to base64
 def encode_image(image_path):
     with Image.open(image_path) as img:
         buffered = BytesIO()
         img.save(buffered, format="PNG")
         return base64.b64encode(buffered.getvalue()).decode()
 
+# Function to send image and prompt to OpenAI
 def generate_caption(image_base64):
     response = client.chat.completions.create(
         model="gpt-4o-mini",
@@ -40,11 +47,11 @@ def generate_caption(image_base64):
     )
     return response.choices[0].message.content.strip()
 
-# Input/Output
-image_directory = "/home/jgnauck/images200"
-output_csv = "gpt_captions_200.csv"
+# Input/Output paths
+image_directory = "sample dataset/images"
+output_csv = "model captions/gpt_captions_200.csv"
 
-# Get and sort image filenames numerically
+# Sort image files numerically
 def extract_number(name):
     return int(''.join(filter(str.isdigit, name)) or -1)
 
@@ -53,7 +60,7 @@ image_files = sorted(
     key=extract_number
 )
 
-# Write results to CSV
+# Write captions to CSV
 with open(output_csv, mode='w', newline='') as csvfile:
     writer = csv.writer(csvfile)
     writer.writerow(["filename", "caption"])
