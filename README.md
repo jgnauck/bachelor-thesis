@@ -45,46 +45,7 @@ This repository contains code and data for the Bachelor Thesis:
 │   └── qwen_tikz.csv
 ├── Bachelor Thesis.pdf
 └── README.md
-
-
-
-Caption Analysis/
-└── Evaluation_Sheet.xlsx/
-
-generated images
-├── BLIP
-├── LLaVA
-├── Original Caption
-├── Qwen
-├── Revised Descriptions
-└── gpt
-
-large scale/
-├── code/
-│ └── large_scale.py
-├── images/
-└── large_scale_captions.csv
-
-sample dataset/
-├── code/
-│ └── sample_dataset.py
-├── images/
-└── descriptions.csv
-
-tikz/
-├── code/
-│ └── tikz.py
-├── qwen_tikz.csv
-├── blip_tikz.csv
-├── gpt_tikz.csv
-├── llava_tikz.csv
-├── description_tikz.csv
-└── original_tikz.csv
-
-Bachelor Thesis.pdf
-README.md
 ```
-
 
 ## Scripts
 ```
