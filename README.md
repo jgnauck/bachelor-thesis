@@ -4,40 +4,85 @@ This repository contains code and data for the Bachelor Thesis:
 
 ## Project Structure
 ```
-Caption Analysis/
-├── model captions/
-│ ├── code/
-│ │ ├── load_blip.py
-│ │ ├── load_llava.py
-│ │ ├── load_qwen.py
-│ │ └── load_gpt4omini.py
-│ ├── blip2_captions_200.csv
-│ ├── gpt_captions_200.csv
-│ ├── llava16_captions_200.csv
-│ └── qwen_captions_200.csv
-
+[bachelor-thesis]/
+├── Caption Analysis/
+│   └── Evaluation_Sheet.xlsx
+├── generated images/
+│   ├── BLIP/
+│   ├── LLaVA/
+│   ├── Original Caption/
+│   ├── Qwen/
+│   ├── Revised Descriptions/
+│   └── gpt/
 ├── large scale/
-│ ├── code/
-│ │ └── large_scale.py
-│ ├── images/
-│ └── qwen_4001_6000.csv
-
+│   ├── code/
+│   │   └── large_scale.py
+│   ├── images/
+│   └── large_scale_captions.csv
+├── model captions/
+│   ├── code/
+│   │   ├── load_blip.py
+│   │   ├── load_gpt4omini.py
+│   │   ├── load_llava.py
+│   │   └── load_qwen.py
+│   ├── blip2_captions_200.csv
+│   ├── gpt_captions_200.csv
+│   ├── llava_captions_200.csv
+│   └── qwen_captions_200.csv
 ├── sample dataset/
-│ ├── code/
-│ │ └── sample_dataset.py
-│ ├── images/
-│ └── description.csv
-
+│   ├── code/
+│   │   └── sample_dataset.py
+│   ├── images/
+│   └── descriptions.csv
 ├── tikz/
-│ ├── code/
-│ │ └── tikz.py
-│ ├── qwen_tikz.csv
-│ ├── blip_tikz.csv
-│ ├── gpt_tikz.csv
-│ └── llava_tikz.csv
-
+│   ├── code/
+│   │   └── tikz.py
+│   ├── blip_tikz.csv
+│   ├── description_tikz.csv
+│   ├── gpt_tikz.csv
+│   ├── llava_tikz.csv
+│   ├── original_tikz.csv
+│   └── qwen_tikz.csv
 ├── Bachelor Thesis.pdf
 └── README.md
+
+
+
+Caption Analysis/
+└── Evaluation_Sheet.xlsx/
+
+generated images
+├── BLIP
+├── LLaVA
+├── Original Caption
+├── Qwen
+├── Revised Descriptions
+└── gpt
+
+large scale/
+├── code/
+│ └── large_scale.py
+├── images/
+└── large_scale_captions.csv
+
+sample dataset/
+├── code/
+│ └── sample_dataset.py
+├── images/
+└── descriptions.csv
+
+tikz/
+├── code/
+│ └── tikz.py
+├── qwen_tikz.csv
+├── blip_tikz.csv
+├── gpt_tikz.csv
+├── llava_tikz.csv
+├── description_tikz.csv
+└── original_tikz.csv
+
+Bachelor Thesis.pdf
+README.md
 ```
 
 
@@ -58,7 +103,7 @@ Caption Analysis/
 ```
 | File                      | Description                                        
 |---------------------------|----------------------------------------------------
-| `Evaluation_Sheet.csv`    | Results from the manual classification framework             
+| `Evaluation_Sheet.xlsx`    | Results from the manual classification framework             
 | `large_scale_captions.csv`| Descriptions for 2000 images generated using Qwen2.5-VL           
 | `blip2_captions_200.csv`  | Captions generated using BLIP-2 for the 200 sample images        
 | `gpt_captions_200.csv`    | Captions generated using GPT-4o-mini for the 200 sample images          
