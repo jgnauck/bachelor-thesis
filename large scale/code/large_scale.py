@@ -13,7 +13,7 @@ processor = AutoProcessor.from_pretrained("Qwen/Qwen2.5-VL-7B-Instruct")
 
 # Input and output paths
 input_folder = "../images"
-output_csv = "../qwen_4001_6000.csv"
+output_csv = "../large_scale_captions.csv"
 
 # Caption prompt
 caption_prompt = (

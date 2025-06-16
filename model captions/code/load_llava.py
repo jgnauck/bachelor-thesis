@@ -13,7 +13,7 @@ model = LlavaForConditionalGeneration.from_pretrained("llava-hf/llava-1.5-7b-hf"
 
 # Input and output paths
 input_folder = "../../sample dataset/images"
-output_csv = "../llava16_captions_200.csv"
+output_csv = "../llava_captions_200.csv"
 
 # Generate captions and write to CSV
 with open(output_csv, mode='w', newline='') as file:

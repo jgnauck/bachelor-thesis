@@ -20,6 +20,14 @@ CSV_OUTPUT = "tikz/qwen_tikz.csv"
 #CSV_INPUT = "../model captions/llava_captions_200.csv"
 #CSV_OUTPUT = "../llava_tikz.csv"
 
+#Original
+#CSV_INPUT = "../model captions/llava_captions_200.csv"
+#CSV_OUTPUT = "../original_tikz.csv"
+
+#Revised description
+#CSV_INPUT = "../model captions/llava_captions_200.csv"
+#CSV_OUTPUT = "../description_tikz.csv"
+
 MODEL = "gpt-4o-mini" 
 MAX_SAMPLES = 51
 

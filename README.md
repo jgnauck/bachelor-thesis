@@ -54,6 +54,25 @@ Caption Analysis/
 | `tikz.py`           | Converts captions into LaTeX TikZ code using GPT-4o     
 ```
 
+## CSV Files
+```
+| File                      | Description                                        
+|---------------------------|----------------------------------------------------
+| `Evaluation_Sheet.csv`    | Results from the manual classification framework             
+| `large_scale_captions.csv`| Descriptions for 2000 images generated using Qwen2.5-VL           
+| `blip2_captions_200.csv`  | Captions generated using BLIP-2 for the 200 sample images        
+| `gpt_captions_200.csv`    | Captions generated using GPT-4o-mini for the 200 sample images          
+| `llava_captions_200.csv`  | Captions generated using LLaVA 1.5 for the 200 sample images      
+| `qwen_captions_200.csv`   | Captions generated using Qwen2.5-VL for the 200 sample images              
+| `descriptions.csv`        | Original and revised descriptions for each image in the sample dataset 
+| `blip_tikz.csv`           | TikZ code generated from BLIP-2 captions (50 images)            
+| `gpt_tikz.csv`            | TikZ code generated from GPT-4o-mini captions (50 images)        
+| `description_tikz.csv`    | TikZ code generated from our manually revised captions (50 images)          
+| `llava_tikz.csv`          | TikZ code generated from LLaVA 1.5 captions (50 images)       
+| `original_tikz.csv`       | TikZ code generated from original (unmodified) captions (50 images)              
+| `qwen_tikz.csv`           | TikZ code generated from Qwen2.5-VL captions (50 images)    
+```
+
 ## Installation Instructions
 Install required packages via 'pip':
 ```bash
@@ -62,7 +81,6 @@ pip install torch transformers openai pandas tqdm pillow datasets
 
 ## OpenAI API Key Setup
 Some scripts (load_gpt4omini.py, tikz.py) use the OpenAI API. To run these, set your API key as an environment variable:
-On Windows:
 ```
 set OPENAI_API_KEY=your-api-key
 ```
