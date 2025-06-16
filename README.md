@@ -43,15 +43,15 @@ Caption Analysis/
 
 ## Scripts
 ```
-| Script              | Description                                        |
-|---------------------|----------------------------------------------------|
-| `sample_dataset.py`    | Generates a filtered 200-sample subset from the DaTikZ-v3 dataset              |
-| `load_blip.py`      | Generates image captions for the sample dataset using BLIP-2              |
-| `load_llava.py`     | Generates image captions for the sample dataset using LLaVA 1.5           |
-| `load_qwen.py`      | Generates image captions for the sample dataset using Qwen2.5-VL          |
-| `load_gpt4omini.py` | Generates image captions for the sample dataset using GPT-4o-mini         |
-| `large_scale.py`    | Generates 2000 captions using Qwen2.5-VL             |
-| `tikz.py`           | Converts captions into LaTeX TikZ code using GPT-4o     |
+| Script              | Description                                        
+|---------------------|----------------------------------------------------
+| `sample_dataset.py` | Generates a filtered 200-sample subset from the DaTikZ-v3 dataset              
+| `load_blip.py`      | Generates image captions for the sample dataset using BLIP-2              
+| `load_llava.py`     | Generates image captions for the sample dataset using LLaVA 1.5           
+| `load_qwen.py`      | Generates image captions for the sample dataset using Qwen2.5-VL          
+| `load_gpt4omini.py` | Generates image captions for the sample dataset using GPT-4o-mini         
+| `large_scale.py`    | Generates 2000 captions using Qwen2.5-VL             
+| `tikz.py`           | Converts captions into LaTeX TikZ code using GPT-4o     
 ```
 
 ## Installation Instructions
