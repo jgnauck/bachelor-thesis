@@ -40,9 +40,9 @@ Caption Analysis/
 └── README.md
 ```
 
-```md
-## Scripts
 
+## Scripts
+```
 | Script              | Description                                        |
 |---------------------|----------------------------------------------------|
 | `sample_dataset.py`    | Generates a filtered 200-sample subset from the DaTikZ-v3 dataset              |
