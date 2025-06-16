@@ -1,8 +1,9 @@
 # Thesis Project 
 This repository contains code and data for my Bachelor Thesis:
-** "Caption Quality Comparison with the DaTikZ Dataset" **
+**"Caption Quality Comparison with the DaTikZ Dataset"**
 
 ## Project Structure
+```
 Caption Analysis/
 ├── model captions/
 │ ├── code/
@@ -35,7 +36,7 @@ Caption Analysis/
 
 ├── Bachelor Thesis.pdf
 └── README.md
-
+```
 
 ```md
 ## 📜 Scripts
