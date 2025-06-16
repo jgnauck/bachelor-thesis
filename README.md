@@ -1,4 +1,4 @@
-# Thesis Project 
+# Bachelor Thesis
 This repository contains code and data for my Bachelor Thesis:
 **"Caption Quality Comparison with the DaTikZ Dataset"**.
 
