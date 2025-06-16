@@ -1,6 +1,6 @@
 # Thesis Project 
 This repository contains code and data for my Bachelor Thesis:
-**"Caption Quality Comparison with the DaTikZ Dataset"**
+**"Caption Quality Comparison with the DaTikZ Dataset"**.
 
 ## Project Structure
 ```
@@ -23,6 +23,8 @@ Caption Analysis/
 │ └── qwen_4001_6000.csv
 
 ├── sample dataset/
+│ ├── code/
+│ │ └── sample_dataset.py
 │ ├── images/
 │ └── description.csv
 
@@ -43,16 +45,27 @@ Caption Analysis/
 
 | Script              | Description                                        |
 |---------------------|----------------------------------------------------|
-| `load_blip.py`      | Generates image captions using BLIP-2              |
-| `load_llava.py`     | Generates image captions using LLaVA 1.5           |
-| `load_qwen.py`      | Generates image captions using Qwen2.5-VL          |
-| `load_gpt4omini.py` | Generates image captions using GPT-4o-mini         |
-| `large_scale.py`    | Processes a large image set using Qwen             |
-| `tikz.py`           | Converts captions into LaTeX TikZ using GPT-4o     |
+| `sample_dataset.py`    | Generates a filtered 200-sample subset from the DaTikZ-v3 dataset              |
+| `load_blip.py`      | Generates image captions for the sample dataset using BLIP-2              |
+| `load_llava.py`     | Generates image captions for the sample dataset using LLaVA 1.5           |
+| `load_qwen.py`      | Generates image captions for the sample dataset using Qwen2.5-VL          |
+| `load_gpt4omini.py` | Generates image captions for the sample dataset using GPT-4o-mini         |
+| `large_scale.py`    | Generates 2000 captions using Qwen2.5-VL             |
+| `tikz.py`           | Converts captions into LaTeX TikZ code using GPT-4o     |
 ```
 
 ## Installation Instructions
 Install required packages via 'pip':
 ```bash
-pip install torch transformers openai pandas tqdm pillow
+pip install torch transformers openai pandas tqdm pillow datasets
 ```
+
+## OpenAI API Key Setup
+Some scripts (load_gpt4omini.py, tikz.py) use the OpenAI API. To run these, set your API key as an environment variable:
+On Windows:
+```
+set OPENAI_API_KEY=your-api-key
+```
+
+## Thesis
+This project was developed as part of my Bachelor Thesis at University of Mannheim. Please refer to Bachelor Thesis.pdf for methodology and detailed analysis.
