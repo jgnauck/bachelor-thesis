@@ -1,4 +1,4 @@
-,code
+Sample,Code
 1,"\documentclass[11pt, twosides]{book}
 \usepackage[a4paper, top=.5cm]{geometry}
 \usepackage[myheadings]{fullpage}
