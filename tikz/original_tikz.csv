@@ -1,13 +1,4 @@
 Sample,Caption,LaTeX_Document
-Sample,Caption,"\documentclass[tikz,border=10pt]{standalone}
-    \usepackage{tikz}
-    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
-    
-    \begin{document}
-    \begin{tikzpicture}
-\node at (0,0) {Caption};
-\end{tikzpicture}
-    \end{document}"
 1,"Could some one fix this tikz code?
 
 \documentclass[11pt, twosides]{book}

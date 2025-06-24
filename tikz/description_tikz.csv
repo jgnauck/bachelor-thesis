@@ -1,13 +1,4 @@
 Sample,Caption,LaTeX_Document
-Sample,Caption,"\documentclass[tikz,border=10pt]{standalone}
-    \usepackage{tikz}
-    \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
-    
-    \begin{document}
-    \begin{tikzpicture}
-    \node[draw, rectangle, minimum width=3cm, minimum height=1cm] (caption) {Caption};
-\end{tikzpicture}
-    \end{document}"
 1,"A sample layout from a text document, including a headline, section and a sidebar. The page title ""Random"" is centered at the top of the page. The main content includes two sections ""1.1 Ipsum"" and ""1.2 Subsection"", each written in the font color blue.  A green sidebar, which  transitions to blue, contains the word ""RANDOM"" vertically.  This design showcases document formatting with decorative sidebars.","\documentclass[tikz,border=10pt]{standalone}
     \usepackage{tikz}
     \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
